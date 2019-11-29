@@ -21,7 +21,7 @@
                 </li>
                 <li class="nav-item dropdown menu-large @if ($menu=='CSC')
                     active @endif">
-                    <a href="#" data-toggle="dropdown" class="seta">O Centro
+                    <a href="#" data-toggle="dropdown" class="seta">O Ce  ntro
                         <b class="caret"></b>
                     </a>
 
