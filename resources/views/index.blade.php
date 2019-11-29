@@ -3,7 +3,7 @@
 <!-- nome da pasta e ponto
 significa q extende a view master -->
 
-@section("title", "Centro Socail de Carnide")
+@section("title", "Centro Social de Carnide")
 
 @section("content")
 
