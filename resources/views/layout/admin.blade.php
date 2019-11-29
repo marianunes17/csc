@@ -31,12 +31,12 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-                        <li><a href="{{asset('index.html')}}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li><a href="{{asset('index.html')}}"Z><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 
-                        <li><a href="{{route('eventos.index')}}" class="active"><i class="lnr lnr-home"></i> <span>Lista de eventos</span></a></li>
-                        <li><a href="{{route('eventos.create')}}" class="active"><i class="lnr lnr-home"></i> <span>Adicionar eventos</span></a></li>
+                        <li><a href="{{route('eventos.index')}}"><i class="lnr lnr-home"></i> <span>Lista de eventos</span></a></li>
+                        <li><a href="{{route('eventos.create')}}"><i class="lnr lnr-home"></i> <span>Adicionar eventos</span></a></li>
 
-                 
+
 
 						<li><a href="{{asset('elements.html')}}" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
 						<li><a href="{{asset('charts.html')}}" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
