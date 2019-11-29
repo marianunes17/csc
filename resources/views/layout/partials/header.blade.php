@@ -1,5 +1,5 @@
 <header class="nav-holder make-sticky">
-    <div id="all">
+   
         <div class="top-bar">
             <div class="container">
                 <div class="row d-flex align-items-center">
@@ -8,7 +8,7 @@
                     <div class="col-md-6">
                         <div class="d-flex justify-content-md-end
                             justify-content-between">
-                            
+
                             <div class="login">
                                 <a href="#" data-toggle="modal"
                                     data-target="#login-modal"

@@ -46,7 +46,7 @@
 
 
     <body>
-
+        <div id="all">
         @include ('layout.partials.header')
 
         @include ('layout.partials.nav')
@@ -66,10 +66,7 @@
         </section>
 
         @include ('layout.partials.footer')
-
-        <!-- Bootstrap core JavaScript -->
-        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        </div>
     </body>
 
 </html>
