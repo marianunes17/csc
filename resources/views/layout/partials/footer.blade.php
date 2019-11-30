@@ -23,7 +23,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a href="{{route('csc.serviços')}}" title="serviços" class="nav-item">Serviços</a>
+              <a href="{{route('csc.servicos')}}" title="servicos" class="nav-item">Serviços</a>
             </li>
             <li class="nav-item">
               <a href="{{route('csc.eventos')}}" title="eventos" class="nav-item">Eventos</a>
