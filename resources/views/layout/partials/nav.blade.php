@@ -15,8 +15,7 @@
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item dropdown @if ($menu=='index') active
                     @endif">
-                    <a href="{{route('csc.index')}}" data-toggle="dropdown"
-                        class="">Início
+                    <a href="{{route('csc.index')}}" class="">Início
                     </a>
                 </li>
                 <li class="nav-item dropdown menu-large @if ($menu=='CSC')
@@ -57,8 +56,7 @@
                     </ul>
                 </li>
                 <li class="nav-item @if ($menu=='Servicos') active @endif">
-                    <a href="{{route('csc.servicos')}}"
-                        data-toggle="dropdown" class="nav-link">Serviços</a>
+                    <a href="{{route('csc.servicos')}}" class="nav-link">Serviços</a>
                 </li>
 
                 <li class="nav-item @if ($menu=='Eventos') active @endif">
