@@ -13,13 +13,14 @@
         <div id="navigation" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item dropdown @if ($menu=='index') active
-                    @endif">
+                <li class="nav-item
+                    @if ($menu=='index') active @endif">
                     <a href="{{route('csc.index')}}" class="">Início
                     </a>
                 </li>
-                <li class="nav-item dropdown menu-large @if ($menu=='CSC')
-                    active @endif">
+
+                <li class="nav-item dropdown menu-large
+                    @if ($menu=='CSC') active @endif">
                     <a href="#" data-toggle="dropdown" class="seta">O Centro
                         <b class="caret"></b>
                     </a>
@@ -55,11 +56,13 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if ($menu=='Servicos') active @endif">
+                <li class="nav-item
+                    @if ($menu=='Servicos') active @endif">
                     <a href="{{route('csc.servicos')}}" class="nav-link">Serviços</a>
                 </li>
 
-                <li class="nav-item @if ($menu=='Eventos') active @endif">
+                <li class="nav-item
+                    @if ($menu=='Eventos') active @endif">
                     <a href="{{route('csc.eventos')}}" class="nav-link">Eventos</a>
                 </li>
 
@@ -68,11 +71,13 @@
                         target="_blank">Loja</a>
                 </li>
 
-                <li class="nav-item @if ($menu=='Contactos') active @endif">
+                <li class="nav-item
+                    @if ($menu=='Contactos') active @endif">
                     <a href="{{route('csc.contactos')}}" class="nav-link">Contactos</a>
                 </li>
             </ul>
         </div>
+        
         <div id="search" class="collapse clearfix">
             <form role="search" class="navbar-form">
                 <div class="input-group">
