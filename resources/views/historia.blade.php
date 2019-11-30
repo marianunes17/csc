@@ -16,7 +16,7 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
     <div class="card-footer text-muted">
-        2 days ago
+        2 days  ago
     </div>
 </div>
 
