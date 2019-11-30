@@ -57,7 +57,7 @@
                     </ul>
                 </li>
                 <li class="nav-item @if ($menu=='Servicos') active @endif">
-                    <a href="{{route('csc.serviços')}}"
+                    <a href="{{route('csc.servicos')}}"
                         data-toggle="dropdown" class="nav-link">Serviços</a>
                 </li>
 
