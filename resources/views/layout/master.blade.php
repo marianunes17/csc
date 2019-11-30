@@ -35,8 +35,7 @@
         <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
         <!-- Favicon and apple touch icons-->
-        <link rel="shortcut icon" href="{{asset('public/img/favicon.ico')}}"
-            type="image/x-icon">
+        <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
 
         <!-- Tweaks for older IEs-->
         <!--[if lt IE 9]>
@@ -68,7 +67,7 @@
         @include ('layout.partials.footer')
 
         <!-- Bootstrap core JavaScript -->
-    
+
     </body>
 
 </html>
