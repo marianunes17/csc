@@ -19,6 +19,18 @@ class PageController extends Controller
         return view('centro')->with('menu', 'CSC');
     }
 
+    public function historia(){
+        return view('historia')->with('menu', 'História');
+    }
+
+    public function equipa(){
+        return view('equipa')->with('menu', 'Equipa');
+    }
+
+    public function parcerias(){
+        return view('parcerias')->with('menu', 'Parcerias');
+    }
+
 
     public function serviços(){
         return view('servicos')->with('menu', 'Servicos');
