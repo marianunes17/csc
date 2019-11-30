@@ -16,7 +16,7 @@ Route::get('/', 'PageController@index')->name("csc.index");
 Route::get('/historia', 'PageController@historia')->name("csc.historia");
 Route::get('/equipa', 'PageController@equipa')->name("csc.equipa");
 Route::get('/parcerias', 'PageController@parcerias')->name("csc.parcerias");
-Route::get('/serviços', 'PageController@serviços')->name("csc.serviços");
+Route::get('/servicos', 'PageController@servicos')->name("csc.servicos");
 Route::get('/eventos', 'PageController@eventos')->name("csc.eventos");
 Route::get('/contactos', 'PageController@contactos')->name("csc.contactos");
 
