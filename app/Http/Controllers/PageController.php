@@ -32,7 +32,7 @@ class PageController extends Controller
     }
 
 
-    public function serviços(){
+    public function servicos(){
         return view('servicos')->with('menu', 'Servicos');
     }
 
