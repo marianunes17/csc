@@ -45,7 +45,7 @@
 
 
     <body>
-
+        <div id="all">
         @include ('layout.partials.header')
 
         @include ('layout.partials.nav')
@@ -65,6 +65,7 @@
         </section>
 
         @include ('layout.partials.footer')
+        </div>
 
         <!-- Bootstrap core JavaScript -->
 
