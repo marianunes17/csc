@@ -5,7 +5,7 @@
 @section("content")
 
 @include ('layout.partials.banner')
-
+<div class="container">
 <div class="row">
     <div class="col-lg-3">
         <div class="panel panel-default sidebar-menu with-icons">
@@ -39,6 +39,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
