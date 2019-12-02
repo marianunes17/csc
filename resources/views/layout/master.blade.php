@@ -42,11 +42,8 @@
         @include ('layout.partials.header')
 
 
+        @yield("content")
 
-
-                        @yield("content")
-
-                  
 
         @include ('layout.partials.footer')
     </div>
