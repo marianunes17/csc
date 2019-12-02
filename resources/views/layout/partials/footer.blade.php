@@ -54,14 +54,22 @@
                             <button type="button" class="btn btn-secondary"><i class="fa fa-send"></i></button>
                         </div>
                     </div>
+                </form>
+                <hr>
+                <h4 class="h6">Redes Sociais</h4>
+                <ul class="list-unstyled social">
+                    <li class="list-inline-item"><a
+                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/" target="_blank"><i
+                                class="fa fa-facebook"></i></a></li>
+                </ul>
             </div>
         </div>
-        <div class="copyrights">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 text-center-md">
-                        <p>Copyright &copy; by Centro Social de Carnide, 2019</p>
-                    </div>
+    </div>
+    <div class="copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 text-center-md">
+                    <p>Copyright &copy; by Centro Social de Carnide, 2019</p>
                 </div>
             </div>
         </div>
