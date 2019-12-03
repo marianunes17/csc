@@ -18,16 +18,18 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Actions</th>
+              <th>Título</th>
+              <th>Descrição</th>
+              <th>Categoria</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             @foreach($eventos as $eventos)
             <tr>
-                <td>{{$eventos->name}}</td>
-                <td>{{$eventos->description}}</td>
+                <td>{{$eventos->titulo}}</td>
+                <td>{{$eventos->descricao}}</td>
+                <td>{{$eventos->categorias}}</td>
 
                 <td nowrap>
                 <a class="btn btn-xs btn-primary btn-p" href="{{route('eventos.show',$eventos)}}">
@@ -39,7 +41,7 @@
                 </a>
 
                 <form method="POST" action="{{route('eventos.destroy',$eventos)}}" role="form"
-                class="inline" onsubmit="return confirm('Are you sure you want to delete this record?');">
+                class="inline" onsubmit="return confirm('Tem a certeza que pretende eliminar?');">
                     @csrf
                     <!--Proteção do website contra ataques de cross-site request forgery (CSRF),
                         ou seja, Contra pedidos que provêm de outros websites

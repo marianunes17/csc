@@ -25,11 +25,9 @@
                                 <h3><a href="team-member.html">Dr.ª Andreia Mendonça</a></h3>
                                 <p class="role">Assistente Social</p>
                                 <ul class="social list-inline">
-                                    <li class="list-inline-item"><a href="#" class="external facebook"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="external gplus"><i
-                                                class="fa fa-google-plus"></i></a></li>
-
+                                    <li class="list-inline-item"><a
+                                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li class="list-inline-item"><a href="#" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
@@ -47,11 +45,9 @@
                                 <h3><a href="team-member.html">Dr.ª Sara Gordo</a></h3>
                                 <p class="role">Psicóloga</p>
                                 <ul class="social list-inline">
-                                    <li class="list-inline-item"><a href="#" class="external facebook"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="external gplus"><i
-                                                class="fa fa-google-plus"></i></a></li>
-
+                                    <li class="list-inline-item"><a
+                                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li class="list-inline-item"><a href="#" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
@@ -69,11 +65,9 @@
                                     </a></h3>
                                 <p class="role">Educadora de Infância</p>
                                 <ul class="social list-inline">
-                                    <li class="list-inline-item"><a href="#" class="external facebook"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="external gplus"><i
-                                                class="fa fa-google-plus"></i></a></li>
-
+                                    <li class="list-inline-item"><a
+                                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li class="list-inline-item"><a href="#" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
@@ -90,11 +84,9 @@
                                 <h3><a href="team-member.html">Enf.ª Tânia Luís</a></h3>
                                 <p class="role">Enfermeira</p>
                                 <ul class="social list-inline">
-                                    <li class="list-inline-item"><a href="#" class="external facebook"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="external gplus"><i
-                                                class="fa fa-google-plus"></i></a></li>
-
+                                    <li class="list-inline-item"><a
+                                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li class="list-inline-item"><a href="#" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
@@ -110,11 +102,9 @@
                                 <h3><a href="team-member.html">Susana Ribeiro</a></h3>
                                 <p class="role">Animadora Sociocultural</p>
                                 <ul class="social list-inline">
-                                    <li class="list-inline-item"><a href="#" class="external facebook"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="external gplus"><i
-                                                class="fa fa-google-plus"></i></a></li>
-
+                                    <li class="list-inline-item"><a
+                                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li class="list-inline-item"><a href="#" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
@@ -304,7 +294,8 @@
             <div class="col-lg-8 text-center p-3">
                 <h3>Queremos ouvir o que tem a dizer!</h3>
             </div>
-            <div class="col-lg-4 text-center p-3"> <a href="#" class="btn btn-template-outlined-white">
+            <div class="col-lg-4 text-center p-3"> <a href="{{route('csc.contactos')}}"
+                    class="btn btn-template-outlined-white">
                     Vamos conversar?</a></div>
         </div>
     </div>
