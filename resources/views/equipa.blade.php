@@ -27,8 +27,9 @@
                                 <ul class="social list-inline">
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
-                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
@@ -47,8 +48,9 @@
                                 <ul class="social list-inline">
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
-                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
@@ -67,8 +69,9 @@
                                 <ul class="social list-inline">
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
-                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
@@ -86,8 +89,9 @@
                                 <ul class="social list-inline">
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
-                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
@@ -104,8 +108,9 @@
                                 <ul class="social list-inline">
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
-                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                            class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
@@ -114,20 +119,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row text-center">
+                    <div class="row text-center mt-5">
+                        <div class="col"></div>
                         <div class="col-md-2 col-sm-3">
                             <div data-animate="fadeInUp" class="team-member">
                                 <div class="image"><a href="team-member.html"><img src="img/person-1.jpg" alt=""
                                             class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Han Solo</a></h3>
-                                <p class="role">Founder</p>
+                                <h3><a href="team-member.html">João Gomes</a></h3>
+                                <p class="role">Fundador</p>
                             </div>
                         </div>
                         <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
                             <div class="team-member">
                                 <div class="image"><a href="team-member.html"><img src="img/person-2.jpg" alt=""
                                             class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Luke Skywalker</a></h3>
+                                <h3><a href="team-member.html">David Lopes</a></h3>
                                 <p class="role">CTO</p>
                             </div>
                         </div>
@@ -135,34 +141,19 @@
                             <div class="team-member">
                                 <div class="image"><a href="team-member.html"><img src="img/person-3.png" alt=""
                                             class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Princess Leia</a></h3>
-                                <p class="role">Team Leader</p>
+                                <h3><a href="team-member.html">Patrícia Lopes</a></h3>
+                                <p class="role">Tesoureira</p>
                             </div>
                         </div>
                         <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
                             <div class="team-member">
                                 <div class="image"><a href="team-member.html"><img src="img/person-4.jpg" alt=""
                                             class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Jabba Hut</a></h3>
-                                <p class="role">Lead Developer</p>
+                                <h3><a href="team-member.html">Ricardo Dinis</a></h3>
+                                <p class="role">Marketeer</p>
                             </div>
                         </div>
-                        <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
-                            <div class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-2.jpg" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Luke Skywalker</a></h3>
-                                <p class="role">CTO</p>
-                            </div>
-                        </div>
-                        <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
-                            <div class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-3.png" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Princess Leia</a></h3>
-                                <p class="role">Team Leader</p>
-                            </div>
-                        </div>
+                        <div class="col"></div>
                     </div>
                 </div>
             </div>
@@ -181,17 +172,17 @@
                         <li class="item">
                             <div class="testimonial d-flex flex-wrap">
                                 <div class="text">
-                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself
-                                        transformed in his bed into a horrible vermin. He lay on his armour-like back,
-                                        and if he lifted his head a little he could see his brown belly, slightly domed
-                                        and divided by arches into stiff sections.</p>
+                                    <p>Desde muito cedo que gostaria de ajudar a popolação da minha terra. Infelizmente
+                                        ouvimos casos como solidão (idosos) e cada vez mais hoje em dia é extremamente
+                                        difícil confiar em alguém para cuidar dos mais novos. Esta foi a melhor solução
+                                        encontrada e não estou nada arrependido.</p>
                                 </div>
                                 <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                                     <div class="icon"><i class="fa fa-quote-left"></i></div>
                                     <div class="testimonial-info d-flex">
                                         <div class="title">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
+                                            <h5>João Gomes</h5>
+                                            <p>Fundador</p>
                                         </div>
                                         <div class="avatar"><img alt="" src="img/person-1.jpg" class="img-fluid"></div>
                                     </div>
@@ -201,17 +192,18 @@
                         <li class="item">
                             <div class="testimonial d-flex flex-wrap">
                                 <div class="text">
-                                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
-                                        His many legs, pitifully thin compared with the size of the rest of him, waved
-                                        about helplessly as he looked. "What's happened to me? " he thought. It wasn't a
-                                        dream.</p>
+                                    <p>Sou licenciado em Engenharia Informática, uma das coisa que futuramente gostaria
+                                        de trabalhar profissionalmente era na minha área, mas de modo a ajudar a
+                                        população. Este emprego foi a luz da minha vida. Adoro o que faço pois estou
+                                        constantemente em contactos com as pessoas que ajudo e trabalho na minha área de
+                                        estudos ao mesmo tempo.</p>
                                 </div>
                                 <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                                     <div class="icon"><i class="fa fa-quote-left"></i></div>
                                     <div class="testimonial-info d-flex">
                                         <div class="title">
                                             <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
+                                            <p>CTO</p>
                                         </div>
                                         <div class="avatar"><img alt="" src="img/person-2.jpg" class="img-fluid"></div>
                                     </div>
@@ -221,18 +213,16 @@
                         <li class="item">
                             <div class="testimonial d-flex flex-wrap">
                                 <div class="text">
-                                    <p>His room, a proper human room although a little too small, lay peacefully between
-                                        its four familiar walls.</p>
-                                    <p>A collection of textile samples lay spread out on the table - Samsa was a
-                                        travelling salesman - and above it there hung a picture that he had recently cut
-                                        out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                                    <p>Sou mestre em Economia, eu e os números somos irmãos.</p>
+                                    <p>Nada melhor do que ter alguém a cuidar das contas. A pessoa responsável sou eu!
+                                    </p>
                                 </div>
                                 <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                                     <div class="icon"><i class="fa fa-quote-left"></i></div>
                                     <div class="testimonial-info d-flex">
                                         <div class="title">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
+                                            <h5>Patrícia Lopes</h5>
+                                            <p>Tesoureira</p>
                                         </div>
                                         <div class="avatar"><img alt="" src="img/person-3.png" class="img-fluid"></div>
                                     </div>
@@ -242,24 +232,23 @@
                         <li class="item">
                             <div class="testimonial d-flex flex-wrap">
                                 <div class="text">
-                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a
-                                        heavy fur muff that covered the whole of her lower arm towards the viewer.
-                                        Gregor then turned to look out the window at the dull weather. Drops of rain
-                                        could be heard hitting the pane, which made him feel quite sad.</p>
+                                    <p>Sou licenciado em Marketing e pós-graduado em Marteking Digital. Promovo a
+                                        instituição nas redes socias de modo a mostrar o seu melhor lado. Com isto
+                                        consigo angariar mais "clientes" e a tornar a instituição mais conhecida.</p>
                                 </div>
                                 <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                                     <div class="icon"><i class="fa fa-quote-left"></i></div>
                                     <div class="testimonial-info d-flex">
                                         <div class="title">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
+                                            <h5>Ricardo Dinis</h5>
+                                            <p>Marketeer</p>
                                         </div>
                                         <div class="avatar"><img alt="" src="img/person-4.jpg" class="img-fluid"></div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="item">
+                        <!--<li class="item">
                             <div class="testimonial d-flex flex-wrap">
                                 <div class="text">
                                     <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a
@@ -280,7 +269,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li>-->
                     </ul>
                     <!-- Carousel End-->
                 </div>
