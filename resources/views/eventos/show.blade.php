@@ -10,8 +10,8 @@
         </div>
         <div class="card-body">
 
-			<div> <strong>Nome:</strong> {{$eventos->name}} </div>
-            <div> <strong>Descrção:</strong> {{$eventos->description}} </div>
+			<div> <strong>Título:</strong> {{$eventos->Titulo}} </div>
+            <div> <strong>Descrção:</strong> {{$eventos->descricao}} </div>
 		</div>
 	</div>
 </div>
