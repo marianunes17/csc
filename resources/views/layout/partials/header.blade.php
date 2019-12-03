@@ -68,7 +68,7 @@
 <header class="nav-holder make-sticky">
     <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
         <div class="container"><a href="{{route('csc.index')}}" class="navbar-brand home">
-                <img src="img/logos/logo-simbolo.png" alt="Centro Social de
+                <img src="img/logos/logo-simbolo2.png" alt="Centro Social de
                     Carnide logo" class="d-none d-md-inline-block logo"> <span class="site-description">Centro Social
                     de
                     Carnide</span>
