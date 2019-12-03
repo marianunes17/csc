@@ -40,8 +40,17 @@ class EventosController extends Controller
         $fields=$request->validated();
         $eventos=new eventos();
         $eventos->fill($fields);
+        $eventos->categoria=$fields["categoria"];
         $eventos->save();
         return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
+
+        if ($request->hasFile('imagem')) {
+            $imagem = $request->file('imagem');
+            $postImg = $post->id . '_' . time() . '.' . $imagem->getClientOriginalExtension();
+            Storage::disk('public')->putFileAs('posts_images', $imagem, $postImg);
+            $eventos->imagem = $eventosImg;
+            $eventos->save();
+        }
 
     }
 
@@ -88,9 +97,9 @@ class EventosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(eventos $eventos){
-        if ($eventos->posts()->exists()){
+        if ($eventos->eventos()->exists()){
             return redirect()->route('eventos.index')->withErrors(
-            ['delete'=>'Eventos has related posts'] );
+            ['delete'=>'Eventos has related eventoss'] );
             }
             $eventos->delete();
             return redirect()->route('eventos.index')->with('success', 'Eventos successfully deleted');
