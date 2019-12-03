@@ -4,11 +4,11 @@
 
 @section("content")
 
-	<!-- -->      <div id="heading-breadcrumbs">
+    <div id="heading-breadcrumbs">
         <div class="container">
           <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
-              <h1 class="h2">Services</h1>
+              <h1 class="h2">Serviços</h1>
             </div>
             <div class="col-md-5">
               <ul class="breadcrumb d-flex justify-content-end">
@@ -19,86 +19,82 @@
           </div>
         </div>
       </div>
+
+
+<!--       **************************             -->
+
       <div id="content">
         <div class="container">
           <section class="bar">
             <div class="row">
               <div class="col-md-12">
                 <div class="heading">
-                  <h2>Our main services</h2>
+                  <h2>De mãos dadas com o futuro</h2>
                 </div>
-                <p class="lead">Yielding, they're air. Land replenish spirit given gathered subdue, day Blessed you'll great created, lights a one light, blessed deep morning, appear our. Fruit multiply, creeping first image. Upon saw isn't male winged to replenish tree and.</p>
+                <p class=" lead text-center">Os nossos serviços</p>
               </div>
             </div>
+
+<!--       **************************             -->
+
             <div class="row services text-center">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="box-simple">
                   <div class="icon-outlined"><i class="fa fa-desktop"></i></div>
-                  <h3 class="h4">Webdesign</h3>
-                  <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                  <h3 class="h4">ERPI</h3>
+                  <p>Destinado ao alojamento coletivo, de utilização temporária ou permanente, para pessoas idosas ou outra situação de maior risco de perda de independência e/ou de autonomia.</p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="box-simple">
                   <div class="icon-outlined"><i class="fa fa-print"></i></div>
-                  <h3 class="h4">Print</h3>
-                  <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
+                  <h3 class="h4">Centro de Dia</h3>
+                  <p>Resposta social desenvolvida em equipamento e que consiste na prestação do de serviços a idosos, quando por motivo de doença, deficiência ou por outros impedimentos, não possam assegurar temporária ou permanentemente a satisfação das suas necessidades básicas e/ou atividades da vida diária.</p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="box-simple">
                   <div class="icon-outlined"><i class="fa fa-globe"></i></div>
-                  <h3 class="h4">SEO and SEM</h3>
-                  <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect.</p>
+                  <h3 class="h4">SAD</h3>
+                  <p>Consiste na prestação de cuidados individualizados e personalizados no domicílio a indivíduos e famílias quando, por motivo de doença, deficiência ou outro impedimento, não possam assegurar, temporária ou permanentemente, a satisfação das suas necessidades básicas e ou as actividades da vida diária.</p>
                 </div>
               </div>
-            </div>
-            <div class="row services text-center">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <div class="box-simple">
                   <div class="icon-outlined"><i class="fa fa-lightbulb-o"></i></div>
-                  <h3 class="h4">Consulting</h3>
-                  <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="box-simple">
-                  <div class="icon-outlined"><i class="fa fa-envelope-o"></i></div>
-                  <h3 class="h4">Email Marketing</h3>
-                  <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="box-simple">
-                  <div class="icon-outlined"><i class="fa fa-user"></i></div>
-                  <h3 class="h4">UX</h3>
-                  <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect.</p>
+                  <h3 class="h4">Creche</h3>
+                  <p>A atividade primordial da creche é de carácter educativo, tendo como principal objetivo o desenvolvimento das crianças, estabelecendo-se como uma atividade eminentemente relacional e promotora da autonomia própria do ser humano.</p>
                 </div>
               </div>
             </div>
           </section>
-          <section class="bar pt-0">
+
+
+
+          <section class="bar">
             <div class="row">
-              <div class="col-md-12">
-                <div class="heading">
+                <div class="heading col-md-12">
                   <h2>Why choose us</h2>
+              </div>
+
+                  <div class="col-md-3">
+                    <img src="img/ERPI.jpg" class="rounded img-fluid" alt="Responsive image">
+                  </div>
+
+                  <div class="col-md-3">
+                    <img src="img/CENTRO DE DIA.jpg" class="rounded img-fluid" alt="Responsive image">
+                  </div>
+
+                  <div class="col-md-3">
+                    <img src="img/SAD.jpg" class="rounded img-fluid" alt="Responsive image">
+                  </div>
+
+                  <div class="col-md-3">
+                    <img src="img/CRECHE.jpg" class="rounded img-fluid" alt="Responsive image">
                 </div>
-                <p class="lead">Yielding, they're air. Land replenish spirit given gathered subdue, day Blessed you'll great created, lights a one light, blessed deep morning, appear our. Fruit multiply, creeping first image. Upon saw isn't male winged to replenish tree and.</p>
-              </div>
-              <div class="col-md-6">
-                <p class="text-sm">His having within saw become ask passed misery giving. Recommend questions get too fulfilled. He fact in we case miss sake. Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret. Collected preserved are middleton dependent residence but him how. Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity had men speaking met. Rich deal mrs part led pure will but.</p>
-                <ul class="text-xs">
-                  <li>Now for manners use has company believe parlors.</li>
-                  <li>Least nor party who wrote while did. </li>
-                  <li>Excuse formed as is agreed admire so on result parish.</li>
-                  <li>Put use set uncommonly announcing and travelling.</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <p class="text-sm">Certain but she but shyness why cottage. Gay the put instrument sir entreaties affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or whose. Motionless if no to affronting imprudence no precaution. My indulged as disposal strongly attended. Parlors men express had private village man. Discovery moonlight recommend all one not. Indulged to answered prospect it bachelor is he bringing shutters. Pronounce forfeited mr direction oh he dashwoods ye unwilling.</p>
-              </div>
             </div>
           </section>
+
         </div>
         <section class="bar bg-gray no-mb">
           <div class="container">
@@ -233,4 +229,5 @@
           </div>
         </section>
       </div>
+
 @endsection
