@@ -28,7 +28,7 @@
                                     <li class="list-inline-item"><a
                                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
                                             class="external facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" class="email"><i
+                                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com" class="email"><i
                                                 class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <div class="text">
