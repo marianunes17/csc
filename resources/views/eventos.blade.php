@@ -7,7 +7,7 @@
 @include ('layout.partials.banner')
 
 <link rel="stylesheet" href="{{route('css/eventos.css')}}">
-
+<!--<link rel="stylesheet" href="{{route('css/eventos.css')}}">-->
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
