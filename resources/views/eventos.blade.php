@@ -5,6 +5,9 @@
 @section("content")
 
 @include ('layout.partials.banner')
+
+<link rel="stylesheet" href="{{route('css/eventos.css')}}">
+
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
@@ -37,11 +40,11 @@
                     <p class="card-text">
                         Juntámos o ar puro da natureza com muita comida saudável, imensas atividades e muita diversão
                     </p>
-                </div>
 
 
-                <!--Imagens-->
-                <div class="row">
+
+                    <!--Imagens-->
+                    <div class="row">
                         <!-- Imagem 1 -->
                         <div class="col-lg-4 col-md-12 mb-4">
 
@@ -66,7 +69,7 @@
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="{{route('img/atividade1_1.jpg')}}"
+                                                    src="img/atividade1_1.jpg"
                                                     alt="video"
                                                     data-toggle="modal" data-target="#modal1">
                                             </div>
@@ -79,7 +82,7 @@
                             <!--Modal: Name-->
 
                             <a><img class="img-fluid z-depth-1"
-                                    src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                    src="img/atividade1_1.jpg"
                                     alt="video"
                                     data-toggle="modal" data-target="#modal1"></a>
 
@@ -87,7 +90,6 @@
 
                         <!--Imagem 2-->
                         <div class="col-lg-4 col-md-12 mb-4">
-
                             <!--Modal: Name-->
                             <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
                                 aria-labelledby="myModalLabel" aria-hidden="true">
@@ -101,14 +103,14 @@
                                             btn-rounded btn-md ml-4" data-dismiss="modal"
                                             aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
-                                        </button>
+                                            </button>
                                         </div>
                                         <!--Body-->
                                         <div class="modal-body mb-0 p-0">
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                                    src="img/atividade1_2.jpg"
                                                     alt="video"
                                                     data-toggle="modal" data-target="#modal1">
                                             </div>
@@ -119,13 +121,13 @@
                                 </div>
                             </div>
                             <!--Modal: Name-->
-
                             <a><img class="img-fluid z-depth-1"
-                                    src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                    src="img/atividade1_2.jpg"
                                     alt="video"
                                     data-toggle="modal" data-target="#modal1"></a>
-
                         </div>
+
+
                          <!--Imagem 2-->
                          <div class="col-lg-4 col-md-12 mb-4">
 
@@ -149,7 +151,7 @@
 
                                                 <div class="embed-responsive">
                                                     <img class="img-fluid z-depth-1"
-                                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                                        src="img/atividade1_3.jpg"
                                                         alt="video"
                                                         data-toggle="modal" data-target="#modal1">
                                                 </div>
@@ -162,7 +164,7 @@
                                 <!--Modal: Name-->
 
                                 <a><img class="img-fluid z-depth-1"
-                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                        src="img/atividade1_3.jpg"
                                         alt="video"
                                         data-toggle="modal" data-target="#modal1"></a>
 
@@ -172,52 +174,93 @@
                     </div>
 
                     <div class="row">
-                            <!-- Imagem 1 -->
-                            <div class="col-lg-4 col-md-12 mb-4">
+                        <!-- Imagem 3 -->
+                        <div class="col-lg-4 col-md-12 mb-4">
 
-                                <!--Modal: Name-->
-                                <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-                                    aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
+                            <!--Modal: Name-->
+                            <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
 
-                                        <!--Content-->
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <p> asdhfgntjl,dewkmrfnasdhfgntjl,dewkmrfnjdmjdm </p>
-                                                <button type="button" class="btn btn-outline-primary
-                                                    btn-rounded btn-md ml-4" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-
-                                            <!--Body-->
-                                            <div class="modal-body mb-0 p-0">
-
-                                                <div class="embed-responsive">
-                                                    <img class="img-fluid z-depth-1"
-                                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-                                                        alt="video"
-                                                        data-toggle="modal" data-target="#modal1">
-                                                </div>
-
-                                            </div>
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p> asdhfgntjl,dewkmrfnasdhfgntjl,dewkmrfnjdmjdm </p>
+                                            <button type="button" class="btn btn-outline-primary
+                                                btn-rounded btn-md ml-4" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
 
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+
+                                            <div class="embed-responsive">
+                                                <img class="img-fluid z-depth-1"
+                                                    src="img/atividade1_4.jpg"
+                                                    alt="video"
+                                                    data-toggle="modal" data-target="#modal1">
+                                            </div>
+
+                                        </div>
                                     </div>
+
                                 </div>
-                                <!--Modal: Name-->
-
-                                <a><img class="img-fluid z-depth-1"
-                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-                                        alt="video"
-                                        data-toggle="modal" data-target="#modal1"></a>
-
                             </div>
+                            <!--Modal: Name-->
 
-                            <!--Imagem 2-->
+                            <a><img class="img-fluid z-depth-1"
+                                    src="img/atividade1_4.jpg"
+                                    alt="video"
+                                    data-toggle="modal" data-target="#modal1"></a>
+
+                        </div>
+
+                        <!--Imagem 4-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+
+                            <!--Modal: Name-->
+                            <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p> asdhfgntjl,dewkmrfnjdm </p>
+                                            <button type="button" class="btn btn-outline-primary
+                                            btn-rounded btn-md ml-4" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+
+                                            <div class="embed-responsive">
+                                                <img class="img-fluid z-depth-1"
+                                                    src="img/atividade1_5.jpg"
+                                                    alt="video"
+                                                    data-toggle="modal" data-target="#modal1">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Modal: Name-->
+
+                            <a><img class="img-fluid z-depth-1"
+                                    src="img/atividade1_5.jpg"
+                                    alt="video"
+                                    data-toggle="modal" data-target="#modal1"></a>
+
+                        </div>
+
+                            <!--Imagem 6-->
                             <div class="col-lg-4 col-md-12 mb-4">
-
                                 <!--Modal: Name-->
                                 <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
                                     aria-labelledby="myModalLabel" aria-hidden="true">
@@ -231,14 +274,14 @@
                                                 btn-rounded btn-md ml-4" data-dismiss="modal"
                                                 aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
-                                            </button>
+                                                </button>
                                             </div>
                                             <!--Body-->
                                             <div class="modal-body mb-0 p-0">
 
                                                 <div class="embed-responsive">
                                                     <img class="img-fluid z-depth-1"
-                                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                                        src="img/atividade1_6.jpg"
                                                         alt="video"
                                                         data-toggle="modal" data-target="#modal1">
                                                 </div>
@@ -249,59 +292,12 @@
                                     </div>
                                 </div>
                                 <!--Modal: Name-->
-
                                 <a><img class="img-fluid z-depth-1"
-                                        src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
+                                        src="img/atividade1_6.jpg"
                                         alt="video"
                                         data-toggle="modal" data-target="#modal1"></a>
-
-                            </div>
-                             <!--Imagem 2-->
-                             <div class="col-lg-4 col-md-12 mb-4">
-
-                                    <!--Modal: Name-->
-                                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-                                        aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-
-                                            <!--Content-->
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <p> asdhfgntjl,dewkmrfnjdm </p>
-                                                    <button type="button" class="btn btn-outline-primary
-                                                    btn-rounded btn-md ml-4" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                                </div>
-                                                <!--Body-->
-                                                <div class="modal-body mb-0 p-0">
-
-                                                    <div class="embed-responsive">
-                                                        <img class="img-fluid z-depth-1"
-                                                            src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-                                                            alt="video"
-                                                            data-toggle="modal" data-target="#modal1">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!--Modal: Name-->
-
-                                    <a><img class="img-fluid z-depth-1"
-                                            src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-                                            alt="video"
-                                            data-toggle="modal" data-target="#modal1"></a>
-
-                                </div>
-                            </div>
-
                         </div>
-
-
+                    </div>
                 <div class="card-footer text-muted">
                     30 agosto
                 </div>
