@@ -329,9 +329,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer text-muted">
-                    <p> 30 agosto </p>
-                    <p class="text-right">Atividade</p>
+                <div class="card-footer text-muted d-inline-block">
+                    <span class="text-align left"> 30 agosto </span>
+                    <span class="text-algin right">Atividade</span>
                 </div>
             </div>
             </div>
