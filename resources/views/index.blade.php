@@ -7,127 +7,89 @@ significa q extende a view master -->
 
 @section("content")
 
-<section style="background: url('img/photogrid.jpg') center center repeat; background-size: cover;"
+<section style="background: url('img/centrocrs.jpg') center center repeat; background-size: cover;"
     class="bar background-white relative-positioned">
     <div class="container">
-        <!-- Carousel Start-->
         <div class="home-carousel">
             <div class="dark-mask mask-primary"></div>
             <div class="container">
                 <div class="homepage owl-carousel">
                     <div class="item">
                         <div class="row">
-                            <div class="col-md-5 text-right">
-                                <p><img src="img/logo.png" alt="" class="ml-auto"></p>
-                                <h1>Multipurpose responsive theme</h1>
-                                <p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>
-                            </div>
-                            <div class="col-md-7"><img src="img/template-homepage.png" alt="" class="img-fluid"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-7 text-center"><img src="img/template-mac.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-md-5">
-                                <h2>46 HTML pages full of features</h2>
-                                <ul class="list-unstyled">
-                                    <li>Sliders and carousels</li>
-                                    <li>4 Header variations</li>
-                                    <li>Google maps, Forms, Megamenu, CSS3 Animations and much more</li>
-                                    <li>+ 11 extra pages showing template features</li>
-                                </ul>
+                            <div class="col-md-12 text-center">
+                                <img src="img/centrocrs.jpg" alt="" class="ml-auto">
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="row">
-                            <div class="col-md-5 text-right">
-                                <h1>Design</h1>
-                                <ul class="list-unstyled">
-                                    <li>Clean and elegant design</li>
-                                    <li>Full width and boxed mode</li>
-                                    <li>Easily readable Roboto font and awesome icons</li>
-                                    <li>7 preprepared colour variations</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-7"><img src="img/template-easy-customize.png" alt="" class="img-fluid">
+                            <div class="col-md-12 text-center">
+                                <img src="img/crechecrs.jpg" alt="" class="ml-auto">
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="row">
-                            <div class="col-md-7"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
-                            <div class="col-md-5">
-                                <h1>Easy to customize</h1>
-                                <ul class="list-unstyled">
-                                    <li>7 preprepared colour variations.</li>
-                                    <li>Easily to change fonts</li>
-                                </ul>
+                            <div class="col-md-12 text-center">
+                                <img src="img/trabalhos.jpg" alt="" class="ml-auto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <img src="img/atividades.jpg" alt="" class="ml-auto">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Carousel End-->
     </div>
 </section>
-<section class="bar background-white">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-desktop"></i></div>
-                    <h3 class="h4">Webdesign</h3>
-                    <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl
-                        Moved
-                        life us beast good yielding. Have bring.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-print"></i></div>
-                    <h3 class="h4">Print</h3>
-                    <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is
-                        justice.
-                        Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-globe"></i></div>
-                    <h3 class="h4">SEO and SEM</h3>
-                    <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay.
-                        Lively is people so basket ladies window expect.</p>
-                </div>
-            </div>
+<section class="bar pt-5">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>Serviços</h2>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-lightbulb-o"></i></div>
-                    <h3 class="h4">Consulting</h3>
-                    <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl
-                        Moved
-                        life us beast good yielding. Have bring.</p>
+        <p class="lead text-center">O Centro Social de Carnide, proporciona aos nossos utentes um leque de serviços e
+            atividades,
+            que permite ao mesmo e aos seus familiares estarem descansados.<br>Caso queira saber mais acerca d os nossos
+            serviços, clique no botão "Saber mais"!</p>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="box-simple">
+                        <div><img src="img/erpi.jpeg" alt="" class="img-fluid"></div>
+                        <br>
+                        <h4 class="h4">ERPI</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-envelope-o"></i></div>
-                    <h3 class="h4">Email Marketing</h3>
-                    <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is
-                        justice.
-                        Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="box-simple">
+                        <div><img src="img/centrodia.jpg" alt="" class="img-fluid"></div>
+                        <br>
+                        <h4 class="h4">CENTRO DE DIA</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box-simple">
-                    <div class="icon-outlined"><i class="fa fa-user"></i></div>
-                    <h3 class="h4">UX</h3>
-                    <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay.
-                        Lively is people so basket ladies window expect.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="box-simple">
+                        <div><img src="img/sad-01.png" alt="" class="img-fluid"></div>
+                        <br>
+                        <h4 class="h4">SAD</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="box-simple">
+                        <div><img src="img/crechecrs1.jpg" alt="" class="img-fluid"></div>
+                        <br>
+                        <h4 class="h4">CRECHE</h4>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 text-center">
+                    <a href="{{route('csc.servicos')}}" class="btn btn-template-outlined" style>Saber mais</a>
                 </div>
             </div>
         </div>
@@ -136,29 +98,27 @@ significa q extende a view master -->
 <section class="bar background-pentagon no-mb text-md-center">
     <div class="container">
         <div class="heading text-center">
-            <h2>Testimonials</h2>
+            <h2>Testemunhos</h2>
         </div>
-        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation
-            happy and satisfied. Have a look what our clients said about us.</p>
-        <!-- Carousel Start-->
+        <p class="lead">Testemunhos mais recentes dos nossos utentes, que comprovam a qualidade dos nossos serviços!</p>
         <ul class="owl-carousel testimonials list-unstyled equal-height">
             <li class="item">
                 <div class="testimonial d-flex flex-wrap">
                     <div class="text">
-                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
-                            bed
-                            into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little
-                            he could
-                            see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+                        <p>O Centro Social de Carnide foi um apoio enorme no que toca a criar os meus três filhos. Se
+                            não fosse o mesmo, estaria a ficar careca com os problemas que eles me dão.<br>
+                            O meu profundo obrigado ao CSC!</p>
                     </div>
                     <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                         <div class="icon"><i class="fa fa-quote-left"></i></div>
                         <div class="testimonial-info d-flex">
                             <div class="title">
-                                <h5>John McIntyre</h5>
-                                <p>CEO, TransTech</p>
+                                <h5>João Morgado</h5>
+                                <strong>
+                                    <p>29/11/2019</p>
+                                </strong>
                             </div>
-                            <div class="avatar"><img alt="" src="img/person-1.jpg" class="img-fluid"></div>
+                            <div class="avatar"><img alt="" src="img/persona2.jpg" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
@@ -166,20 +126,19 @@ significa q extende a view master -->
             <li class="item">
                 <div class="testimonial d-flex flex-wrap">
                     <div class="text">
-                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many
-                            legs,
-                            pitifully thin compared with the size of the rest of him, waved about helplessly as he
-                            looked. "What's
-                            happened to me? " he thought. It wasn't a dream.</p>
+                        <p>Após ter ter pesquisado um lugar para colocar o nosso filho, encontrei em carnide o lugar
+                            perfeito para satisfazer as minhas necessidades</p>
                     </div>
                     <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                         <div class="icon"><i class="fa fa-quote-left"></i></div>
                         <div class="testimonial-info d-flex">
                             <div class="title">
-                                <h5>John McIntyre</h5>
-                                <p>CEO, TransTech</p>
+                                <h5>Diogo Calisto</h5>
+                                <strong>
+                                    <p>29/11/2019</p>
+                                </strong>
                             </div>
-                            <div class="avatar"><img alt="" src="img/person-2.jpg" class="img-fluid"></div>
+                            <div class="avatar"><img alt="" src="img/persona1.jpg" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
@@ -187,21 +146,18 @@ significa q extende a view master -->
             <li class="item">
                 <div class="testimonial d-flex flex-wrap">
                     <div class="text">
-                        <p>His room, a proper human room although a little too small, lay peacefully between its four
-                            familiar
-                            walls.</p>
-                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman
-                            - and
-                            above it there hung a picture that he had recently cut out of an illustrated magazine and
-                            housed in a
-                            nice, gilded frame.</p>
+                        <p>Não tenho condiçoes nem tempo devido ao trabalho para dar a atenção necessaria aos meus pais,
+                            por isso decidi inscrevê-los no Centro social de Carnide.</p>
+                        <p>Hoje em dia vejo que foi a melhor decisão da minha vida! Obrigado a esta equipa incrível!</p>
                     </div>
                     <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                         <div class="icon"><i class="fa fa-quote-left"></i></div>
                         <div class="testimonial-info d-flex">
                             <div class="title">
-                                <h5>John McIntyre</h5>
-                                <p>CEO, TransTech</p>
+                                <h5>Ana Santos</h5>
+                                <strong>
+                                    <p>01/11/2019</p>
+                                </strong>
                             </div>
                             <div class="avatar"><img alt="" src="img/person-3.png" class="img-fluid"></div>
                         </div>
@@ -211,139 +167,67 @@ significa q extende a view master -->
             <li class="item">
                 <div class="testimonial d-flex flex-wrap">
                     <div class="text">
-                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur
-                            muff that
-                            covered the whole of her lower arm towards the viewer. Gregor then turned to look out the
-                            window at
-                            the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite
-                            sad.</p>
+                        <p>Sinto que ao colocar os meus avôs neste Centro, eles ganharam outro ânimo, pois este promove
+                            atividades ludicas para os utentes.</p>
                     </div>
                     <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                         <div class="icon"><i class="fa fa-quote-left"></i></div>
                         <div class="testimonial-info d-flex">
                             <div class="title">
-                                <h5>John McIntyre</h5>
-                                <p>CEO, TransTech</p>
+                                <h5>João Camões</h5>
+                                <strong>
+                                    <p>21/10/2019</p>
+                                </strong>
                             </div>
-                            <div class="avatar"><img alt="" src="img/person-4.jpg" class="img-fluid"></div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="testimonial d-flex flex-wrap">
-                    <div class="text">
-                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur
-                            muff that
-                            covered the whole of her lower arm towards the viewer. Gregor then turned to look out the
-                            window at
-                            the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite
-                            sad. Gregor
-                            then turned to look out the window at the dull weather. Drops of rain could be heard hitting
-                            the pane,
-                            which made him feel quite sad.</p>
-                    </div>
-                    <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                        <div class="icon"><i class="fa fa-quote-left"></i></div>
-                        <div class="testimonial-info d-flex">
-                            <div class="title">
-                                <h5>John McIntyre</h5>
-                                <p>CEO, TransTech</p>
-                            </div>
-                            <div class="avatar"><img alt="" src="img/person-1.jpg" class="img-fluid"></div>
+                            <div class="avatar"><img alt="" src="img/persona4.jpg" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
             </li>
         </ul>
-        <!-- Carousel End-->
     </div>
 </section>
-<section style="background: url(img/fixed-background-2.jpg) center top no-repeat; background-size: cover;"
-    class="bar no-mb color-white text-center bg-fixed relative-positioned">
-    <div class="dark-mask"></div>
+<section class="bar pt-5">
     <div class="container">
-        <div class="icon icon-outlined icon-lg"><i class="fa fa-file-code-o"></i></div>
-        <h3 class="text-uppercase">Do you want to see more?</h3>
-        <p class="lead">We have prepared for you more than 40 different HTML pages, including 5 variations of homepage.
-        </p>
-        <p class="text-center"><a href="index2.html" class="btn btn-template-outlined-white btn-lg">See another
-                homepage</a></p>
-    </div>
-</section>
-<section class="bg-white bar">
-    <div class="container">
-        <div class="heading text-center">
-            <h2>From the blog</h2>
-        </div>
-        <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-            egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. <a href="blog.html">Check our
-                blog</a></p>
         <div class="row">
-            <div class="col-lg-3">
-                <div class="home-blog-post">
-                    <div class="image"><img src="img/portfolio-4.jpg" alt="..." class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#"
-                                class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
-                    </div>
-                    <div class="text">
-                        <h4><a href="#">Fashion Now </a></h4>
-                        <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a></p>
-                        <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold
-                            green
-                            moved fowl Moved life us beast good yielding. Have bring.</p><a href="#"
-                            class="btn btn-template-outlined">Continue Reading</a>
-                    </div>
+            <div class="col-md-12">
+                <div class="heading text-center">
+                    <h2>Deixe aqui o seu testemunho</h2>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="home-blog-post">
-                    <div class="image"><img src="img/portfolio-3.jpg" alt="..." class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#"
-                                class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
+            <div class="col-md-8 mx-auto">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="nome"></label>
+                                <input id="nome" type="text" class="form-control" placeholder="Primeiro Nome">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="asssunto"></label>
+                                <input id="assunto" type="text" class="form-control" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input id="email" type="text" class="form-control" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="message"></label>
+                                <textarea id="message" class="form-control" placeholder="Testemunho"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
+                                Enviar</button>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h4><a href="#">What to do</a></h4>
-                        <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a></p>
-                        <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold
-                            green
-                            moved fowl Moved life us beast good yielding. Have bring.</p><a href="#"
-                            class="btn btn-template-outlined">Continue Reading</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="home-blog-post">
-                    <div class="image"><img src="img/portfolio-5.jpg" alt="..." class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#"
-                                class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
-                    </div>
-                    <div class="text">
-                        <h4><a href="#">5 ways to look awesome</a></h4>
-                        <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a></p>
-                        <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold
-                            green
-                            moved fowl Moved life us beast good yielding. Have bring.</p><a href="#"
-                            class="btn btn-template-outlined">Continue Reading</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="home-blog-post">
-                    <div class="image"><img src="img/portfolio-6.jpg" alt="..." class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#"
-                                class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
-                    </div>
-                    <div class="text">
-                        <h4><a href="#">Fashion Now </a></h4>
-                        <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a></p>
-                        <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold
-                            green
-                            moved fowl Moved life us beast good yielding. Have bring.</p><a href="#"
-                            class="btn btn-template-outlined">Continue Reading</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -351,7 +235,7 @@ significa q extende a view master -->
 <section class="bar bg-gray">
     <div class="container">
         <div class="heading text-center">
-            <h2>Our Clients</h2>
+            <h2>Parceiros</h2>
         </div>
         <ul class="list-unstyled owl-carousel customers no-mb">
             <li class="item"><img src="img/customer-1.png" alt="" class="img-fluid"></li>
@@ -363,17 +247,5 @@ significa q extende a view master -->
         </ul>
     </div>
 </section>
-<!-- GET IT-->
-<div class="get-it">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 text-center p-3">
-                <h3>Do you want cool website like this one?</h3>
-            </div>
-            <div class="col-lg-4 text-center p-3"> <a href="#" class="btn btn-template-outlined-white">Buy this template
-                    now</a></div>
-        </div>
-    </div>
-</div>
 
 @endsection
