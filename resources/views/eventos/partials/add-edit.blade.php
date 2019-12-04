@@ -28,10 +28,3 @@
 </div>
 
 
-<div class="form-group">
-    <label for="inputCategoria">Categoria</label>
-    <select name="categoria" id="inputCategoria" class="form-control" value="{{old('categoria',$eventos->categoria)}}">
-            <option value="Projetos"> Projetos </option>
-            <option value="Eventos"> Eventos </option>
-    </select>
-</div>
