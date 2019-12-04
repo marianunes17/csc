@@ -59,7 +59,7 @@
         </table>
       </div>
       @else
-        <h6>De momento, não há eventos/h6>  <!--Caso não tenha eventos mostra esta mensagem-->
+        <h6>De momento, não há eventos </h6>  <!--Caso não tenha eventos mostra esta mensagem-->
     @endif
     </div>
   </div>
