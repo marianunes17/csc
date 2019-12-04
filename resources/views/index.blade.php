@@ -16,29 +16,30 @@ significa q extende a view master -->
                 <div class="homepage owl-carousel">
                     <div class="item">
                         <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="img/centrocrs.jpg" alt="" class="ml-auto">
+                            <div class="col-md-5 text-right">
+                                <h1>CENTRO DE DIA</h1>
+                                <p>+ Conforto<br>+ companhia<br>+ ativades<br> Venha visitar-nos!</p>
+                            </div>
+                            <div class="col-md-7"><img src="img/centrodia.png" alt="" class="img-fluid"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-7 text-center"><img src="img/centrodia2.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-5">
+                                <h2>LAR</h2>
+                                <p>O nosso centro dá as<br> melhores codições<br> as pessoas mais necessitada!</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="img/crechecrs.jpg" alt="" class="ml-auto">
+                            <div class="col-md-5 text-right">
+                                <h1>CRECHE</h1>
+                                <p>O futuro das vossas crianças<br>começa aqui no CSC!</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="img/trabalhos.jpg" alt="" class="ml-auto">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="img/atividades.jpg" alt="" class="ml-auto">
+                            <div class="col-md-7"><img src="img/creche.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -213,7 +214,7 @@ significa q extende a view master -->
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="email"></label>
-                                <input id="email" type="text" class="form-control" placeholder="E-mail">
+                                <input id="email" type="email" class="form-control" placeholder="E-mail">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -238,12 +239,13 @@ significa q extende a view master -->
             <h2>Parceiros</h2>
         </div>
         <ul class="list-unstyled owl-carousel customers no-mb">
-            <li class="item"><img src="img/customer-1.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/customer-2.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/customer-3.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/customer-4.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/customer-5.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/customer-6.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria1.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria2.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria3.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria4.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria5.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria6.png" alt="" class="img-fluid"></li>
+            <li class="item"><img src="img/parceria7_2.png" alt="" class="img-fluid"></li>
         </ul>
     </div>
 </section>
