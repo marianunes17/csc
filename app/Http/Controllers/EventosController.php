@@ -1,10 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\eventos;
+use App\Category;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventosRequest;
 use App\Http\Requests\UpdateEventosRequest;
-use App\eventos;
-use Illuminate\Http\Request;
+
+
 
 class EventosController extends Controller
 {
@@ -23,10 +27,9 @@ class EventosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create(){
         $eventos=new eventos;
-        return view('eventos.add', compact("eventos"));
+        return view('eventos.add',compact("categoria","eventos"));
     }
 
     /**
@@ -37,11 +40,11 @@ class EventosController extends Controller
      */
     public function store(StoreEventosRequest $request) {
         $fields=$request->validated();
-        $eventos=new eventos();
+        $eventos=new eventos;
         $eventos->fill($fields);
-      /*  $eventos->categoria=$fields["categoria"];*/
+        $eventos->categoria_id=$fields["categoria"];
         $eventos->save();
-        return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
+        return redirect()->route('eventos.index')->with('success', 'O evento foi criado com sucesso');
     }
 
     /**
@@ -87,7 +90,7 @@ class EventosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(eventos $eventos){
-        if ($eventos->eventos()->exists()){
+        if ($eventos->categoria()->exists()){
             return redirect()->route('eventos.index')->withErrors(
             ['delete'=>'Eventos has related eventoss'] );
             }
