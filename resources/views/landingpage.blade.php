@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{asset('vendor/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap2/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
@@ -21,7 +21,7 @@
         <div class="container py-2">
             <div class="box text-center">
 
-                <img src="{{asset('img/logos/logo_v.png')}}" alt="logotipo" class="w-25">
+                <img src="img/logos/logo_v.png" alt="logotipo" class="w-25">
                 <h1 class="title">Venha festejar o Natal connosco</h1>
                 <p class="description font-italic">"Dia <span class="font-weight-bold size">15</span> de dezembro, às
                     <span class="font-weight-bold size">16</span> horas,
@@ -67,7 +67,7 @@
                     <div class="row opiniao position-relative align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <figure class="d-inline-block">
-                                <img src="{{asset('img/mulher.jpg')}}" alt="testemunho mulher" class="w-50">
+                                <img src="img/mulher.jpg" alt="testemunho mulher" class="w-50">
                             </figure>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -83,7 +83,7 @@
                     <div class="row opiniao position-relative align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <figure class="d-inline-block">
-                                <img src="{{asset('img/joao.jpg')}}" alt="testemunho homem" class="w-50">
+                                <img src="img/joao.jpg" alt="testemunho homem" class="w-50">
                             </figure>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -100,7 +100,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <figure class="d-inline-block">
-                                <img src="{{asset('img/idosa.jpg')}}" alt="testemunho idosa" class="w-50">
+                                <img src="img/idosa.jpg" alt="testemunho idosa" class="w-50">
                             </figure>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
