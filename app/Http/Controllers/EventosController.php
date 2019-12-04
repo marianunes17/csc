@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\StoreEventosRequest;
 use App\Http\Requests\UpdateEventosRequest;
-
 use App\eventos;
 use Illuminate\Http\Request;
 
@@ -40,18 +39,9 @@ class EventosController extends Controller
         $fields=$request->validated();
         $eventos=new eventos();
         $eventos->fill($fields);
-        $eventos->categoria=$fields["categoria"];
+      /*  $eventos->categoria=$fields["categoria"];*/
         $eventos->save();
         return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
-
-        if ($request->hasFile('imagem')) {
-            $imagem = $request->file('imagem');
-            $postImg = $post->id . '_' . time() . '.' . $imagem->getClientOriginalExtension();
-            Storage::disk('public')->putFileAs('posts_images', $imagem, $postImg);
-            $eventos->imagem = $eventosImg;
-            $eventos->save();
-        }
-
     }
 
     /**
