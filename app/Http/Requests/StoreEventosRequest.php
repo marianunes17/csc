@@ -20,12 +20,15 @@ class StoreEventosRequest extends FormRequest{
      * @return array
      */
     public function rules() {
-        return ["name" => 'required|min:3|max:20|unique:eventos,name|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "description" => 'required'
+        return [
+
+            "titulo" => 'required|min:3|max:20|unique:eventos,name|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "descricao" => 'required',
+            "categoria"
         ];
     }
 
     public function messages() {
-        return ['name.regex' => 'Name should contain only letters and spaces'];
+        return ['titulo.regex' => 'Name should contain only letters and spaces'];
     }
 }
