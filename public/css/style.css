@@ -4,7 +4,7 @@ body {
 }
 
 #one {
-    background-image: url("christmasphoto2.jpg");
+    background-image: url("img/christmasphoto2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -40,7 +40,7 @@ body {
 }
 
 #two {
-    background-image: url("coming.jpg");
+    background-image: url("img/coming.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -68,7 +68,7 @@ body {
 }
 
 #three {
-    background-image: url("testemunhos2.jpg");
+    background-image: url("img/testemunhos2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -142,7 +142,7 @@ body {
 }
 
 #four{
-    background-image: url("contactos.jpg");
+    background-image: url("img/contactos.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
