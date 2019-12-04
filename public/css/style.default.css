@@ -2083,14 +2083,12 @@ table tr td {
 }
 
 .sidebar-menu.with-icons a.nav-link::before {
-  content: '\f105';
   display: inline-block;
   position: absolute;
   top: 50%;
   right: 15px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: 'FontAwesome';
 }
 
 .panel-heading {
@@ -2170,7 +2168,7 @@ table tr td {
 }
 
 .nav-pills .nav-link.active {
-  background: #4fbfa8;
+  background-color: #1D5B90;
 }
 
 .panel {
@@ -3880,7 +3878,8 @@ a>code {
 .card {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0;
+  border-radius: 10px;
+  border-top: 4px solid #1D5B90 !important;
 }
 
 .card>.list-group:first-child .list-group-item:first-child {
@@ -3984,3 +3983,11 @@ a>code {
   }
 }
 
+.btn-outline-primary{
+    color: black;
+    border-color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #1D5B90;
+}
