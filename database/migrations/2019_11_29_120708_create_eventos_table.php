@@ -14,14 +14,24 @@ class CreateEventosTable extends Migration
     public function up()
     {
         Schema::create('eventos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+           /* $table->bigIncrements('id');
             $table->string('nome');
             $table->string('descricao');
-            $table->unsignedBigInteger('categoria');
             $table->datetime('data');
             $table->string('imagem')->nullable();
+            $table->unsignedBigInteger('categoria');
             $table->timestamps();
+            $table->foreign('categoria')->references('id')->on('categoria');*/
 
+            $table->bigIncrements('id');
+            $table->string('nome', 100);
+            $table->dateTime('data');
+            $table->text('descricao');
+            $table->string('image')->nullable();
+            $table->string('viewMore')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categoria');
         });
     }
 
