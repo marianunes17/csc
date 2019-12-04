@@ -8,60 +8,60 @@
 
 <section class="bar">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading">
-                    <h2>We are here to help you</h2>
-                </div>
-                <p class="lead">Are you curious about something? Do you have some kind of problem with our products? As
-                    am
-                    hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but
-                    built
-                    gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined
-                    in
-                    declared marianne is vicinity.</p>
-                <p class="text-sm">Please feel free to contact us, our customer service center is working for you 24/7.
-                </p>
-            </div>
-        </div>
+        <p class="lead text-center">O Centro Social de Carnide põe ao seu dispor contactos para que possa colocar todas
+            as
+            questões
+            de uma forma rápida e directa. Estamos abertos a qualquer dúvida ou sugestão. Para isso basta
+            enviar-nos um
+            e-mail ou preencher o formulário a baixo.</p>
     </div>
 </section>
 <section>
-    <div class="row text-center">
-        <div class="col-md-4">
-            <div class="box-simple">
-                <div class="icon-outlined"><i class="fa fa-map-marker"></i></div>
-                <h3 class="h4">Address</h3>
-                <p>13/25 New Avenue<br> New Heaven, 45Y 73J<br> England, <strong>Great Britain</strong></p>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="box-simple">
+                    <div class="icon-outlined"><i class="fa fa-map-marker"></i></div>
+                    <h3 class="h4">Morada</h3>
+                    <p>Travessa da fonte nº4, junto ao Centro Escolar<br> Portugal, <strong>Pombal/Carnide</strong></p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="box-simple">
-                <div class="icon-outlined"><i class="fa fa-phone"></i></div>
-                <h3 class="h4">Call center</h3>
-                <p>This number is toll free if calling from Great Britain otherwise we advise you to use the electronic
-                    form of communication.</p>
-                <p><strong>+33 555 444 333</strong></p>
+            <div class="col-md-4">
+                <div class="box-simple">
+                    <div class="icon-outlined"><i class="fa fa-phone"></i></div>
+                    <h3 class="h4">Contacto Telefnico</h3>
+                    <p>Este contacto encontra-se disponivel 24 horas por dia. Não hesite em contactar. </p>
+                    <p><strong>Telemóvel: 968 415 877 </strong> <br> <strong> Telefone: 236 946 189</strong></p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="box-simple">
-                <div class="icon-outlined"><i class="fa fa-envelope"></i></div>
-                <h3 class="h4">Electronic support</h3>
-                <p>Please feel free to write an email to us or to use our electronic ticketing system.</p>
-                <ul class="list-unstyled text-sm">
-                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong></li>
-                    <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
-                </ul>
+            <div class="col-md-4">
+                <div class="box-simple">
+                    <div class="icon-outlined"><i class="fa fa-envelope"></i></div>
+                    <h3 class="h4">E-mail</h3>
+                    <p>Não hesite em contactar via email caso tenha alguma questão.</p>
+                    <ul class="list-unstyled text-sm">
+                        <li><strong><a href="mailto:">cacddjm@gmail.com</a></strong></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="bar mt-5">
+    <div class="heading text-center">
+        <h2>Localização</h2><br><br>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1530.6840925025829!2d-8.730496713075222!3d39.888388229661466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd226eb82eaf26a3%3A0x80a58f4dfc8f8f28!2sCentro%20Social%20de%20Carnide!5e0!3m2!1sen!2spt!4v1575157862156!5m2!1sen!2spt"
+            width="100%" height="450" frameborder="0" style="border:0;" class="p-0 m-0"></iframe>
+    </div>
+</section>
+
 <section class="bar pt-0">
     <div class="row">
         <div class="col-md-12">
             <div class="heading text-center">
-                <h2>Contact form</h2>
+                <h2>Formulário de Contacto</h2>
             </div>
         </div>
         <div class="col-md-8 mx-auto">
@@ -69,58 +69,40 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="firstname">First Name</label>
-                            <input id="firstname" type="text" class="form-control">
+                            <label for="nome"></label>
+                            <input id="nome" type="text" class="form-control" placeholder="Nome">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="lastname">Last Name</label>
-                            <input id="lastname" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input id="email" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input id="subject" type="text" class="form-control">
+                            <label for="asssunto"></label>
+                            <input id="assunto" type="text" class="form-control" placeholder="Assunto">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control"></textarea>
+                            <label for="email"></label>
+                            <input id="email" type="text" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
+                                data-type="email" class="form-control" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="message"></label>
+                            <textarea id="message" class="form-control" placeholder="Escreva a sua questão!"></textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 text-center">
-                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i> Send
-                            message</button>
+                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
+                            Enviar</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </section>
-</div>
-<div id="map"></div>
-</div>
-<!-- GET IT-->
-<div class="get-it">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 text-center p-3">
-                <h3>Do you want cool website like this one?</h3>
-            </div>
-            <div class="col-lg-4 text-center p-3"> <a href="#" class="btn btn-template-outlined-white">Buy this template
-                    now</a></div>
-        </div>
-    </div>
-</div>
+
+
 
 
 
