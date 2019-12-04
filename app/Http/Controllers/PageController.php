@@ -47,6 +47,10 @@ class PageController extends Controller
     public function registar(){
         return view('registar')->with('menu', 'Registar');
     }
+
+    public function landingpage(){
+        return view('landingpage')->with('menu', 'landingpage');
+    }
 }
 
 
