@@ -35,6 +35,27 @@
 
                 <div class="card-body">
                     <p class="card-text">
+                        <a href="{{route('csc.landingpage')}}"> Evento </a>
+                    </p>
+
+                    <p class="card-text">
+                        Juntámos o ar puro da natureza com muita comida
+                        saudável, imensas atividades e muita diversão
+                    </p>
+                </div>
+                <div class="card-footer text-muted d-inline-block">
+                    <span class="text-align left"> 30 agosto </span>
+                    <span class="text-algin right">Atividade</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header text-center">
+                    PICNIC NO PARQUE
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">
                         Hoje reunimos crianças e graúdos e fizemos um picnic no
                         parque.
                     </p>
@@ -63,8 +84,8 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                                <p> Inicio dos preparativos para o
-                                                        pic-nic </p>
+                                            <p> Inicio dos preparativos para o
+                                                pic-nic </p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -111,8 +132,8 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                                <p>Convivio entre diferentes
-                                                        gerações</p>
+                                            <p>Convivio entre diferentes
+                                                gerações</p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -159,7 +180,7 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                                <p> D. Lurdes </p>
+                                            <p> D. Lurdes </p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -206,7 +227,7 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                           <p>Pic-nic</p>
+                                            <p>Pic-nic</p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -251,7 +272,8 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <p> Partilha entre o Sr. José e o Rafael</p>
+                                            <p> Partilha entre o Sr. José e o
+                                                Rafael</p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -296,7 +318,9 @@
                                     <!--Content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <p> A Madalena, a Leonor e o Tomás a saborearem uma deliciosa melancia </p>
+                                            <p> A Madalena, a Leonor e o Tomás a
+                                                saborearem uma deliciosa
+                                                melancia </p>
                                             <button type="button" class="btn
                                                 btn-outline-primary
                                                 btn-rounded btn-md ml-4"
@@ -333,7 +357,6 @@
                     <span class="text-align left"> 30 agosto </span>
                     <span class="text-algin right">Atividade</span>
                 </div>
-            </div>
             </div>
         </div>
     </div>
