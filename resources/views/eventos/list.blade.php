@@ -27,9 +27,9 @@
           <tbody>
             @foreach($eventos as $eventos)
             <tr>
-                <td>{{$eventos->titulo}}</td>
+                <td>{{$eventos->nome}}</td>
                 <td>{{$eventos->descricao}}</td>
-                <td>{{$eventos->categorias}}</td>
+                <td>{{$eventos->categoria_id}}</td>
 
                 <td nowrap>
                 <a class="btn btn-xs btn-primary btn-p" href="{{route('eventos.show',$eventos)}}">
