@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="card-group">
+    <div class="card-group mb-5">
         <div class="card">
             <img class="card-img-top" src="img/parceria4.png" alt="Card image cap">
             <div class="card-body">
