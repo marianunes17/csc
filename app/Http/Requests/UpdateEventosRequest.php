@@ -21,12 +21,12 @@ class UpdateEventosRequest extends FormRequest {
      * @return array
      */
     public function rules() {
-        return ["name" => 'required|min:3|max:20|unique:eventos,name,'.
+        return ["titulo" => 'required|min:3|max:20|unique:eventos,titulo,'.
             $this->eventos->id.'|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "description" => 'required' ];
+            "descricao" => 'required' ];
     }
 
     public function messages() {
-        return [ 'name.regex' => 'Name should contain only letters and spaces' ];
+        return [ 'titulo.regex' => 'Name should contain only letters and spaces' ];
     }
 }
