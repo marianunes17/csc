@@ -11,7 +11,7 @@
         <section class="bar mb-0">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="heading">
+                    <div class="heading text-center">
                         <h2>Conheça a nossa equipa!</h2>
                     </div>
                     <p class="lead">Contamos com uma equipa de profissionais qualificada que garante o nosso bom
