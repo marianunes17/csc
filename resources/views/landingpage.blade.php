@@ -30,7 +30,7 @@
                     <span class="font-weight-bold size">16</span> horas,
                     haverá a festa de Natal da nossa instituição.
                     Apareça, está convidado/a"</p>
-                <a href="#" class="btn btn-danger text-white text-uppercase my-5" title="ver site">Visitar</a>
+                <a href="http://csc.test/" target="_blank" class="btn btn-danger text-white text-uppercase my-5" title="ver site">Visitar</a>
             </div>
         </div>
     </section>
@@ -196,7 +196,7 @@
         </div>
     </section>
     <section id="five" class="text-white text-center">
-        <a href="#" target="_blank"><i class="fa fa-facebook social text-center" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/" target="_blank"><i class="fa fa-facebook social text-center" aria-hidden="true"></i></a>
         <p class="mt-4">Copyright © Centro Social de Carnide, 2019</p>
     </section>
 </body>
