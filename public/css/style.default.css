@@ -1445,7 +1445,7 @@ header.nav-holder.sticky {
   opacity: 80%;
 
   /* Set a specific height */
-  min-height: 90px; 
+  min-height: 90px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -1468,7 +1468,7 @@ header.nav-holder.sticky {
 .serv_line{
   margin-top: 5%;
   margin-left: 25%;
-  width:50%; 
+  width:50%;
   height:2px;
    background: #c2a636;
 }
@@ -4058,10 +4058,6 @@ a>code {
 }
 
 
-/*
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color: #1D5B90;
-}*/
 
 
 .nav-link.categorias{
