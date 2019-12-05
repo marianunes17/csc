@@ -76,7 +76,7 @@
 
           <section class="bar imgboxserv">
             <div class="row">
-                <div class="serv_line2"></div>
+               
                   <div class="col-md-6 servimg">
                     <img src="img/ERPI.jpg" class="img-fluid" alt="Responsive image">
                   </div>
@@ -92,8 +92,21 @@
                   <div class="col-md-6 servimg">
                     <img src="img/CRECHE2.jpg" class="img-fluid" alt="Responsive image">
                   </div>
+                  
+              <div class="row text-center">
+                <div class="col-md-12">
+                  <div class="box-simple servtexto">
+                    <div class="serv_line2"></div>
+                    <p>O Centro Social de Carnide é uma Instituição de Solidariedade Social de âmbito local, que tem como objectivos, entre outros, o apoio à família;  à infância e juventude, incluindo as crianças e jovens em perigo; o apoio às pessoas idosas, às pessoas com deficiência e incapacidade bem como o apoio à integração social e comunitária.</p>
+
+                  <p>O CSC é uma instituição bem organizada, que assenta a sua acção em valores humanistas e se pretende constituir como uma referência e uma força impulsionadora da melhoria do bem estar e da qualidade de vida das populações que serve.</p>
+
+                  <p>Mobiliza todas as suas energias para a melhoria dos seus serviços e para o alargamento das respostas que disponibiliza às pessoas, famílias e comunidade, assente numa equipa de profissionais motivados e competentes, que compreende os esforços que tem ainda pela frente para disponibilizar de qualidade que os nossos utentes e a nossa comunidade merecem.</p></div>
                   <div class="serv_line3"></div>
+                </div>
+              </div>
             </div>
+          </section>
       </div>
       
     </div>
