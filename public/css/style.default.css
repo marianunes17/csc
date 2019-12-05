@@ -1466,7 +1466,7 @@ header.nav-holder.sticky {
 }
 
 .serv_line{
-  margin-bottom: 6%;
+  margin-bottom: 7%;
   margin-left: 25%;
   width:50%;
   height:2px;
@@ -1485,11 +1485,11 @@ header.nav-holder.sticky {
 .serv_line3{
   opacity: 70%;
   margin-top: 5%;
-  margin-bottom: 1%;
+  margin-bottom: 0%;
   margin-left: 25%;
   width:50%;
   height:2px;
-   background: #c2a636;
+  background: #c2a636;
 }
 
 .ourservices p{
@@ -1543,6 +1543,12 @@ header.nav-holder.sticky {
   opacity: 100%
 }
 
+.servtexto{
+  margin-top: 5%;
+}
+.servtexto p{
+  font-size: 17px;
+}
 
 /*    Duartinho   */
 
