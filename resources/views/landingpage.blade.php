@@ -13,7 +13,10 @@
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Landing Page</title>
+     <!-- Favicon and apple touch icons-->
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
+
+    <title>Landing Page | Centro Social de Carnide </title>
 </head>
 
 <body>
