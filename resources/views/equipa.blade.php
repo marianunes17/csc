@@ -202,7 +202,7 @@
                                     <div class="icon"><i class="fa fa-quote-left"></i></div>
                                     <div class="testimonial-info d-flex">
                                         <div class="title">
-                                            <h5>John McIntyre</h5>
+                                            <h5>David Lopes</h5>
                                             <p>CTO</p>
                                         </div>
                                         <div class="avatar"><img alt="" src="img/person-2.jpg" class="img-fluid"></div>
