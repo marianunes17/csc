@@ -20,6 +20,8 @@ Route::get('/servicos', 'PageController@servicos')->name("csc.servicos");
 Route::get('/eventos', 'PageController@eventos')->name("csc.eventos");
 Route::get('/contactos', 'PageController@contactos')->name("csc.contactos");
 
+Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage");
+
 Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
 Route::get('/admin');

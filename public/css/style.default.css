@@ -3019,8 +3019,8 @@ STYLE SWITCHER FOR DEMO
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #4fbfa8;
-  border-color: #4fbfa8;
+  background-color: #1D5B90;
+  border-color:  #1D5B90;
 }
 
 .btn-outline-primary:focus,
@@ -3947,9 +3947,8 @@ a>code {
 */
 .card {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #1D5B90 !important;
   border-radius: 10px;
-  border-top: 4px inset #1D5B90 !important;
 }
 
 .card>.list-group:first-child .list-group-item:first-child {
@@ -4058,6 +4057,27 @@ a>code {
     border-color: black;
 }
 
+
+/*
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: #1D5B90;
+}*/
+
+
+.nav-link.categorias{
+    background-color: white !important;
+    color: #1D5B90 !important;
+}
+
+.nav-link.categorias:hover{
+    color: #1D5B90;
+    border-bottom: 1px solid #1D5B90;
+    border-bottom-left-radius: 7px;
+}
+
+.nav-link.categorias.active{
+    background-color: #1D5B90 !important;
+    color: white !important;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
 }
