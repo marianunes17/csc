@@ -18,10 +18,10 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
                         <li class="nav-item"><a href="#"
-                                class="nav-link
-                                active">Atividades</a></li>
+                                class="nav-link categorias
+                                active ">Atividades</a></li>
                         <li class="nav-item"><a href="#"
-                                class="nav-link">Projetos</a></li>
+                                class="nav-link categorias">Projetos</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,28 +30,45 @@
         <div class="col-lg-9">
             <div class="card">
                 <div class="card-header text-center">
-                    PICNIC NO PARQUE
+                    Festa de Natal
                 </div>
 
                 <div class="card-body">
                     <p class="card-text">
-                        <a href="{{route('csc.landingpage')}}"> Evento </a>
-                    </p>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="{{route('csc.landingpage')}}"
+                                    target="_blank">
+                                    <img src="{{asset('img/flyer.jpg')}}"
+                                        alt="flyer de natal"
+                                        class="img-fluid z-depth-1">
+                                </a>
+                            </div>
 
-                    <p class="card-text">
-                        Juntámos o ar puro da natureza com muita comida
-                        saudável, imensas atividades e muita diversão
-                    </p>
+                            <div class="col-lg-9">
+                                Temos todo o gosto em convida-lo para a nossa
+                                festa de
+                                Natal que se realizará no dia 15 de dezembro
+                                pelas 16 horas
+                            </p>
+
+                            <p class="card-text"> Venha ter connosco! </p>
+                            <p class="card-text"> Reserve já o seu lugar
+                                <a href="{{route('csc.landingpage')}}"
+                                    target="_blank"> aqui </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer text-muted d-inline-block">
-                    <span class="text-align left"> 30 agosto </span>
-                    <span class="text-algin right">Atividade</span>
+                    <span class="float-left"> 05 dezembro </span>
+                    <span class="float-right">Atividade</span>
                 </div>
             </div>
-
+            <br>
             <div class="card">
                 <div class="card-header text-center">
-                    PICNIC NO PARQUE
+                    Picnic no Parque
                 </div>
 
                 <div class="card-body">
@@ -99,7 +116,7 @@
                                         <div class="modal-body mb-0 p-0">
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_1.jpg"
+                                                    src="{{asset('img/atividade1_1.jpg')}}"
                                                     alt="pic-nic"
                                                     data-toggle="modal"
                                                     data-target="#modal1">
@@ -113,7 +130,7 @@
 
                             <a>
                                 <img class="img-fluid z-depth-1"
-                                    src="img/atividade1_1.jpg"
+                                    src="{{asset('img/atividade1_1.jpg')}}"
                                     alt="pic-nic"
                                     data-toggle="modal" data-target="#modal1">
                             </a>
@@ -147,7 +164,7 @@
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_2.jpg"
+                                                    src="{{asset('img/atividade1_2.jpg')}}"
                                                     alt="diferentes gerações"
                                                     data-toggle="modal"
                                                     data-target="#modal2">
@@ -160,7 +177,7 @@
                             </div>
                             <!--Modal: Name-->
                             <a><img class="img-fluid z-depth-1"
-                                    src="img/atividade1_2.jpg"
+                                    src="{{asset('img/atividade1_2.jpg')}}"
                                     alt="diferentes gerações"
                                     data-toggle="modal" data-target="#modal2"></a>
                         </div>
@@ -193,7 +210,7 @@
                                         <div class="modal-body mb-0 p-0">
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_3.jpg"
+                                                    src="{{asset('img/atividade1_3.jpg')}}"
                                                     alt="D.Lurdes"
                                                     data-toggle="modal"
                                                     data-target="#modal3">
@@ -207,7 +224,7 @@
                             <!--Modal: Name-->
 
                             <a><img class="img-fluid z-depth-1"
-                                    src="img/atividade1_3.jpg"
+                                    src="{{asset('img/atividade1_3.jpg')}}"
                                     alt="D.Lurdes"
                                     data-toggle="modal" data-target="#modal3"></a>
                         </div>
@@ -242,7 +259,7 @@
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_4.jpg"
+                                                    src="{{asset('img/atividade1_4.jpg')}}"
                                                     alt="pic-nic"
                                                     data-toggle="modal"
                                                     data-target="#modal4">
@@ -254,7 +271,7 @@
                             <!--Modal: Name-->
 
                             <a><img class="img-fluid z-depth-1"
-                                    src="img/atividade1_4.jpg"
+                                    src="{{asset('img/atividade1_4.jpg')}}"
                                     alt="pic-nic"
                                     data-toggle="modal" data-target="#modal4"></a>
                         </div>
@@ -287,7 +304,7 @@
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_5.jpg"
+                                                    src="{{asset('img/atividade1_5.jpg')}}"
                                                     alt="partilha"
                                                     data-toggle="modal"
                                                     data-target="#modal5">
@@ -301,7 +318,7 @@
                             <!--Modal: Name-->
 
                             <a><img class="img-fluid z-depth-1"
-                                    src="img/atividade1_5.jpg"
+                                    src="{{asset('img/atividade1_5.jpg')}}"
                                     alt="partilha"
                                     data-toggle="modal" data-target="#modal5"></a>
                         </div>
@@ -334,7 +351,7 @@
 
                                             <div class="embed-responsive">
                                                 <img class="img-fluid z-depth-1"
-                                                    src="img/atividade1_6.jpg"
+                                                    src="{{asset('img/atividade1_6.jpg')}}"
                                                     alt="crianças"
                                                     data-toggle="modal"
                                                     data-target="#modal6">
@@ -347,15 +364,15 @@
                             </div>
                             <!--Modal: Name-->
                             <a><img class="img-fluid z-depth-1"
-                                    src="img/atividade1_6.jpg"
+                                    src="{{asset('img/atividade1_6.jpg')}}"
                                     alt="crianças"
                                     data-toggle="modal" data-target="#modal6"></a>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted d-inline-block">
-                    <span class="text-align left"> 30 agosto </span>
-                    <span class="text-algin right">Atividade</span>
+                    <span class="float-left"> 25 novembro </span>
+                    <span class="float-right">Atividade</span>
                 </div>
             </div>
         </div>
