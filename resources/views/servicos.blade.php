@@ -4,6 +4,8 @@
 
 @section("content")
 
+@include ('layout.partials.banner')
+
 <link rel="stylesheet" type="text/css" href="../../public/css/servicos.css">
 <!--
     <div id="heading-breadcrumbs">
@@ -27,16 +29,16 @@
 
       <div id="content">
         <div class="container">
-          <section class="bar">
+          <section class="bar textboxserv">
             <div class="row">
               <div class="col-md-12 ourservices">
-                <div class="servicosparallax">
+               <!-- <div class="servicosparallax">
                   <div class="heading">
                     <h2>De mãos dadas com o futuro</h2>
                   </div>
-              </div>
-                <div class="serv_line"></div>
+              </div>-->
                 <p class=" lead text-center">Os nossos serviços</p>
+                <div class="serv_line"></div>
               </div>
             </div>
 
@@ -72,27 +74,25 @@
 
 
 
-          <section class="bar">
+          <section class="bar imgboxserv">
             <div class="row">
-                <div class="heading col-md-12">
-                  <h2>Why choose us</h2>
-              </div>
-
-                  <div class="col-md-3">
-                    <img src="img/ERPI.jpg" class="rounded img-fluid" alt="Responsive image">
+                <div class="serv_line2"></div>
+                  <div class="col-md-6 servimg">
+                    <img src="img/ERPI.jpg" class="img-fluid" alt="Responsive image">
                   </div>
 
-                  <div class="col-md-3">
-                    <img src="img/CENTRO DE DIA.jpg" class="rounded img-fluid" alt="Responsive image">
+                  <div class="col-md-6 servimg">
+                    <img src="img/CENTRO DE DIA.jpg" class="img-fluid" alt="Responsive image">
                   </div>
 
-                  <div class="col-md-3">
-                    <img src="img/SAD.jpg" class="rounded img-fluid" alt="Responsive image">
+                  <div class="col-md-6 servimg">
+                    <img src="img/SAD.jpg" class="img-fluid" alt="Responsive image">
                   </div>
 
-                  <div class="col-md-3">
-                    <img src="img/CRECHE.jpg" class="rounded img-fluid" alt="Responsive image">
-                </div>
+                  <div class="col-md-6 servimg">
+                    <img src="img/CRECHE2.jpg" class="img-fluid" alt="Responsive image">
+                  </div>
+                  <div class="serv_line3"></div>
             </div>
       </div>
       

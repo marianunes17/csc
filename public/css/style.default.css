@@ -1466,7 +1466,26 @@ header.nav-holder.sticky {
 }
 
 .serv_line{
+  margin-bottom: 6%;
+  margin-left: 25%;
+  width:50%;
+  height:2px;
+   background: #c2a636;
+}
+
+.serv_line2{
+  opacity: 70%;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  width:50%;
+  height:2px;
+   background: #c2a636;
+}
+
+.serv_line3{
+  opacity: 70%;
   margin-top: 5%;
+  margin-bottom: 1%;
   margin-left: 25%;
   width:50%;
   height:2px;
@@ -1477,6 +1496,15 @@ header.nav-holder.sticky {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 40px;
+}
+
+.textboxserv{
+  padding:0;
+}
+
+.imgboxserv{
+  padding: 0;
+  padding-bottom: 5%;
 }
 
 .contserv h3{
@@ -1504,7 +1532,21 @@ header.nav-holder.sticky {
   -webkit-transition: all 0.4s;
   transition: all 0.4s ease-in-out;
 }
+
+.servimg{
+  padding: 0px;
+  opacity: 60%;
+    -webkit-transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
+}
+.servimg:hover{
+  opacity: 100%
+}
+
+
 /*    Duartinho   */
+
+
 
 .box-simple.box-white {
   border: dotted 1px #999;
