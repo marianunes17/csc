@@ -1436,6 +1436,76 @@ header.nav-holder.sticky {
   font-size: 0.9rem;
 }
 
+
+/*    Duartinho   */
+
+.servicosparallax{
+  /* The image used */
+  background-image: url("../img/texture-bw.png");
+  opacity: 80%;
+
+  /* Set a specific height */
+  min-height: 90px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.ourservices h2{
+  padding: 30px;
+  text-align: center;
+  display: block;
+}
+
+.ourservices h2:after{
+ content: none;
+}
+
+.serv_line{
+  margin-top: 5%;
+  margin-left: 25%;
+  width:50%; 
+  height:2px;
+   background: #c2a636;
+}
+
+.ourservices p{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 40px;
+}
+
+.contserv h3{
+  font-size: 20px;
+
+}
+
+.contserv h3:after{
+  margin-left: 41%;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin-top: .6rem;
+    background: #c2a636;
+}
+
+.contserv p{
+  font-size: 17px;
+}
+
+.contserv:hover p{
+  color: black !important;
+  cursor: default;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
+}
+/*    Duartinho   */
+
 .box-simple.box-white {
   border: dotted 1px #999;
   padding: 15px 20px;
