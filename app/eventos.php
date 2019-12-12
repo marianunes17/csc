@@ -9,6 +9,6 @@ class eventos extends Model {
         'nome', 'descricao', 'data', 'imagem', 'categoria_id'];
 
     public function categoria(){
-        return $this->hasMany("App\category","categoria_id");
+        return $this->belongsTo("App\category","categoria_id");
     }
 }

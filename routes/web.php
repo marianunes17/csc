@@ -27,3 +27,4 @@ Route::get('/registar', 'PageController@registar')->name("csc.registar");
 Route::get('/admin');
 
 Route::resource('/admin/eventos', 'EventosController');
+Route::resource('/admin/utilizadores', 'UtilizadoresController');
