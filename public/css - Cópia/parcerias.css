@@ -1,0 +1,14 @@
+.card-img-top {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid gray !important;
+    border-radius: 0px;
+  }
