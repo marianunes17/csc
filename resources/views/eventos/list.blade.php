@@ -18,18 +18,31 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
+                <th>Imagem</th>
               <th>Título</th>
               <th>Descrição</th>
               <th>Categoria</th>
+              <th>Data</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             @foreach($eventos as $eventos)
             <tr>
+                <td>
+                    @if ($eventos->image)
+                    <img src="{{Storage::disk('public')->url('eventoss_images/').$eventos->image}}"
+                    class="img-eventos" alt="eventos image">
+                    @else
+                    <img src="{{asset('img/no-image.png')}}"
+                        class="img-eventos" alt="eventos image">
+                    @endif
+                </td>
+
                 <td>{{$eventos->nome}}</td>
                 <td>{{$eventos->descricao}}</td>
-                <td>{{$eventos->categoria_id}}</td>
+                <td>{{$eventos->categoria->nome}}</td>
+                <td>{{$eventos->data}}</td>
 
                 <td nowrap>
                 <a class="btn btn-xs btn-primary btn-p" href="{{route('eventos.show',$eventos)}}">

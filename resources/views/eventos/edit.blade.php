@@ -10,12 +10,7 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('eventos.update',$eventos)}}" class="form-group inline">
-                @csrf
-                @method("PUT")
-                <!--O formulário apenas suporta o post e o get, por isso tem de ser acrescentar @ method("PUT")
-                Rotas put -->
-
+			<form method="POST" action="#" class="form-group inline">
                 @include('eventos.partials.add-edit')
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="ok">Salvar</button>
