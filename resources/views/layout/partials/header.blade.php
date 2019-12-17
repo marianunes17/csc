@@ -138,7 +138,7 @@
                             <li>
                                 <div class="row">
                                     <div class="col-lg-7">
-                                        <img src="img/template-easy-customize.png" alt="" class="img-fluid d-none
+                                        <img src="img/template-easy-customize2.png" alt="" class="img-fluid d-none
                                             d-lg-block">
                                     </div>
                                     <div class="col-lg-4 col-md-2">
