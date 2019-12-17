@@ -30,11 +30,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($eventos as $eventos)
+                        @foreach($eventos as $evento)
                         <tr>
                             <td>
-                                @if ($eventos->imagem)
-                                <img src="{{Storage::disk('public')->url('eventos_images/').$eventos->image}}"
+                                @if ($evento->imagem)
+                                <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
                                 class="img-eventos" alt="eventos image">
                                 @else
                                 <img src="{{asset('img/no-image.png')}}"
@@ -42,22 +42,22 @@
                                 @endif
                             </td>
 
-                            <td>{{$eventos->nome}}</td>
-                            <td>{{$eventos->descricao}}</td>
-                            <td>{{$eventos->category->name}}</td>
-                            <td>{{$eventos->data}}</td>
+                            <td>{{$evento->nome}}</td>
+                            <td>{{$evento->descricao}}</td>
+                            <td>{{$evento->category->name}}</td>
+                            <td>{{$evento->data}}</td>
 
 
                             </td>
                             <td nowrap>
-                                <a href="{{route('eventos.show',$eventos)}}" class="text-primary d-inline">
+                                <a href="{{route('eventos.show',$evento)}}" class="text-primary d-inline">
                                     <i class="fas fa-eye fa-xs"></i></a>
 
-                                <a href="{{route('eventos.edit',$eventos)}}" class="text-primary d-inline">
+                                <a href="{{route('eventos.edit',$evento)}}" class="text-primary d-inline">
                                     <i class="fas fa-pen fa-xs"></i></a>
 
                                 <form method="POST"
-                                    action="{{route('eventos.destroy',$eventos)}}"
+                                    action="{{route('eventos.destroy',$evento)}}"
                                     role="form" class="d-inline"
                                     onsubmit="return confirm('Are you sure you
                                     want to delete this record?');">

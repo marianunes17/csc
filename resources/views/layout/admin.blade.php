@@ -34,7 +34,12 @@
     <div id="content-wrapper">
 
       <div class="container-fluid">
-
+        @if ($errors->any())
+        @include ('partials.errors')
+       @endif
+       @if (!empty(session('success')))
+        @include ('partials.success')
+       @endif
         @yield("content")
 
       </div>

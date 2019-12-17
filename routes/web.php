@@ -25,10 +25,8 @@ Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage"
 Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
 Route::get('/admin');
-Route::resource('/admin/Cotas', 'CotasController');
-Route::resource('/admin/utilizadores', 'UtilizadoresController');
+Route::resource('/admin/utilizadores', 'UserController');
 Route::resource('/admin/categorias', 'CategoryController');
 Route::resource('/admin/eventos', 'EventosController');
-Route::resource('/admin/testemunhos', 'TestemunhosController');
 
 

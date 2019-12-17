@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Eventos;
+use App\Evento;
 use App\Category; /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventosRequest;
@@ -18,7 +18,7 @@ class EventosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-     $eventos=Eventos::all();
+     $eventos=Evento::all();
      return view('eventos.list',compact('eventos'));
     }
 
@@ -30,8 +30,8 @@ class EventosController extends Controller
      */
     public function create() {
         $categories=Category::orderBy("name")->get();
-        $eventos=new Eventos;
-        return view('eventos.add',compact("categories","eventos"));
+        $evento=new Evento;
+        return view('eventos.add',compact("categories","evento"));
     }
 
     /**
@@ -42,17 +42,17 @@ class EventosController extends Controller
      */
     public function store(StoreEventosRequest $request) {
         $fields=$request->validated();
-        $eventos=new Eventos;
-        $eventos->fill($fields);
-        $eventos->category_id=$fields["category"];
-        $eventos->save();
+        $evento=new Evento;
+        $evento->fill($fields);
+        $evento->category_id=$fields["category"];
+        $evento->save();
 
         if ($request->hasFile('imagem')) {
             $image = $request->file('imagem');
-            $eventosImg = $eventos->id . '_' . time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->putFileAs('eventos_imagem', $image, $eventosImg);
-            $eventos->image = $eventosImg;
-            $eventos->save();
+            $eventoImg = $evento->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('public')->putFileAs('eventos_images', $image, $eventoImg);
+            $evento->imagem = $eventoImg;
+            $evento->save();
         }
 
         return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
@@ -60,13 +60,13 @@ class EventosController extends Controller
 
     /**
      * Display the specified resource.
-     *
+
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function show(eventos $eventos)
+    public function show(Evento $evento)
     {
-        //
+        return view('eventos.show',compact('evento'));
     }
 
     /**
@@ -75,9 +75,10 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function edit(eventos $eventos)
+    public function edit(Evento $evento)
     {
-        //
+        $categories=Category::orderBy("name")->get();
+        return view('eventos.edit',compact('categories','evento'));
     }
 
     /**
@@ -87,7 +88,7 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, eventos $eventos)
+    public function update(Request $request, Evento $evento)
     {
         //
     }
@@ -98,7 +99,7 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(eventos $eventos)
+    public function destroy(Evento $evento)
     {
         //
     }
