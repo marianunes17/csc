@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Dashboard</title>
+  <title>CSC | @yield('title') </title>
 
 
   <!-- Custom fonts for this template-->

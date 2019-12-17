@@ -23,8 +23,7 @@ class StoreEventosRequest extends FormRequest{
         return [
 
             "titulo" => 'required|min:3|max:20|unique:eventos,name|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "descricao" => 'required',
-            "categoria"
+            "descricao" => 'required'
         ];
     }
 

@@ -1,23 +1,19 @@
 
 @extends('layout.admin')
 
-@section("title", "Eventos")
+@section("title", "Categorias")
 
 @section('content')
 <div class="container-fluid">
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Evento
+			Category Information
         </div>
         <div class="card-body">
 
-			<div>
-				<img alt="Post image" src="xxx">
-			</div>
-
-			<div><strong>Titulo:</strong> xxx </div>
-			<div><strong>Descrição:</strong> xxx </div>
+			<div> <strong>Name:</strong> {{$category->name}} </div>
+            <div> <strong>Description:</strong> {{$category->description}} </div>
 		</div>
 	</div>
 </div>

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\eventos;
-use App\Category;
+use App\Eventos;
+use App\Category; /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventosRequest;
-use App\Http\Requests\UpdateEventosRequest;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -18,18 +18,20 @@ class EventosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $eventos=eventos::all();
-        return view('eventos.list', compact('eventos'));
+     $eventos=Eventos::all();
+     return view('eventos.list',compact('eventos'));
     }
+
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(){
-        $eventos=new eventos;
-        return view('eventos.add',compact("categoria","eventos"));
+    public function create() {
+        $categories=Category::orderBy("name")->get();
+        $eventos=new Eventos;
+        return view('eventos.add',compact("categories","eventos"));
     }
 
     /**
@@ -40,11 +42,20 @@ class EventosController extends Controller
      */
     public function store(StoreEventosRequest $request) {
         $fields=$request->validated();
-        $eventos=new eventos;
+        $eventos=new Eventos;
         $eventos->fill($fields);
-        $eventos->categoria_id=$fields["categoria"];
+        $eventos->category_id=$fields["category"];
         $eventos->save();
-        return redirect()->route('eventos.index')->with('success', 'O evento foi criado com sucesso');
+
+        if ($request->hasFile('imagem')) {
+            $image = $request->file('imagem');
+            $eventosImg = $eventos->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('public')->putFileAs('eventos_imagem', $image, $eventosImg);
+            $eventos->image = $eventosImg;
+            $eventos->save();
+        }
+
+        return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
     }
 
     /**
@@ -53,8 +64,9 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function show(eventos $eventos) {
-        return view('eventos.show',compact("eventos"));
+    public function show(eventos $eventos)
+    {
+        //
     }
 
     /**
@@ -63,8 +75,9 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function edit(eventos $eventos) {
-        return view('eventos.edit',compact('eventos'));
+    public function edit(eventos $eventos)
+    {
+        //
     }
 
     /**
@@ -74,13 +87,9 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEventosRequest $request, Eventos $eventos)
+    public function update(Request $request, eventos $eventos)
     {
-    $fields=$request->validated();
-    $eventos->fill($fields);
-    $eventos->save();
-    return redirect()->route('eventos.index')->with('success',
-    'eventos successfully updated');
+        //
     }
 
     /**
@@ -89,12 +98,8 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(eventos $eventos){
-        if ($eventos->categoria()->exists()){
-            return redirect()->route('eventos.index')->withErrors(
-            ['delete'=>'Eventos has related eventoss'] );
-            }
-            $eventos->delete();
-            return redirect()->route('eventos.index')->with('success', 'Eventos successfully deleted');
+    public function destroy(eventos $eventos)
+    {
+        //
     }
 }

@@ -4,11 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class eventos extends Model {
+class Eventos extends Model
+{
     protected $fillable = [
-        'nome', 'descricao', 'data', 'imagem', 'categoria_id'];
+        'nome', 'descricao', 'data', 'imagem', 'category_id'
+    ];
+    /*É sempre obrigatorio indicar os campos que estão a ser preenchidos*/
 
-    public function categoria(){
-        return $this->belongsTo("App\category","categoria_id");
+    public function category(){ /*Relacionamento com a tabela Category*/
+        return $this->belongsTo("App\Category","category_id");
     }
 }
