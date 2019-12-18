@@ -24,9 +24,8 @@ class UpdateEventosRequest extends FormRequest {
         return ["nome" => 'required|min:3|max:20|unique:eventos,nome,'.
             $this->evento->id.'|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
-            "category"=>'required',
-            "imagem"=>'nullable',
-            "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"' ];
+        "category"=>'required',
+            "imagem"=>'nullable'];
     }
 
     public function messages() {
