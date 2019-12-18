@@ -16,7 +16,7 @@
 				<img alt="Post image" src="xxx">
 			</div>
 
-			<div><strong>Titulo:</strong> {{$evento->nome}} </div>
+			<div><strong>Título:</strong> {{$evento->nome}} </div>
             <div><strong>Descrição:</strong> {{$evento->descricao}} </div>
             <div><strong>Categoria:</strong> {{$evento->category->name}} </div>
 		</div>

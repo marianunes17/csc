@@ -8,12 +8,12 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Category Information
+			Informação Categoria
         </div>
         <div class="card-body">
 
 			<div> <strong>Name:</strong> {{$category->name}} </div>
-            <div> <strong>Description:</strong> {{$category->description}} </div>
+            <div> <strong>Descrição:</strong> {{$category->description}} </div>
 		</div>
 	</div>
 </div>
