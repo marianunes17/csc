@@ -57,13 +57,19 @@
                 <a class="dropdown-item" href="{{route('eventos.create')}}">Adicionar
                     evento</a>
 
-
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Categories:</h6>
+                <h6 class="collapse-header">Categorias:</h6>
                 <a class="dropdown-item" href="{{route('categorias.index')}}">Lista de
                     Categorias</a>
                 <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
                     Categoria</a>
+
+                    <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Sub Categorias:</h6>
+                <a class="dropdown-item" href="{{route('categorias.index')}}">Lista de
+                    Sub Categorias</a>
+                <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
+                    Sub Categoria</a>
             </div>
         </div>
     </li>
