@@ -129,8 +129,36 @@
                         <a href="{{route('csc.eventos')}}" class="nav-link">Eventos</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="https://cscarnide.g7.dwm.best/" class="nav-link" target="_blank">Loja</a>
+                    <li class="nav-item dropdown menu-large">
+                        <a href="#" data-toggle="dropdown" class="seta">Loja
+                            <b class="caret"></b>
+                        </a>
+
+                        <ul class="dropdown-menu megamenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <img src="img/template-easy-customize2.png" alt="" class="img-fluid d-none
+                                            d-lg-block">
+                                    </div>
+                                    <div class="col-lg-4 col-md-2">
+                                        <ul class="list-unstyled mb-3">
+                                            <li class="nav-item">
+                                                <a href="https://cscarnide.g7.dwm.best/" class="nav-link" target="_blank">Loja</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="https://cscarnide.g7.dwm.best/saldos" class="nav-link" target="_blank">Saldos</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="https://cscarnide.g7.dwm.best/novidades" class="nav-link" target="_blank">Novidades</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="nav-item
