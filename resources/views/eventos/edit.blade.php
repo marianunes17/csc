@@ -12,12 +12,14 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="#" class="form-group" enctype="multipart/form-data">
-				@include('eventos.partials.add-edit')
+        <form method="POST" action="{{route('eventos.update',$evento)}}" class="form-group" enctype="multipart/form-data">
+                @include('eventos.partials.add-edit')
+                @csrf
+                @method('put')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Save</button>
 
-					<a href="#" class="btn btn-default">Cancelar</a>
+					<a href="{{route('eventos.index')}}" class="btn btn-default">Cancelar</a>
 
 				</div>
 
