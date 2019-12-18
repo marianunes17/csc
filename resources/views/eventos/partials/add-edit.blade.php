@@ -20,7 +20,7 @@
 </div>
 
 <div class="form-group">
-    <label for="inputCategory">Categoria</label>
+    <label for="inputCategory">Category</label>
     <select name="category" id="inputCategory" class="form-control">
         @foreach ($categories as $category)
         <option {{ old('$category', $evento->category_id) == $category->id ?

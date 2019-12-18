@@ -6,6 +6,7 @@ use App\Evento;
 use App\Category; /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventosRequest;
+use App\Http\Requests\UpdateEventosRequest;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -88,9 +89,13 @@ class EventosController extends Controller
      * @param  \App\eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Evento $evento)
+    public function update(UpdateEventosRequest $request, Evento $evento)
     {
-        //
+        $fields=$request->validated();
+        $evento->fill($fields);
+        $evento->save();
+        return redirect()->route('eventos.index')->with('success',
+        'evento successfully updated');
     }
 
     /**
@@ -101,6 +106,6 @@ class EventosController extends Controller
      */
     public function destroy(Evento $evento)
     {
-        //
+
     }
 }
