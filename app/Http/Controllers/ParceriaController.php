@@ -18,8 +18,8 @@ class ParceriaController extends Controller
      */
     public function index()
     {
-            $parceria=Parceria::all();
-            return view('parcerias.list',compact('parceria'));
+            $parcerias=Parceria::all();
+            return view('parcerias.list',compact('parcerias'));
     }
 
     /**
@@ -54,7 +54,7 @@ class ParceriaController extends Controller
             $parceria->save();
         }
 
-        return redirect()->route('parceria.index')->with('success', 'parceria criada com sucesso');
+        return redirect()->route('parcerias.index')->with('success', 'parceria criada com sucesso');
     }
 
     /**
@@ -92,7 +92,7 @@ class ParceriaController extends Controller
         $fields = $request->validated();
         $parceria->fill($fields);
         $parceria->save();
-        return redirect()->route('parceria.index')->with(
+        return redirect()->route('parcerias.index')->with(
             'success',
             'parceria atualizada com sucesso'
         );
@@ -107,8 +107,7 @@ class ParceriaController extends Controller
     public function destroy(Parceria $parceria)
     {
         $parceria->delete();
-        $parceria->save();
-        return redirect()->route('parceria.index')->with(
+        return redirect()->route('parcerias.index')->with(
             'success',
             'parceria eliminada com sucesso'
         );

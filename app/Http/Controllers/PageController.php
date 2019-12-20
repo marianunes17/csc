@@ -4,9 +4,11 @@
 //php artisan make: controller PageController
 
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Parceria;
 
 
 class PageController extends Controller
@@ -28,7 +30,8 @@ class PageController extends Controller
     }
 
     public function parcerias(){
-        return view('parcerias')->with('menu', 'Parcerias');
+        $parcerias=Parceria::all();
+        return view('parcerias',compact('parcerias'))->with('menu', 'Parcerias');
     }
 
 

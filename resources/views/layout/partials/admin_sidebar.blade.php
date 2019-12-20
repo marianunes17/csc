@@ -44,8 +44,8 @@
             <span>Parcerias</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="{{route('parcerias.index')}}">Adicionar Parcerias</a>
-            <a class="dropdown-item" href="{{route('parcerias.create')}}">Lista de Parcerias</a>
+            <a class="dropdown-item" href="{{route('parcerias.create')}}">Adicionar Parcerias</a>
+            <a class="dropdown-item" href="{{route('parcerias.index')}}">Lista de Parcerias</a>
         </div>
     </li>
 

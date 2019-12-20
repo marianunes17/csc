@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="inputNome">Título</label>
-    <input type="text" class="form-control" name="nome" id="inputNome"
+    <input type="text" class="form-control" name="titulo" id="inputNome"
         value="{{old('titulo',$parceria->titulo)}}" />
 </div>
 

@@ -27,7 +27,7 @@ class UpdateParceriaRequest extends FormRequest
 
         "titulo" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
         "descricao" => 'required',
-        "imagem"=>'nullable',
+        "imagem"=>'required',
         ];
     }
 }
