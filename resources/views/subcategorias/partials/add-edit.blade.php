@@ -1,7 +1,7 @@
 <div class="form-group">
     <label for="inputName">Nome</label>
     <input type="text" class="form-control" name="name" id="inputName"
-    value="{{old('name',$subategory->name)}}" />
+    value="{{old('name',$subcategory->name)}}" />
     <!--Old - Se der erro vai mostrar o que estava no antigo-->
 </div>
 <div class="form-group">
