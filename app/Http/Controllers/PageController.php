@@ -6,6 +6,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Evento;
+use App\Category;
 use Illuminate\Http\Request;
 
 
@@ -28,6 +30,7 @@ class PageController extends Controller
     }
 
     public function parcerias(){
+        $parcerias=parcerias::all();
         return view('parcerias')->with('menu', 'Parcerias');
     }
 
@@ -36,8 +39,24 @@ class PageController extends Controller
         return view('servicos')->with('menu', 'Servicos');
     }
 
-    public function eventos(){
-        return view('eventos')->with('menu', 'Eventos');
+    public function eventos(Request $request){
+        $categories=Category::where('category_id', null)->get();
+
+        if ($request->has('cat_id')){
+            $cat_id=$request->query('cat_id');
+            $categories_s=Category::where('category_id', $cat_id)->orWhere('id',$cat_id)->pluck('id');
+            $eventos=Evento::whereIn('category_id', $categories_s)->get();
+        }else{
+            $cat_id=$categories[0]->id;
+            $eventos=Evento::where('category_id',$cat_id)->get();
+        }
+        if ($request->has('pai')) {
+            $cat_id=$request->has('pai');
+        }
+        $categories_sub=Category::where('category_id', $cat_id)->get();
+
+        return view('eventos', compact('categories','eventos','categories_sub'))->with('menu', 'Eventos');
+
     }
 
     public function contactos(){

@@ -106,6 +106,7 @@ class EventosController extends Controller
      */
     public function destroy(Evento $evento)
     {
-
+        $evento->delete();
+        return redirect()->route('eventos.index')->with('success', 'Category successfully deleted');
     }
 }
