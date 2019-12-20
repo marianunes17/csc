@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Evento;
-use App\Category; /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
+use App\Category;
+
+/**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
+
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEventosRequest;
 use App\Http\Requests\UpdateEventosRequest;
@@ -18,9 +21,10 @@ class EventosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-     $eventos=Evento::all();
-     return view('eventos.list',compact('eventos'));
+    public function index()
+    {
+        $eventos = Evento::all();
+        return view('eventos.list', compact('eventos'));
     }
 
 
@@ -29,10 +33,11 @@ class EventosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
-        $categories=Category::orderBy("name")->get();
-        $evento=new Evento;
-        return view('eventos.add',compact("categories","evento"));
+    public function create()
+    {
+        $categories = Category::orderBy("name")->get();
+        $evento = new Evento;
+        return view('eventos.add', compact("categories", "evento"));
     }
 
     /**
@@ -41,11 +46,12 @@ class EventosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEventosRequest $request) {
-        $fields=$request->validated();
-        $evento=new Evento;
+    public function store(StoreEventosRequest $request)
+    {
+        $fields = $request->validated();
+        $evento = new Evento;
         $evento->fill($fields);
-        $evento->category_id=$fields["category"];
+        $evento->category_id = $fields["category"];
         $evento->save();
 
         if ($request->hasFile('imagem')) {
@@ -67,7 +73,7 @@ class EventosController extends Controller
      */
     public function show(Evento $evento)
     {
-        return view('eventos.show',compact('evento'));
+        return view('eventos.show', compact('evento'));
     }
 
     /**
@@ -78,8 +84,8 @@ class EventosController extends Controller
      */
     public function edit(Evento $evento)
     {
-        $categories=Category::orderBy("name")->get();
-        return view('eventos.edit',compact('categories','evento'));
+        $categories = Category::orderBy("name")->get();
+        return view('eventos.edit', compact('categories', 'evento'));
     }
 
     /**
@@ -91,11 +97,13 @@ class EventosController extends Controller
      */
     public function update(UpdateEventosRequest $request, Evento $evento)
     {
-        $fields=$request->validated();
+        $fields = $request->validated();
         $evento->fill($fields);
         $evento->save();
-        return redirect()->route('eventos.index')->with('success',
-        'evento successfully updated');
+        return redirect()->route('eventos.index')->with(
+            'success',
+            'evento successfully updated'
+        );
     }
 
     /**
@@ -106,6 +114,5 @@ class EventosController extends Controller
      */
     public function destroy(Evento $evento)
     {
-
     }
 }
