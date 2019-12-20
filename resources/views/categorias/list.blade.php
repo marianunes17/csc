@@ -33,12 +33,12 @@
                             <td>{{$category->description}}</td>
 
                             <td nowrap>
-                                <a class="btn btn-xs btn-primary text-white d-inline" href="{{route('categorias.show',$category)}}">
-                                    <i class="fas fa-eye fa-xs"></i>
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.show',$category)}}">
+                                    <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a class="btn btn-xs btn-warning  text-dark d-inline mx-1" href="{{route('categorias.edit',$category)}}">
-                                    <i class="fas fa-pen fa-xs"></i>
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.edit',$category)}}">
+                                    <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
                                 <form method="POST" action="{{route('categorias.destroy',$category)}}" role="form"
@@ -50,8 +50,8 @@
                     Acrescenta 2 campos escondidos ao formulario-->
 
                                     @method("DELETE")
-                                    <button type="submit" class="btn btn-xs btn-danger text-white d-inline py-1">
-                                        <i class="fas fa-trash fa-xs"></i>
+                                    <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
+                                        <i class="fas fa-trash fa-xs text-danger" style="font-size: 15px;"></i>
                                     </button>
                                 </form>
                             </td>
