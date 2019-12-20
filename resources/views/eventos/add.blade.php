@@ -19,7 +19,7 @@
                 @include('eventos.partials.add-edit')
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success" name="ok">Salvar</button>
+                    <button type="submit" class="btn btn-success" name="ok">Guardar</button>
                     <a href="{{route('eventos.index')}}" class="btn btn-default">Cancelar</a>
                 </div>
             </form>

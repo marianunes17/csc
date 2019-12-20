@@ -17,7 +17,7 @@
                 @csrf
                 @method('put')
 				<div class="form-group">
-					<button type="submit" class="btn btn-success" name="ok">Save</button>
+					<button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
 					<a href="{{route('eventos.index')}}" class="btn btn-default">Cancelar</a>
 

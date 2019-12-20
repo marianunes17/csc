@@ -1,10 +1,9 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
-    <a href="{{route('csc.index')}}"
-    <li class="text-center"><img src="{{asset('img/logos/logo-simbolo2.png')}}"
-            alt="Centro Social de
+    <a href="{{route('csc.index')}}">
+        <li class="text-center"><img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro Social de
             Carnide logo" class="w-75"></li>
-            <h6 class="text-white text-center">Centro Social de Carnide</h6>
+        <h6 class="text-white text-center">Centro Social de Carnide</h6>
     </a>
     <li class="nav-item active">
 
@@ -28,9 +27,8 @@
     </li>
 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-users"></i>
             <span>Utilizadores</span>
         </a>
@@ -42,23 +40,23 @@
 
 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
             <span>Eventos</span>
         </a>
 
         <div id="collapseEventos" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Eventos:</h6>
+                <h6 class="collapse-header pl-3">Eventos:</h6>
                 <a class="dropdown-item" href="{{route('eventos.index')}}">Lista
                     de eventos</a>
                 <a class="dropdown-item" href="{{route('eventos.create')}}">Adicionar
                     evento</a>
 
+                <div class="dropdown-divider"></div>
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Categorias:</h6>
+                <h6 class="collapse-header pl-3">Categories:</h6>
                 <a class="dropdown-item" href="{{route('categorias.index')}}">Lista de
                     Categorias</a>
                 <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar

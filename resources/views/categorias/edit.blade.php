@@ -20,9 +20,9 @@
 
                 @include('categorias.partials.add-edit')
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success" name="ok">Save</button>
+                    <button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-                    <a href="{{route('categorias.index')}}" class="btn btn-default">Cancel</a>
+                    <a href="{{route('categorias.index')}}" class="btn btn-default">Cancelar</a>
                     <!--Quando cancela vai para o index-->
                 </div>
             </form>
