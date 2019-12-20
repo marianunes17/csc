@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateSubCategoryRequest extends FormRequest {
+class UpdateSubcategoryRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -28,7 +28,7 @@ class UpdateSubCategoryRequest extends FormRequest {
             "description" => 'required',
             "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"'];
     }
-    
+
     public function messages() {
         return ['name.regex' => 'Name should contain only letters and spaces'];
 

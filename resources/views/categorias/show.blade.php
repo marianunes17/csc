@@ -14,6 +14,9 @@
 
 			<div> <strong>Name:</strong> {{$category->name}} </div>
             <div> <strong>Descrição:</strong> {{$category->description}} </div>
+            @if ($category->category_id)
+            <div> <strong>Categoria pai:</strong> {{$category->categoryParent->name}} </div>
+            @endif
 		</div>
 	</div>
 </div>

@@ -35,7 +35,8 @@ class CategoryController extends Controller
     public function create()
     {
         $category=new Category;
-        return view('categorias.add', compact("category"));
+        $categories=Category::all();
+        return view('categorias.add', compact("category",'categories'));
     }
 
 
@@ -54,6 +55,7 @@ class CategoryController extends Controller
 
         $category=new Category();
         $category->fill($fields);
+        $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categorias.index')->with('success', 'Category successfully created');
     }
@@ -78,7 +80,8 @@ class CategoryController extends Controller
     public function edit(Category $category)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
-        return view('categorias.edit',compact('category'));
+        $categories=Category::all();
+        return view('categorias.edit',compact('category','categories'));
     }
 
 
@@ -93,6 +96,7 @@ class CategoryController extends Controller
     public function update(UpdateCategoryRequest $request, Category $category){
         $fields=$request->validated();
         $category->fill($fields);
+        $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categorias.index')->with('success',
         'Category successfully updated');

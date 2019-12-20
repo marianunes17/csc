@@ -23,6 +23,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Descrição</th>
+                            <th>Pai</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -31,7 +32,11 @@
                         <tr>
                             <td>{{$category->name}}</td>
                             <td>{{$category->description}}</td>
-
+                            <td>
+                                @if ($category->category_id)
+                                {{$category->categoryParent->name}}
+                                @endif
+                            </td>
                             <td nowrap>
                                 <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.show',$category)}}">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
