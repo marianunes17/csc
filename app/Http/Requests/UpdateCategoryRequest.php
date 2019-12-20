@@ -26,7 +26,7 @@ class UpdateCategoryRequest extends FormRequest {
             ["name" => 'required|min:3|max:20|unique:categories,name,'. $this->category->id.'|
             regex:/^[A-ZÀ-úa-z\s]+$/',
             "description" => 'required',
-            "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"'];
+            'category' => 'nullable|exists:categories,id'
     }
     /*unique:categories,name - Unico na tabela das categorias,  no campo name
     ,'. $this->category->id.' - Terceiro parametro do unique (Depois do 'name')

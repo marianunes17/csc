@@ -1,12 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\SubCategory;
+use App\Subcategory;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreSubCategoryRequest;
-use App\Http\Requests\UpdateSubCategoryRequest;
+use App\Http\Requests\StoreSubcategoryRequest;
+use App\Http\Requests\UpdateSubcategoryRequest;
 
-class subCategoryController extends Controller
+class SubcategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class subCategoryController extends Controller
      */
     public function index()
     {
-        $subcategorias=SubCategory::all();
+        $subcategorias=Subcategory::all();
 
         return view('subcategorias.list', compact('subcategorias'));
     }
@@ -27,7 +27,7 @@ class subCategoryController extends Controller
      */
     public function create()
     {
-        $Subcategory=new SubCategory;
+        $Subcategory=new Subcategory;
         return view('subcategorias.add', compact("subcategory"));
     }
 
@@ -38,17 +38,17 @@ class subCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSubCategoryRequest $request)
+    public function store(StoreSubcategoryRequest $request)
     {
         $fields=$request->validated();
         /**Se a validação for efetuada com sucesso, o código continuará a ser executado normalmente,
          se a validação falhar, aparecerá uma resposta de erro apropriada será automaticamente
          enviada de volta ao utilizador. */
 
-        $subcategory=new subCategory();
+        $subcategory=new subcategory();
         $subcategory->fill($fields);
         $subcategory->save();
-        return redirect()->route('subcategorias.index')->with('success', 'subCategory successfully created');
+        return redirect()->route('subcategorias.index')->with('success', 'subcategory successfully created');
     }
 
 
@@ -58,7 +58,7 @@ class subCategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(SubCategory $subcategory){
+    public function show(Subcategory $subcategory){
         return view('subcategorias.show',compact("subcategory"));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
@@ -68,7 +68,7 @@ class subCategoryController extends Controller
      * @param  \App\subCategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(subCategory $subcategory)
+    public function edit(subcategory $subcategory)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
         return view('subcategorias.edit',compact('subcategory'));
@@ -83,12 +83,12 @@ class subCategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(UpdateSubCategoryRequest $request, subCategory $subcategory){
+    public function update(UpdateSubcategoryRequest $request, subcategory $subcategory){
         $fields=$request->validated();
         $subcategory->fill($fields);
         $subcategory->save();
         return redirect()->route('subcategorias.index')->with('success',
-        'subCategory successfully updated');
+        'Subcategory successfully updated');
     } /*Permita guardar os dados submetidos através do formulário. */
 
 
@@ -98,7 +98,7 @@ class subCategoryController extends Controller
      * @param  \App\subCategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(subCategory $subcategory) {
+    public function destroy(Subcategory $subcategory) {
 
         if ($subcategory->eventos()->exists()){
             return redirect()->route('subcategorias.index')->withErrors(
