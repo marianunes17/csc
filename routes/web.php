@@ -24,7 +24,7 @@ Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage"
 
 Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
-Route::get('/admin');
+Route::get('/admin','DashboardController@show');
 Route::resource('/admin/utilizadores', 'UserController');
 Route::resource('/admin/categorias', 'CategoryController');
 Route::resource('/admin/subcategorias', 'SubcategoryController');
