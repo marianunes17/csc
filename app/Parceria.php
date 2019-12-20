@@ -8,3 +8,6 @@ class Parceria extends Model
 {
     protected $fillable = [ 'titulo', 'descricao', 'imagem' ];
 }
+
+
+?>
