@@ -51,7 +51,7 @@ class EventosController extends Controller
         if ($request->hasFile('imagem')) {
             $image = $request->file('imagem');
             $eventoImg = $evento->id . '_' . time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->put FileAs('eventos_images', $image, $eventoImg);
+            Storage::disk('public')->putFileAs('eventos_images', $image, $eventoImg);
             $evento->imagem = $eventoImg;
             $evento->save();
         }
