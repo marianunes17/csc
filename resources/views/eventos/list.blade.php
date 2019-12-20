@@ -49,21 +49,21 @@
                             </td>
                             <td nowrap>
                                 <a href="{{route('eventos.show',$evento)}}"
-                                    class="btn btn-xs btn-primary text-white d-inline">
-                                    <i class="fas fa-eye fa-xs"></i>
+                                    class="btn btn-sm btn-link text-decoration-none d-inline">
+                                    <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
                                 <a href="{{route('eventos.edit',$evento)}}"
-                                    class="btn btn-xs btn-warning  text-dark d-inline mx-1">
-                                    <i class="fas fa-pen fa-xs"></i>
+                                    class="btn btn-sm btn-link d-inline text-decoration-none">
+                                    <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
                                 <form method="POST" action="{{route('eventos.destroy',$evento)}}" role="form"
                                     class="d-inline" onsubmit="return confirm('Are you sure you want to delete this record?');">
                                     @csrf
                                     @method("DELETE")
-                                    <button type="submit" class="btn btn-xs btn-danger text-white d-inline py-1">
-                                        <i class="fas fa-trash fa-xs"></i></button>
+                                    <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
+                                        <i class="fas fa-trash fa-xs text-danger" style="font-size: 15px;"></i></button>
                                 </form>
                             </td>
                         </tr>
