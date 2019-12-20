@@ -23,9 +23,9 @@
             <div class="card-body-icon">
               <i class="fas fa-fw fa-comments"></i>
             </div>
-            <div class="mr-5">26 New Messages!</div>
+            <div class="mr-5">{{$total_users}} Utilizadores</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="#">
+          <a class="card-footer text-white clearfix small z-1" href="">
             <span class="float-left">View Details</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>
@@ -71,9 +71,9 @@
             <div class="card-body-icon">
               <i class="fas fa-fw fa-life-ring"></i>
             </div>
-            <div class="mr-5">13 New Tickets!</div>
+            <div class="mr-5">{{$total_events}} Eventos</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="#">
+          <a class="card-footer text-white clearfix small z-1" href="{{route('eventos.index')}}">
             <span class="float-left">View Details</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>

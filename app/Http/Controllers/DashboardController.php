@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Evento;
 class DashboardController extends Controller
 {
     /**
@@ -45,8 +46,9 @@ class DashboardController extends Controller
      */
     public function show()
     {
-        
-        return view('dashboard.show');
+        $total_users=User::count();
+        $total_events=Evento::count();
+        return view('dashboard.show',compact('total_users','total_events'));
     }
 
     /**
