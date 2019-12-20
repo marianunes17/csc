@@ -19,7 +19,6 @@
 			<div><strong>Título:</strong> {{$evento->nome}} </div>
             <div><strong>Descrição:</strong> {{$evento->descricao}} </div>
             <div><strong>Categoria:</strong> {{$evento->category->name}} </div>
-            <div><strong>Sub Categoria:</strong> {{$evento->subcategory->name}} </div>
 		</div>
 	</div>
 </div>

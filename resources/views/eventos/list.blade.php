@@ -59,7 +59,7 @@
                                 </a>
 
                                 <form method="POST" action="{{route('eventos.destroy',$evento)}}" role="form"
-                                    class="d-inline" onsubmit="return confirm('Are you sure you want to delete this record?');">
+                                    class="d-inline" onsubmit="return confirm('Tem a certeza que pretende apagar o evento ?');">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
