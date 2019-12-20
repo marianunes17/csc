@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Evento;
-class DashboardController extends Controller
+
+class PartnershipController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,11 +43,9 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $total_users=User::count();
-        $total_events=Evento::count();
-        return view('dashboard.show',compact('total_users','total_events'));
+        //
     }
 
     /**
