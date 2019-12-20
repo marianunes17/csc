@@ -40,7 +40,7 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="far fa-handshake"></i>
+            <i class="fas fa-handshake"></i>
             <span>Parcerias</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
