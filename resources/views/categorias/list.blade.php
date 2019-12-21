@@ -15,20 +15,20 @@
             </a>
         </div>
         <div class="card-body">
-            @if (count($categorias))
+            @if (count($categories))
             <!--Se tiver categorias mostra-as-->
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Nome</th>
                             <th>Descrição</th>
                             <th>Pai</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($categorias as $category)
+                        @foreach($categories as $category)
                         <tr>
                             <td>{{$category->name}}</td>
                             <td>{{$category->description}}</td>
@@ -72,19 +72,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section("moreScripts")
-<script>
-    $('#dataTable').dataTable({
-        destroy: true,
-        "order": [[0, 'asc']],
-        "columns": [
-            null,
-            null,
-            { "orderable": false }
-        ]
-    });
-
-</script>
 @endsection

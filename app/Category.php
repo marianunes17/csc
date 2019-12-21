@@ -9,8 +9,9 @@ class Category extends Model
     protected $fillable = [ 'name', 'description' ];
 
     public function eventos(){
-        return $this->hasMany("App\Eventos","category_id");
+        return $this->hasMany("App\Evento","category_id");
     }
+
     public function categoryParent(){ /*Relacionamento com a tabela Category*/
         return $this->belongsTo("App\Category","category_id");
     }

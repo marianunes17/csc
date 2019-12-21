@@ -72,13 +72,6 @@
                     Categorias</a>
                 <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
                     Categoria</a>
-                <div class="dropdown-divider"></div>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Sub Categorias:</h6>
-                <a class="dropdown-item" href="{{route('subcategorias.index')}}">Lista de
-                    Sub Categorias</a>
-                <a class="dropdown-item" href="{{route('subcategorias.create')}}">Adicionar
-                    Sub Categoria</a>
             </div>
         </div>
     </li>

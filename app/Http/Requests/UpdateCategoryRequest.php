@@ -28,7 +28,7 @@ class UpdateCategoryRequest extends FormRequest {
             "description" => 'required',
             'category' => 'nullable|exists:categories,id'
     }
-    /*unique:categories,name - Unico na tabela das categorias,  no campo name
+    /*unique:categories,name - Unico na tabela das categories,  no campo name
     ,'. $this->category->id.' - Terceiro parametro do unique (Depois do 'name')
         Exclui a linha que tem aquele id */
 

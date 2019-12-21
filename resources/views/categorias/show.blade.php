@@ -12,7 +12,7 @@
         </div>
         <div class="card-body">
 
-			<div> <strong>Name:</strong> {{$category->name}} </div>
+			<div> <strong>Nome:</strong> {{$category->name}} </div>
             <div> <strong>Descrição:</strong> {{$category->description}} </div>
             @if ($category->category_id)
             <div> <strong>Categoria pai:</strong> {{$category->categoryParent->name}} </div>

@@ -17,13 +17,8 @@ class CategoryController extends Controller
      */
     public function index() /*Metodo chamado para apresentar todos os registos */
     {
-        $categorias=Category::all();
-        /*OU  $categorias= DB::table('categoriass)->get();*/
-
-        /*Forma para ir buscar todos os registos de uma tabela
-        Ou usando queries */
-
-        return view('categorias.list', compact('categorias')); /*Chamar a vista categorias.list,
+        $categories=Category::all();
+        return view('categorias.list', compact('categories')); /*Chamar a vista categorias.list,
         compact da variavel, que cria um array com a variavel com o mesmo nome e faz o mesmo q a linha anterior*/
     }
 
@@ -34,8 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $category=new Category;
-        $categories=Category::all();
+        $category= new Category;
         return view('categorias.add', compact("category",'categories'));
     }
 
@@ -53,7 +47,7 @@ class CategoryController extends Controller
          se a validação falhar, aparecerá uma resposta de erro apropriada será automaticamente
          enviada de volta ao utilizador. */
 
-        $category=new Category();
+        $category=new Category;
         $category->fill($fields);
         $category->category_id=$fields['category'];
         $category->save();
@@ -68,7 +62,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Category $category){
-        return view('categorias.show',compact("category"));
+        return view('categorias.show',compact('category'));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
     /**
@@ -80,7 +74,6 @@ class CategoryController extends Controller
     public function edit(Category $category)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
-        $categories=Category::all();
         return view('categorias.edit',compact('category','categories'));
     }
 
