@@ -24,7 +24,8 @@
                                 target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <!-- <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                   <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-                        <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i
+                                    class="fa fa-envelope"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +40,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h4 id="login-modalLabel" class="modal-title"> Login</h4>
+                <h4 id="login-modalLabel" class="modal-title"> Entrar</h4>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -48,19 +49,17 @@
             <div class="modal-body">
                 <form action="customer-orders.html" method="get">
                     <div class="form-group">
-                        <input id="email_modal" type="text" placeholder="email" class="form-control">
+                        <input id="email_modal" type="text" placeholder="Email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input id="password_modal" type="password" placeholder="password" class="form-control">
+                        <input id="password_modal" type="password" placeholder="Password" class="form-control">
                     </div>
                     <p class="text-center">
-                        <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
+                        <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
                     </p>
                 </form>
                 <p class="text-center text-muted">Ainda não se registou?</p>
-                <p class="text-center text-muted"><a href="{{route('csc.registar')}}"><strong>Registar
-                            Agora</strong></a>
-                    ! É fácil e demora apenas 1 minuto.</p>
+                <p class="text-center text-muted"><a href="{{route('csc.registar')}}"><strong>Registe-se Agora</strong></a>! É fácil e demora apenas 1 minuto.</p>
             </div>
         </div>
     </div>
@@ -144,15 +143,18 @@
                                     <div class="col-lg-4 col-md-2">
                                         <ul class="list-unstyled mb-3">
                                             <li class="nav-item">
-                                                <a href="https://cscarnide.g7.dwm.best/" class="nav-link" target="_blank">Loja</a>
+                                                <a href="https://cscarnide.g7.dwm.best/" class="nav-link"
+                                                    target="_blank">Loja</a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a href="https://cscarnide.g7.dwm.best/saldos" class="nav-link" target="_blank">Saldos</a>
+                                                <a href="https://cscarnide.g7.dwm.best/saldos" class="nav-link"
+                                                    target="_blank">Saldos</a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a href="https://cscarnide.g7.dwm.best/novidades" class="nav-link" target="_blank">Novidades</a>
+                                                <a href="https://cscarnide.g7.dwm.best/novidades" class="nav-link"
+                                                    target="_blank">Novidades</a>
                                             </li>
                                         </ul>
                                     </div>

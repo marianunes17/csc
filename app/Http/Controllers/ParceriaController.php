@@ -54,7 +54,7 @@ class ParceriaController extends Controller
             $parceria->save();
         }
 
-        return redirect()->route('parcerias.index')->with('success', 'parceria criada com sucesso');
+        return redirect()->route('parcerias.index')->with('success', 'Parceria criada com sucesso');
     }
 
     /**
@@ -94,7 +94,7 @@ class ParceriaController extends Controller
         $parceria->save();
         return redirect()->route('parcerias.index')->with(
             'success',
-            'parceria atualizada com sucesso'
+            'Parceria atualizada com sucesso'
         );
     }
 
@@ -109,7 +109,7 @@ class ParceriaController extends Controller
         $parceria->delete();
         return redirect()->route('parcerias.index')->with(
             'success',
-            'parceria eliminada com sucesso'
+            'Parceria eliminada com sucesso'
         );
     }
 }

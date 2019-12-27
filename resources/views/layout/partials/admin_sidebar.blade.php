@@ -5,7 +5,7 @@
             Carnide logo" class="w-75"></li>
         <h6 class="text-white text-center">Centro Social de Carnide</h6>
     </a>
-    <li class="nav-item active">
+    <li class="nav-item ">
 
 
         <hr class="sidebar-divider">
@@ -17,16 +17,16 @@
         </a>
     </li>
 
-    <li class="nav-item active">
-
+    <li class="nav-item ">
+        <hr class="menu-dividir">
         <a class="nav-link" href="#">
 
             <i class="fas fa-coins"></i>
             <span>Cotas</span>
         </a>
     </li>
-
     <li class="nav-item dropdown">
+        <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-users"></i>
@@ -38,6 +38,7 @@
         </div>
     </li>
     <li class="nav-item dropdown">
+        <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-handshake"></i>
@@ -49,8 +50,8 @@
         </div>
     </li>
 
-
     <li class="nav-item dropdown">
+        <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
@@ -75,13 +76,12 @@
             </div>
         </div>
     </li>
-
-    <li class="nav-item active">
-
+    <li class="nav-item ">
+        <hr class="menu-dividir">
         <a class="nav-link" href="index.html">
 
             <i class="fas fa-comments"></i>
-            <span>Formulário de testemunhos</span>
+            <span>Formulário de Testemunhos</span>
         </a>
     </li>
 </ul>

@@ -10,10 +10,10 @@
 <div class="container">
     <div class="row mb-5">
         @foreach ($parcerias as $parceria)
-        <div class="col-md-4 col-sm-12 mb-4">
+        <div class="col-md-4 col-sm-12 mb-4 mt-3">
             <div class="card-group">
                 <div class="card">
-                    <img class="card-img-top"
+                    <img class="card-img-top mt-3"
                         src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}"
                         alt="Card image cap">
                     <div class="card-body">

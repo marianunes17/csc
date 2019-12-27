@@ -1,3 +1,8 @@
+.menu-dividir{
+    border-top: 2px solid rgba(0, 0, 0, 0.1) !important;
+    margin:5px 0px !important;
+}
+
 .img-eventos{
     height:75px;
 }
@@ -10711,11 +10716,11 @@ body {
 }
 
 .sidebar .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .sidebar .nav-item .nav-link:active, .sidebar .nav-item .nav-link:focus, .sidebar .nav-item .nav-link:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
 }
 
 .sidebar.toggled {
