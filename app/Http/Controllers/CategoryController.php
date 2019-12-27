@@ -1,12 +1,11 @@
 <?php
-/** http://gamesandmultimedia.test/categorias */
-
 namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -18,7 +17,7 @@ class CategoryController extends Controller
     public function index() /*Metodo chamado para apresentar todos os registos */
     {
         $categories=Category::all();
-        return view('categorias.list', compact('categories')); /*Chamar a vista categorias.list,
+        return view('categories.list', compact('categories')); /*Chamar a vista categorias.list,
         compact da variavel, que cria um array com a variavel com o mesmo nome e faz o mesmo q a linha anterior*/
     }
 
@@ -30,7 +29,7 @@ class CategoryController extends Controller
     public function create()
     {
         $category= new Category;
-        return view('categorias.add', compact("category",'categories'));
+        return view('categories.add', compact("category","categories"));
     }
 
 
@@ -49,9 +48,9 @@ class CategoryController extends Controller
 
         $category=new Category;
         $category->fill($fields);
-        $category->category_id=$fields['category'];
+        /*$category->category_id=$fields['category'];*/
         $category->save();
-        return redirect()->route('categorias.index')->with('success', 'Category successfully created');
+        return redirect()->route('categories.index')->with('success', 'Category successfully created');
     }
 
 
@@ -62,7 +61,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Category $category){
-        return view('categorias.show',compact('category'));
+        return view('categories.show',compact('category'));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
     /**
@@ -74,7 +73,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
-        return view('categorias.edit',compact('category','categories'));
+        return view('categories.edit',compact('category','categories'));
     }
 
 
@@ -89,9 +88,9 @@ class CategoryController extends Controller
     public function update(UpdateCategoryRequest $request, Category $category){
         $fields=$request->validated();
         $category->fill($fields);
-        $category->category_id=$fields['category'];
+        /*$category->category_id=$fields['category'];*/
         $category->save();
-        return redirect()->route('categorias.index')->with('success',
+        return redirect()->route('categories.index')->with('success',
         'Category successfully updated');
     } /*Permita guardar os dados submetidos através do formulário. */
 
@@ -105,12 +104,12 @@ class CategoryController extends Controller
     public function destroy(Category $category) {
 
         if ($category->eventos()->exists()){
-            return redirect()->route('categorias.index')->withErrors(
+            return redirect()->route('categories.index')->withErrors(
             ['delete'=>'Category has related eventos'] );
         }
 
         $category->delete();
-        return redirect()->route('categorias.index')->with('success', 'Category successfully deleted');
+        return redirect()->route('categories.index')->with('success', 'Category successfully deleted');
     } /**O método “delete” permite eliminar uma categoria.
         Só é possível eliminar uma categoria se esta não tiver posts associados, ou seja, se o relacionamento
     não existir.*/

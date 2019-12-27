@@ -4,16 +4,19 @@
     value="{{old('name',$category->name)}}" />
     <!--Old - Se der erro vai mostrar o que estava no antigo-->
 </div>
+
 <div class="form-group">
     <label for="inputDescription">Descrição</label>
     <textarea class="form-control" name="description" id="inputDescription">{{old('description',$category->description)}}</textarea>
 </div>
+
 <div class="form-group">
     <label for="inputCategory">Categoria</label>
     <select name="category" id="inputCategory" class="form-control">
         <option value="" selected>Categoria pai</option>
-        @foreach ($categories as $category)
+        @foreach ($category as $category)
         <option {{ old('$category', $category->category_id) == $category->id ? "selected":""}} value="{{$category->id}}" >{{$category->name}}</option>
         @endforeach
     </select>
 </div>
+

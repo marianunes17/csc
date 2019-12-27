@@ -76,7 +76,6 @@ class ParceriaController extends Controller
      */
     public function edit(Parceria $parceria)
     {
-
         return view('parcerias.edit', compact('parceria'));
     }
 
