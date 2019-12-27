@@ -26,7 +26,7 @@ Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
 Route::get('/admin','DashboardController@show')->name("dashboard");
 Route::resource('/admin/utilizadores', 'UserController');
-Route::resource('/admin/categorias', 'CategoryController');
+Route::resource('/admin/categories', 'CategoryController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/eventos', 'EventosController');
 

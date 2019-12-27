@@ -9,7 +9,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('categorias.create')}}">
+            <a class="btn btn-primary" href="{{route('categories.create')}}">
                 <!-- rota para criar a categoria -->
                 <i class="fas fa-plus"></i> Adicionar Categoria
             </a>
@@ -23,7 +23,7 @@
                         <tr>
                             <th>Nome</th>
                             <th>Descrição</th>
-                            <th>Pai</th>
+                            <th>Categoria Pai</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -38,15 +38,15 @@
                                 @endif
                             </td>
                             <td nowrap>
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.show',$category)}}">
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.show',$category)}}">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.edit',$category)}}">
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.edit',$category)}}">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
-                                <form method="POST" action="{{route('categorias.destroy',$category)}}" role="form"
+                                <form method="POST" action="{{route('categories.destroy',$category)}}" role="form"
                                     class="d-inline"
                                     onsubmit="return confirm('Are you sure you want to delete this record?');">
                                     @csrf
