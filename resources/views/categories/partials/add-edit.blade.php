@@ -20,7 +20,3 @@
     </select>
 </div>
 
-<div class="form-group">
-    <label for="inputDescription">Descrição</label>
-    <textarea class="form-control" name="description" id="inputDescription">{{old('categoryParent',$category->categoryParent->name)}}</textarea>
-</div>
