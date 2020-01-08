@@ -1,6 +1,6 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
-    <a href="{{route('csc.index')}}">
+    <a href="{{route('csc.index')}}" target="_blank">
         <li class="text-center"><img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro Social de
             Carnide logo" class="w-75"></li>
         <h6 class="text-white text-center">Centro Social de Carnide</h6>
@@ -20,7 +20,6 @@
     <li class="nav-item ">
         <hr class="menu-dividir">
         <a class="nav-link" href="#">
-
             <i class="fas fa-coins"></i>
             <span>Cotas</span>
         </a>
