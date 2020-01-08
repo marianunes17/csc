@@ -29,5 +29,6 @@ Route::resource('/admin/utilizadores', 'UserController');
 Route::resource('/admin/categories', 'CategoryController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/eventos', 'EventosController');
+Route::resource('/admin/testemunhos', 'EventosController');
 
 
