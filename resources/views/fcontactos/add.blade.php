@@ -1,26 +1,31 @@
 @extends('layout.admin')
 
-@section("title", "Adicionar Categoria")
+@section("title", "Adicionar Parcerias")
 
 @section('content')
 
 <div class="container-fluid">
 
-	<div class="card shadow mb-4">
-		<div class="card-header py-3">
-			Adicionar Categoria
-		</div>
-		<div class="card-body">
+    <div class="card shadow mb-4">
+        <h5 class="card-header py-3">
+            Adicionar Parceria
+        </h5>
+        
+        <div class="card-body">
 
-			<form method="POST" action="{{route('categories.store')}}" class="form-group" >
+            <form method="POST" action="{{route('parcerias.store')}}"
+                class="form-group"
+                enctype="multipart/form-data">
                 @csrf
-                @include('categories.partials.add-edit')
+                @include('parcerias.partials.add-edit')
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="ok">Guardar</button>
-                    <a href="{{route('categories.index')}}" class="btn btn-default">Cancelar</a>
+                    <a href="{{route('parcerias.index')}}" class="btn btn-default">Cancelar</a>
                 </div>
             </form>
-		</div>
-	</div>
+
+        </div>
+    </div>
 </div>
 @endsection

@@ -1,63 +1,66 @@
 @extends ("layout.admin")
 
-@section("title", "Categorias")
+@section("title", "Parcerias")
 
 @section("content")
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 pl-3">Categorias</h1>
+    <h1 class="h3 mb-2 text-gray-800 pl-4">Parcerias</h1>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('categories.create')}}">
-                <!-- rota para criar a categoria -->
-                <i class="fas fa-plus"></i> Adicionar Categoria
+            <a href="{{route('csc.parcerias')}}" class="btn btn-outline-primary float-right" target="_blank">
+                Pré-Visualizar
+                <i class="fas fa-eye"></i>
             </a>
         </div>
         <div class="card-body">
-            @if (count($categories))
-            <!--Se tiver categorias mostra-as-->
+            @if (count($parcerias))
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Categoria Pai</th>
-                            <th>Ações</th>
+                            <th>Email</th>
+                            <th>Assunto</th>
+                            <th>Mensagem</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($categories as $category)
+                        @foreach($parcerias as $parceria)
                         <tr>
-                            <td>{{$category->name}}</td>
-                            <td>{{$category->description}}</td>
                             <td>
-                                @if ($category->category_id)
-                                {{$category->categoryParent->name}}
+                                @if ($parceria->imagem)
+                                <img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}"
+                                    class="w-50" alt="parcerias">
+                                @else
+                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="parcerias">
                                 @endif
                             </td>
+
+                            <td>{{$parceria->titulo}}</td>
+                            <td>{{$parceria->descricao}}</td>
+
+
+                            </td>
                             <td nowrap>
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.show',$category)}}">
+                                <a href="{{route('parcerias.show',$parceria)}}"
+                                    class="btn btn-sm btn-link text-decoration-none d-inline">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.edit',$category)}}">
+                                <a href="{{route('parcerias.edit',$parceria)}}"
+                                    class="btn btn-sm btn-link d-inline text-decoration-none">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
-                                <form method="POST" action="{{route('categories.destroy',$category)}}" role="form"
+                                <form method="POST" action="{{route('parcerias.destroy',$parceria)}}" role="form"
                                     class="d-inline"
-                                    onsubmit="return confirm('Are you sure you want to delete this record?');">
+                                    onsubmit="return confirm('Tem a certeza que quer eliminar a parceria?');">
                                     @csrf
-                                    <!--Proteção do website contra ataques de cross-site request forgery (CSRF),
-                        ou seja, Contra pedidos que provêm de outros websites
-                    Acrescenta 2 campos escondidos ao formulario-->
-
                                     @method("DELETE")
                                     <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
-                                        <i class="fas fa-trash fa-xs text-danger" style="font-size: 15px;"></i>
-                                    </button>
+                                        <i class="fas fa-trash fa-xs text-danger" style="font-size: 15px;"></i></button>
                                 </form>
                             </td>
                         </tr>
@@ -66,10 +69,11 @@
                 </table>
             </div>
             @else
-            <h6>No categorias registered</h6>
-            <!--Caso não tenha categorias mostra esta mensagem-->
+            <h6>Não existem parcerias registadas</h6>
             @endif
         </div>
     </div>
 </div>
+
+
 @endsection
