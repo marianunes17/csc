@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\FTestemunhos;
 use Illuminate\Http\Request;
 
-class FTestemunhos extends Controller
+class FTestemunhosController extends Controller
 {
     /**
      * Display a listing of the resource.
