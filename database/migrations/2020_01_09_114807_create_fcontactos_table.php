@@ -15,6 +15,9 @@ class CreateFcontactosTable extends Migration
     {
         Schema::create('fcontactos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nome', 100);
+            $table->string('assunto', 100);
+            $table->text('mensagem');
             $table->timestamps();
         });
     }
