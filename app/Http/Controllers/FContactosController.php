@@ -14,7 +14,8 @@ class FContactosController extends Controller
      */
     public function index()
     {
-        //
+        $contactos=FContactos::all();
+        return view('contactos.list', compact('contactos'));
     }
 
     /**

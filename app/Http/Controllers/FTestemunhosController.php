@@ -14,7 +14,8 @@ class FTestemunhosController extends Controller
      */
     public function index()
     {
-        //
+        $testemunhos=FTestemunhos::all();
+        return view('testemunhos.list', compact('testemunhos'));
     }
 
     /**
