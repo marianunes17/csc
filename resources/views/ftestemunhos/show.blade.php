@@ -1,25 +1,26 @@
 
 @extends('layout.admin')
 
-@section("title", "Categorias")
+@section("title", "Parcerias")
 
 @section('content')
 <div class="container-fluid">
 
-     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-			Informação Categoria
-        </div>
-        <div class="card-body">
+    <div class="card shadow mb-4">
+       <div class="card-header py-3">
+           Parcerias
+       </div>
+       <div class="card-body">
 
-			<div> <strong>Nome:</strong> {{$category->name}} </div>
-            <div> <strong>Descrição:</strong> {{$category->description}} </div>
+           <div>
+               <img alt="Post image" src="xxx">
+           </div>
 
-            
-            @if ($category->category_id)
-            <div> <strong>Categoria pai:</strong> {{$category->categoryParent->name}} </div>
-            @endif
-		</div>
-	</div>
+           <div><strong>Título:</strong> {{$parceria->titulo}} </div>
+           <div><strong>Descrição:</strong> {{$parceria->descricao}} </div>
+           <div><strong>Imagem:</strong> {{$parceria->imagem}} </div>
+       </div>
+   </div>
 </div>
+
 @endsection
