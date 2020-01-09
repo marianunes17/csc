@@ -97,11 +97,8 @@
         <div id="collapseForm" class="dropdown-menu"
             aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header pl-3">Formulário de contactos</h6>
-                <a class="dropdown-item" href="{{route('formulariocontactos.index')}}">Lista
-                    de eventos</a>
-                <a class="dropdown-item" href="{{route('formulariotestemunhos.inde')}}">Adicionar
-                    evento</a>
+                <a class="dropdown-item" href="{{route('formulariocontactos.index')}}">Formulário de Contactos</a>
+                <a class="dropdown-item" href="{{route('formulariotestemunhos.index')}}">Formulário de Testemunhos</a>
             </div>
         </div>
     </li>
