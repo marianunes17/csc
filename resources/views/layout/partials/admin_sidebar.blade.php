@@ -98,7 +98,7 @@
             aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="dropdown-item" href="{{route('formulariocontactos.index')}}">Contactos</a>
-                <a class="dropdown-item" href="{{route('formulariotestemunhos.index')}}">Testemunhos</a>
+                <a class="dropdown-item" href="{{route('testemunhos.index')}}">Testemunhos</a>
             </div>
         </div>
     </li>
