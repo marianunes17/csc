@@ -97,7 +97,7 @@
         <div id="collapseForm" class="dropdown-menu"
             aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="dropdown-item" href="{{route('formulariocontactos.index')}}">Contactos</a>
+                <a class="dropdown-item" href="{{route('contactos.index')}}">Contactos</a>
                 <a class="dropdown-item" href="{{route('testemunhos.index')}}">Testemunhos</a>
             </div>
         </div>
