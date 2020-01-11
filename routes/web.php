@@ -26,9 +26,15 @@ Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
 Route::get('/admin','DashboardController@show')->name("dashboard");
 Route::resource('/admin/utilizadores', 'UserController');
-Route::resource('/admin/categories', 'CategoryController');
 Route::resource('/admin/parcerias', 'ParceriaController');
-Route::resource('/admin/eventos', 'EventosController');
 Route::resource('/admin/formulariotestemunhos', 'FTestemunhosController');
 Route::resource('/admin/formulariocontactos', 'FContactosController');
 
+
+Route::resource('/admin/eventos', 'EventosController');
+Route::redirect('/admin/evento', '/admin/eventos');
+
+Route::resource('/admin/categories', 'CategoryController');
+Route::redirect('/admin/categoria', '/admin/categories');
+Route::redirect('/admin/categorias', '/admin/categories');
+Route::redirect('/admin/category', '/admin/categories');

@@ -48,7 +48,7 @@ class CategoryController extends Controller
 
         $category=new Category;
         $category->fill($fields);
-        /*$category->category_id=$fields['category'];*/
+        $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categories.index')->with('success', 'Category successfully created');
     }
@@ -88,7 +88,7 @@ class CategoryController extends Controller
     public function update(UpdateCategoryRequest $request, Category $category){
         $fields=$request->validated();
         $category->fill($fields);
-        /*$category->category_id=$fields['category'];*/
+        $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categories.index')->with('success',
         'Category successfully updated');

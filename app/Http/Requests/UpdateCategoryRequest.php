@@ -22,11 +22,12 @@ class UpdateCategoryRequest extends FormRequest {
      * @return array
      */
     public function rules() {
-        return
-            ["name" => 'required|min:3|max:20|unique:categories,name,'. $this->category->id.'|
+        return[
+            "name" => 'required|min:3|max:20|unique:categories,name,'. $this->category->id.'|
             regex:/^[A-ZÀ-úa-z\s]+$/',
             "description" => 'required',
             'category' => 'nullable|exists:categories,id'
+            ]
     }
     /*unique:categories,name - Unico na tabela das categories,  no campo name
     ,'. $this->category->id.' - Terceiro parametro do unique (Depois do 'name')

@@ -13,7 +13,6 @@
         <div class="card-body">
 
 			<form method="POST" action="{{route('categories.update',$category)}}" class="form-group inline">
-                @include('categories.partials.add-edit')
                 @csrf
                 @method("PUT")
                 <!--O formulário apenas suporta o post e o get, por isso tem de ser acrescentar @ method("PUT")

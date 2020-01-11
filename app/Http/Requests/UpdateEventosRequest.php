@@ -24,7 +24,7 @@ class UpdateEventosRequest extends FormRequest
     public function rules()
     {
         return [
-            "titulo" => 'required|min:3|max:20|unique:eventos,nome,' .
+            "nome" => 'required|min:3|max:20|unique:eventos,nome,' .
                 $this->evento->id . '|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
             "category" => 'required',
