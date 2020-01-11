@@ -27,9 +27,8 @@ Route::get('/registar', 'PageController@registar')->name("csc.registar");
 Route::get('/admin','DashboardController@show')->name("dashboard");
 Route::resource('/admin/utilizadores', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');
-Route::resource('/admin/formulariotestemunhos', 'FTestemunhosController');
-Route::resource('/admin/formulariocontactos', 'FContactosController');
-
+Route::resource('/admin/testemunhos', 'TestemunhosController');
+Route::resource('/admin/contactos', 'ContactosController');
 
 Route::resource('/admin/eventos', 'EventosController');
 Route::redirect('/admin/evento', '/admin/eventos');
