@@ -25,10 +25,10 @@ class UpdateTestemunhosRequest extends FormRequest
     {
         return [
 
-        "Nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-        "Sobrenome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-        "Email" => 'required',
-        "Testemunho"=>'required|min:3|max:150|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+  "nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "sobrenome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "email" => 'required|email',
+        "testemunho"=>'required|min:3|max:150|regex:/^[A-ZÀ-úa-z\s\-]+$/',
         ];
     }
 }

@@ -15,9 +15,11 @@ class CreateTestemunhosTable extends Migration
     {
         Schema::create('testemunhos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome', 100);
-            $table->string('email', 100);
-            $table->text('testemunhos');
+            $table->string('nome', 20);
+            $table->string('sobrenome', 20);
+            $table->string('email', 50);
+            $table->text('testemunho');
+            $table->dateTime('data');
             $table->timestamps();
         });
     }

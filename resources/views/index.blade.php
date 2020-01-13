@@ -197,34 +197,40 @@ significa q extende a view master -->
                 </div>
             </div>
             <div class="col-md-8 mx-auto">
-                <form>
+                 @if ($errors->any())
+                @include ('partials.errors')
+                @endif
+                <form method="post" action="{{route('testemunhos.store')}}">
+                    @csrf
+                    @method('post')
+                 
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="nome"></label>
-                                <input id="nome" type="text" class="form-control" placeholder="Primeiro Nome">
+                                <input id="nome" name="nome" type="text" class="form-control" placeholder="Primeiro Nome">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="asssunto"></label>
-                                <input id="assunto" type="text" class="form-control" placeholder="Sobrenome">
+                                <input id="assunto" name="sobrenome" type="text" class="form-control" placeholder="Sobrenome">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="email"></label>
-                                <input id="email" type="email" class="form-control" placeholder="E-mail">
+                                <input id="email" type="email" name="email" class="form-control" placeholder="E-mail">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="message"></label>
-                                <textarea id="message" class="form-control" placeholder="Testemunho"></textarea>
+                                <textarea id="message" name="testemunho" class="form-control" placeholder="Testemunho"></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12 text-right">
-                            <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
+                               <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
                                 Enviar</button>
                         </div>
                     </div>

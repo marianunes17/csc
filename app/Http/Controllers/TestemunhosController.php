@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Testemunhos;
+use App\Testemunho;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTestemunhosRequest;
 use App\Http\Requests\UpdateTestemunhosRequest;
@@ -17,20 +17,10 @@ class TestemunhosController extends Controller
      */
     public function index()
     {
-            $testemunhos=Testemunhos::all();
+            $testemunhos=Testemunho::all();
             return view('testemunhos.list',compact('testemunhos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $testemunho = new Testemunhos;
-        return view('testemunhos.add', compact("testemunho"));
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -40,18 +30,13 @@ class TestemunhosController extends Controller
      */
     public function store(StoreTestemunhosRequest $request)
     {
+   
         $fields = $request->validated();
-        $testemunho = new Testemunhos;
+        $testemunho = new Testemunho;
         $testemunho->fill($fields);
+        $testemunho->data=date('Y-m-d H:i:s');
         $testemunho->save();
-
-        if ($request->hasFile('imagem')) {
-            $image = $request->file('imagem');
-            $testemunhosImg = $testemunhos->id . '_' . time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->putFileAs('testemunhos_images', $image, $testemunhosImg);
-            $testemunhos->imagem = $testemunhosImg;
-            $testemunhos->save();
-        }
+      
 
         return redirect()->route('testemunhos.index')->with('success', 'Testemunhos criado com sucesso');
     }
@@ -62,9 +47,9 @@ class TestemunhosController extends Controller
      * @param  \App\FTestemunhos  $testemunhos
      * @return \Illuminate\Http\Response
      */
-    public function show(Testemunhos $testemunhos)
+    public function show(Testemunho $testemunho)
     {
-        return view('testemunhos.show', compact('testemunhos'));
+        return view('testemunhos.show', compact('testemunho'));
     }
 
     /**
@@ -73,9 +58,9 @@ class TestemunhosController extends Controller
      * @param  \App\testemunhos  $testemunhos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testemunhos $testemunhos)
+    public function edit(Testemunho $testemunho)
     {
-        return view('testemunhos.edit', compact('testemunhos'));
+        return view('testemunhos.edit', compact('testemunho'));
     }
 
     /**
@@ -85,11 +70,11 @@ class TestemunhosController extends Controller
      * @param  \App\testemunhos  $testemunhos
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTestemunhosRequest $request, testemunhos $testemunhos)
+    public function update(UpdateTestemunhosRequest $request, testemunho $testemunho)
     {
         $fields = $request->validated();
-        $testemunhos->fill($fields);
-        $testemunhos->save();
+        $testemunho->fill($fields);
+        $testemunho->save();
         return redirect()->route('testemunhos.index')->with(
             'success',
             'Testemunho atualizado com sucesso'
@@ -104,7 +89,7 @@ class TestemunhosController extends Controller
      */
     public function destroy(Testemunhos $testemunhos)
     {
-        $testemunhos->delete();
+        $testemunho->delete();
         return redirect()->route('testemunhos.index')->with(
             'success',
             'Testemunho eliminado com sucesso'

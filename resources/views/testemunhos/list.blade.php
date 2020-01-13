@@ -23,41 +23,41 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Imagem</th>
-                            <th>Título</th>
-                            <th>Descrição</th>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Email</th>
+                            <th>Testemunho</th>
+                            <th>Data</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($testemunhos as $testemunhos)
+                        @foreach($testemunhos as $testemunho)
                         <tr>
+                            
                             <td>
-                                @if ($testemunhos->imagem)
-                                <img src="{{Storage::disk('public')->url('testemunhos_images/').$testemunhos->imagem}}"
-                                    class="w-50" alt="parcerias">
-                                @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="parcerias">
-                                @endif
+                                {{$testemunho->nome}}
                             </td>
 
-                            <td>{{$testemunhos->titulo}}</td>
-                            <td>{{$testemunhos->descricao}}</td>
+                            <td>{{$testemunho->sobrenome}}</td>
+                            <td>{{$testemunho->email}}</td>
+                            <td>{{$testemunho->testemunho}}</td>
+                            <td>{{$testemunho->data}}</td>
 
 
                             </td>
                             <td nowrap>
-                                <a href="{{route('testemunhos.show',$testemunhos)}}"
+                                <a href="{{route('testemunhos.show',$testemunho)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a href="{{route('testemunhos.edit',$testemunhos)}}"
+                                <a href="{{route('testemunhos.edit',$testemunho)}}"
                                     class="btn btn-sm btn-link d-inline text-decoration-none">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
-                                <form method="POST" action="{{route('testemunhos.destroy',$testemunhos)}}" role="form"
+                                <form method="POST" action="{{route('testemunhos.destroy',$testemunho)}}" role="form"
                                     class="d-inline"
                                     onsubmit="return confirm('Tem a certeza que quer eliminar a testemunhos?');">
                                     @csrf
@@ -72,7 +72,7 @@
                 </table>
             </div>
             @else
-            <h6>Não existem parcerias registadas</h6>
+            <h6>Não existem testemunhos registados</h6>
             @endif
         </div>
     </div>
