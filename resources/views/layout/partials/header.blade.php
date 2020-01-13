@@ -55,7 +55,7 @@
                         <input id="password_modal" type="password" placeholder="Password" class="form-control">
                     </div>
                     <p class="text-center">
-                        <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
+                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
                     </p>
                 </form>
                 <p class="text-center text-muted">Ainda não se registou?</p>
