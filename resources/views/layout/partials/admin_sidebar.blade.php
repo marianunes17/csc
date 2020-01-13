@@ -61,7 +61,7 @@
             role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
-            <span>Eventos & Categorias</span>
+            <span>Eventos | Categorias</span>
         </a>
 
         <div id="collapseEventos" class="dropdown-menu"
