@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Evento;
-use App\Testemunhos;
+use App\Testemunho;
 class DashboardController extends Controller
 {
     /**
@@ -49,7 +49,7 @@ class DashboardController extends Controller
     {
         $total_users=User::count();
         $total_events=Evento::count();
-        $total_testimonials=Testemunhos::count();
+        $total_testimonials=Testemunho::count();
         return view('dashboard.show',compact('total_users','total_testimonials','total_events'));
     }
 
