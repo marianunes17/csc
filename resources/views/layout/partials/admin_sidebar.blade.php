@@ -61,7 +61,7 @@
             role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
-            <span>Eventos</span>
+            <span>Eventos & Categorias</span>
         </a>
 
         <div id="collapseEventos" class="dropdown-menu"
@@ -75,7 +75,7 @@
 
                 <div class="dropdown-divider"></div>
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header pl-3">Categories:</h6>
+                <h6 class="collapse-header pl-3">Categorias:</h6>
                 <a class="dropdown-item" href="{{route('categories.index')}}">Lista
                     de
                     Categorias</a>
