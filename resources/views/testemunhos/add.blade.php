@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section("title", "Adicionar Parcerias")
+@section("title", "Adicionar Testemunho")
 
 @section('content')
 
@@ -8,20 +8,20 @@
 
     <div class="card shadow mb-4">
         <h5 class="card-header py-3">
-            Adicionar Parceria
+            Adicionar Testemunho
         </h5>
         
         <div class="card-body">
 
-            <form method="POST" action="{{route('parcerias.store')}}"
+            <form method="POST" action="{{route('testemunho.store')}}"
                 class="form-group"
                 enctype="multipart/form-data">
                 @csrf
-                @include('parcerias.partials.add-edit')
+                @include('testemunho.partials.add-edit')
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="ok">Guardar</button>
-                    <a href="{{route('parcerias.index')}}" class="btn btn-default">Cancelar</a>
+                    <a href="{{route('testemunho.index')}}" class="btn btn-default">Cancelar</a>
                 </div>
             </form>
 
