@@ -87,7 +87,7 @@ class TestemunhosController extends Controller
      * @param  \App\testemunhos  $testemunhos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testemunhos $testemunhos)
+    public function destroy(testemunho $testemunho)
     {
         $testemunho->delete();
         return redirect()->route('testemunhos.index')->with(
