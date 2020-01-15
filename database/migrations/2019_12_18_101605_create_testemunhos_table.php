@@ -21,6 +21,7 @@ class CreateTestemunhosTable extends Migration
             $table->text('testemunho');
             $table->dateTime('data');
             $table->timestamps();
+            $table->boolean('publicado')->default(false);
         });
     }
 

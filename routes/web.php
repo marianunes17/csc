@@ -25,6 +25,8 @@ Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage"
 Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
 Route::get('/admin','DashboardController@show')->name("dashboard");
+
+Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
 Route::resource('/admin/utilizadores', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/testemunhos', 'TestemunhosController');

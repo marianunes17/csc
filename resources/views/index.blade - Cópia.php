@@ -106,26 +106,88 @@ significa q extende a view master -->
         </div>
         <p class="lead">Testemunhos mais recentes dos nossos utentes, que comprovam a qualidade dos nossos serviços!</p>
         <ul class="owl-carousel testimonials list-unstyled equal-height">
-            @foreach($testemunhos as $testemunho)
             <li class="item">
                 <div class="testimonial d-flex flex-wrap">
                     <div class="text">
-                        <p>{{$testemunho->testemunho}}</p>
+                        <p>O Centro Social de Carnide foi um apoio enorme no que toca a criar os meus três filhos. Se
+                            não fosse o mesmo, estaria a ficar careca com os problemas que eles me dão.<br>
+                            O meu profundo obrigado ao CSC!</p>
                     </div>
                     <div class="bottom d-flex align-items-center justify-content-between align-self-end">
                         <div class="icon"><i class="fa fa-quote-left"></i></div>
                         <div class="testimonial-info d-flex">
                             <div class="title">
-                                <h5>{{$testemunho->nome}}</h5>
+                                <h5>João Morgado</h5>
                                 <strong>
-                                    <p>{{$testemunho->data}}</p>
+                                    <p>29/11/2019</p>
                                 </strong>
                             </div>
+                            <div class="avatar"><img alt="" src="img/persona2.jpg" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
             </li>
-            @endforeach
+            <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                    <div class="text">
+                        <p>Após ter ter pesquisado um lugar para colocar o nosso filho, encontrei em carnide o lugar
+                            perfeito para satisfazer as minhas necessidades</p>
+                    </div>
+                    <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                        <div class="icon"><i class="fa fa-quote-left"></i></div>
+                        <div class="testimonial-info d-flex">
+                            <div class="title">
+                                <h5>Diogo Calisto</h5>
+                                <strong>
+                                    <p>29/11/2019</p>
+                                </strong>
+                            </div>
+                            <div class="avatar"><img alt="" src="img/persona1.jpg" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                    <div class="text">
+                        <p>Não tenho condiçoes nem tempo devido ao trabalho para dar a atenção necessaria aos meus pais,
+                            por isso decidi inscrevê-los no Centro social de Carnide.</p>
+                        <p>Hoje em dia vejo que foi a melhor decisão da minha vida! Obrigado a esta equipa incrível!</p>
+                    </div>
+                    <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                        <div class="icon"><i class="fa fa-quote-left"></i></div>
+                        <div class="testimonial-info d-flex">
+                            <div class="title">
+                                <h5>Ana Santos</h5>
+                                <strong>
+                                    <p>01/11/2019</p>
+                                </strong>
+                            </div>
+                            <div class="avatar"><img alt="" src="img/person-3.png" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                    <div class="text">
+                        <p>Sinto que ao colocar os meus avôs neste Centro, eles ganharam outro ânimo, pois este promove
+                            atividades ludicas para os utentes.</p>
+                    </div>
+                    <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                        <div class="icon"><i class="fa fa-quote-left"></i></div>
+                        <div class="testimonial-info d-flex">
+                            <div class="title">
+                                <h5>João Camões</h5>
+                                <strong>
+                                    <p>21/10/2019</p>
+                                </strong>
+                            </div>
+                            <div class="avatar"><img alt="" src="img/persona4.jpg" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 </section>

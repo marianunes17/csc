@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Evento;
+use App\Testemunho;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Parceria;
@@ -16,7 +17,8 @@ use App\Parceria;
 class PageController extends Controller
 {
     public function index() {
-        return view('Index')->with('menu', 'Index');
+        $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
+        return view('Index', compact('testemunhos'))->with('menu', 'Index');
     }
 
     public function centro(){

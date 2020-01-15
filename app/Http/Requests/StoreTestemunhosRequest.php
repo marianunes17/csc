@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreTestemunhosRequest extends FormRequest
-{
+{ protected $redirect = "/#zonaTestemunhos";
     /**
      * Determine if the user is authorized to make this request.
      *

@@ -9,9 +9,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('testemunhos.create')}}">
-                <i class="fas fa-plus"></i> Adicionar Testemunho
-            </a>
+            
             <a href="{{route('csc.index')}}" class="btn btn-outline-primary float-right" target="_blank">
                 Pré-Visualizar
                 <i class="fas fa-eye"></i>
@@ -28,6 +26,7 @@
                             <th>Email</th>
                             <th>Testemunho</th>
                             <th>Data</th>
+                            <th>Publicado</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -43,9 +42,20 @@
                             <td>{{$testemunho->email}}</td>
                             <td>{{$testemunho->testemunho}}</td>
                             <td>{{$testemunho->data}}</td>
-
-
+                            <td>
+                                <form method="post" action="{{route('testemunhos.publicar',$testemunho)}}">
+                                @csrf
+               @method('patch')
+                                @if($testemunho -> publicado)
+                                <input type="checkbox" name="publicado" checked="" onclick="this.form.submit();">
+                                @else
+ <input type="checkbox" name="publicado" onclick="this.form.submit();">
+@endif
+</form>
                             </td>
+
+
+                            
                             <td nowrap>
                                 <a href="{{route('testemunhos.show',$testemunho)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline">

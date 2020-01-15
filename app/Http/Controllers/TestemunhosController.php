@@ -38,7 +38,7 @@ class TestemunhosController extends Controller
         $testemunho->save();
       
 
-        return redirect()->route('testemunhos.index')->with('success', 'Testemunhos criado com sucesso');
+        return redirect()->back()->with('success', 'Testemunhos criado com sucesso');
     }
 
     /**
@@ -93,6 +93,20 @@ class TestemunhosController extends Controller
         return redirect()->route('testemunhos.index')->with(
             'success',
             'Testemunho eliminado com sucesso'
+        );
+    }
+
+    public function publicar(testemunho $testemunho)
+    {
+        if ($testemunho->publicado){
+            $testemunho->publicado=false;
+        }else{
+             $testemunho->publicado=true;
+        }
+        $testemunho->save();
+        return redirect()->route('testemunhos.index')->with(
+            'success',
+            'Testemunho atualizado com sucesso'
         );
     }
 }
