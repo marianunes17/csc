@@ -18,7 +18,7 @@
                <div class="form-group">
                    <button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-                   <a href="{{route('parcerias.index')}}" class="btn btn-success">Cancelar</a>
+                   <a href="{{route('testemunhos.index')}}" class="btn btn-success">Cancelar</a>
 
                </div>
 

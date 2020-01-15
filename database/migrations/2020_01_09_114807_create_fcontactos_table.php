@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFcontactosTable extends Migration
+class CreateContactosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,9 @@ class CreateFcontactosTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome', 100);
             $table->string('assunto', 100);
+            $table->string('email', 50);
             $table->text('mensagem');
+            $table->dateTime('data');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateFcontactosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fcontactos');
+        Schema::dropIfExists('contactos');
     }
 }

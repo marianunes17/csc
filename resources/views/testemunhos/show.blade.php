@@ -8,7 +8,7 @@
 
     <div class="card shadow mb-4">
        <div class="card-header py-3">
-           Testemunhos
+           Visualizar Testemunho
        </div>
        <div class="card-body">
 
@@ -18,7 +18,7 @@
            <div><strong>Testemunho:</strong> {{$testemunho->testemunho}} </div>
            <div><strong>Data:</strong> {{$testemunho->data}} </div>
            <br>
-           <a href="{{route('testemunhos.index')}}" class="btn btn-success">Cancelar</a>
+           <a href="{{route('testemunhos.index')}}" class="btn btn-info">Voltar</a>
        </div>
    </div>
 </div>

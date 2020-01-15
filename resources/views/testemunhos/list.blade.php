@@ -58,12 +58,12 @@
                             
                             <td nowrap>
                                 <a href="{{route('testemunhos.show',$testemunho)}}"
-                                    class="btn btn-sm btn-link text-decoration-none d-inline">
+                                    class="btn btn-sm btn-link text-decoration-none d-inline" title="Visualizar testemunho">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
                                 <a href="{{route('testemunhos.edit',$testemunho)}}"
-                                    class="btn btn-sm btn-link d-inline text-decoration-none">
+                                    class="btn btn-sm btn-link d-inline text-decoration-none" title="Editar testemunho">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 

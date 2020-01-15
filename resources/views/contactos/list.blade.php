@@ -23,37 +23,33 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Imagem</th>
-                            <th>Título</th>
-                            <th>Descrição</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Assunto</th>
+                            <th>Mensagem</th>
+                            <th>Data</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($contactos as $contactos)
                         <tr>
-                            <td>
-                                @if ($contactos->imagem)
-                                <img src="{{Storage::disk('public')->url('contactos_images/').$contactos->imagem}}"
-                                    class="w-50" alt="parcerias">
-                                @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="parcerias">
-                                @endif
-                            </td>
-
-                            <td>{{$contactos->titulo}}</td>
-                            <td>{{$contactos->descricao}}</td>
+                            <td>{{$contactos->nome}}</td>
+                            <td>{{$contactos->email}}</td>
+                            <td>{{$contactos->assunto}}</td>
+                            <td>{{$contactos->mensagem}}</td>
+                            <td>{{$contactos->data}}</td>
 
 
                             </td>
                             <td nowrap>
                                 <a href="{{route('contactos.show',$contactos)}}"
-                                    class="btn btn-sm btn-link text-decoration-none d-inline">
+                                    class="btn btn-sm btn-link text-decoration-none d-inline" title="Visualizar Contacto">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
                                 <a href="{{route('contactos.edit',$contactos)}}"
-                                    class="btn btn-sm btn-link d-inline text-decoration-none">
+                                    class="btn btn-sm btn-link d-inline text-decoration-none" title="Editar Contacto">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
@@ -62,7 +58,7 @@
                                     onsubmit="return confirm('Tem a certeza que quer eliminar o contacto?');">
                                     @csrf
                                     @method("DELETE")
-                                    <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
+                                    <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline" title="Eliminar Contacto">
                                         <i class="fas fa-trash fa-xs text-danger" style="font-size: 15px;"></i></button>
                                 </form>
                             </td>

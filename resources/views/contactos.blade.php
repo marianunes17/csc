@@ -5,7 +5,9 @@
 @section("content")
 
 @include ('layout.partials.banner')
-
+@if (!empty(session('success')))
+@include ('partials.success')
+@endif
 <section class="bar">
     <div class="container">
         <p class="lead text-center">O Centro Social de Carnide põe ao seu dispor contactos para que possa colocar todas
@@ -64,32 +66,37 @@
                 <h2>Formulário de Contacto</h2>
             </div>
         </div>
-        <div class="col-md-8 mx-auto">
-            <form>
+        <div class="col-md-8 mx-auto" id="zonaContactos">
+            @if ($errors->any())
+                @include ('partials.errors')
+                @endif
+            <form method="post" action="{{route('contactos.store')}}">
+                @csrf
+                @method('post')
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="nome"></label>
-                            <input id="nome" type="text" class="form-control" placeholder="Nome">
+                            <input id="nome" type="text" class="form-control" placeholder="Nome" value="{{old('nome')}}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="asssunto"></label>
-                            <input id="assunto" type="text" class="form-control" placeholder="Assunto">
+                            <input id="assunto" type="text" class="form-control" placeholder="Assunto" value="{{old('assunto')}}">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="email"></label>
                             <input id="email" type="text" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
-                                data-type="email" class="form-control" placeholder="E-mail">
+                                data-type="email" class="form-control" placeholder="E-mail" value="{{old('email')}}">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="message"></label>
-                            <textarea id="message" class="form-control" placeholder="Escreva a sua questão!"></textarea>
+                            <label for="mensagem"></label>
+                            <textarea id="mensagem" class="form-control" placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 text-center">

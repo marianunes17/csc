@@ -21,7 +21,6 @@ class TestemunhosController extends Controller
             return view('testemunhos.list',compact('testemunhos'));
     }
 
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,9 +35,8 @@ class TestemunhosController extends Controller
         $testemunho->fill($fields);
         $testemunho->data=date('Y-m-d H:i:s');
         $testemunho->save();
-      
 
-        return redirect()->back()->with('success', 'Testemunhos criado com sucesso');
+        return redirect()->back()->with('success', 'Testemunho criado com sucesso');
     }
 
     /**

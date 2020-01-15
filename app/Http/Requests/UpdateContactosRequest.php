@@ -26,9 +26,8 @@ class UpdateContactosRequest extends FormRequest
         return [
 
         "Nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-        "Email" => 'required',
+        "Email" => 'required|email',
         "Assunto" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',   
-        "Mensagem"=>'required|min:3|max:250|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-        "Data" => 'required'
+        "Mensagem"=>'required|min:3|max:500|regex:/^[A-ZÀ-úa-z\s\-]+$/',
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Contactos;
+use App\Contacto;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreContactosRequest;
 use App\Http\Requests\UpdateContactosRequest;
@@ -17,43 +17,26 @@ class ContactosController extends Controller
      */
     public function index()
     {
-        $contactos=Contactos::all();
+        $contactos=Contacto::all();
         return view('contactos.list', compact('contactos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $contacto = new Contactos;
-        return view('contactos.add', compact("contacto"));
-    }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
+     * Show the form for creating a new resource.
+     * @param 
      * @return \Illuminate\Http\Response
      */
     public function store(StoreContactosRequest $request)
     {
+
         $fields = $request->validated();
-        $contacto = new Contactos;
+        $contacto = new Contacto;
         $contacto->fill($fields);
+        $contacto->data=date('Y-m-d H:i:s');
         $contacto->save();
 
-        if ($request->hasFile('imagem')) {
-            $image = $request->file('imagem');
-            $contactoImg = $contacto->id . '_' . time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->putFileAs('parceria_images', $image, $parceriaImg);
-            $contacto->imagem = $contactoImg;
-            $contacto->save();
-        }
-
-        return redirect()->route('contactos.index')->with('success', 'Contacto criado com sucesso');
+         return redirect()->back()->with('success', 'Contacto criado com sucesso');
     }
 
     /**
@@ -62,7 +45,7 @@ class ContactosController extends Controller
      * @param  \App\Contactos  $contactos
      * @return \Illuminate\Http\Response
      */
-    public function show(Contactos $contacto)
+    public function show(Contacto $contacto)
     {
         return view('contactos.show', compact('contacto'));
     }
@@ -73,7 +56,7 @@ class ContactosController extends Controller
      * @param  \App\Contactos  $contactos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contactos $contacto)
+    public function edit(Contacto $contacto)
     {
         return view('contactos.edit', compact('contacto'));
     }
@@ -85,7 +68,7 @@ class ContactosController extends Controller
      * @param  \App\Contactos  $contactos
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateContactosRequest $request, Contactos $contactos)
+    public function update(UpdateContactosRequest $request, Contacto $contacto)
     {
         $fields = $request->validated();
         $contacto->fill($fields);
@@ -102,7 +85,7 @@ class ContactosController extends Controller
      * @param  \App\Contactos  $contactos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contactos $contactos)
+    public function destroy(Contacto $contacto)
     {
         $contacto->delete();
         return redirect()->route('contactos.index')->with(
