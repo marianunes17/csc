@@ -77,26 +77,26 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="nome"></label>
-                            <input id="nome" type="text" class="form-control" placeholder="Nome" value="{{old('nome')}}">
+                            <input id="nome" name="nome" class="form-control" placeholder="Nome" value="{{old('nome')}}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="asssunto"></label>
-                            <input id="assunto" type="text" class="form-control" placeholder="Assunto" value="{{old('assunto')}}">
+                            <input id="assunto" name="assunto" class="form-control" placeholder="Assunto" value="{{old('assunto')}}">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="email"></label>
-                            <input id="email" type="text" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
+                            <input id="email" name="email" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
                                 data-type="email" class="form-control" placeholder="E-mail" value="{{old('email')}}">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="mensagem"></label>
-                            <textarea id="mensagem" class="form-control" placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 text-center">
@@ -108,9 +108,5 @@
         </div>
     </div>
 </section>
-
-
-
-
 
 @endsection

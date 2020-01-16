@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreContactosRequest extends FormRequest
-{ protected $redirect = "/#zonaContactos";
+{ protected $redirect = "contactos/#zonaContactos";
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -25,10 +25,10 @@ class StoreContactosRequest extends FormRequest
     {
         return [
 
-        "Nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-        "Email" => 'required|email',
-        "Assunto" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',   
-        "Mensagem"=>'required|min:3|max:500|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "email" => 'required|email',
+        "assunto" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',   
+        "mensagem"=>'required|min:3|max:500|regex:/^[A-ZÀ-úa-z\s\-]+$/',
          ];
     }
 }
