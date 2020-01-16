@@ -144,7 +144,7 @@ significa q extende a view master -->
                 <form method="post" action="{{route('testemunhos.store')}}">
                     @csrf
                     @method('post')
-                 
+
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -187,13 +187,9 @@ value="{{old('nome')}}">
             <h2>Parceiros</h2>
         </div>
         <ul class="list-unstyled owl-carousel customers no-mb">
-            <li class="item"><img src="img/parceria1.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria2.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria3.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria4.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria5.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria6.png" alt="" class="img-fluid"></li>
-            <li class="item"><img src="img/parceria7_2.png" alt="" class="img-fluid"></li>
+            @foreach ($parcerias as $parceria)
+            <li class="item"><img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}" alt="" class="img-fluid"></li>
+            @endforeach
         </ul>
     </div>
 </section>

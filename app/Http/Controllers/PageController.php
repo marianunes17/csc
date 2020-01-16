@@ -17,8 +17,9 @@ use App\Parceria;
 class PageController extends Controller
 {
     public function index() {
+        $parcerias=Parceria::all();
         $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
-        return view('Index', compact('testemunhos'))->with('menu', 'Index');
+        return view('Index', compact('testemunhos','parcerias'))->with('menu', 'Index');
     }
 
     public function centro(){
