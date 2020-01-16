@@ -33,7 +33,7 @@
             </div>
             <div class="mr-5">{{$total_testimonials}} Testemunhos</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="#">
+          <a class="card-footer text-white clearfix small z-1" href="{{route('contactos.index')}}">
             <span class="float-left">Ver Mais</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>
