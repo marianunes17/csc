@@ -50,7 +50,7 @@ class CategoryController extends Controller
         $category->fill($fields);
         $category->category_id=$fields['category'];
         $category->save();
-        return redirect()->route('categories.index')->with('success', 'Category successfully created');
+        return redirect()->route('categories.index')->with('success', 'A categoria foi criada com sucesso');
     }
 
 
@@ -91,7 +91,7 @@ class CategoryController extends Controller
         $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categories.index')->with('success',
-        'Category successfully updated');
+        'Categoria editada com sucesso');
     } /*Permita guardar os dados submetidos através do formulário. */
 
 
@@ -105,11 +105,11 @@ class CategoryController extends Controller
 
         if ($category->eventos()->exists()){
             return redirect()->route('categories.index')->withErrors(
-            ['delete'=>'Category has related eventos'] );
+            ['delete'=>'A categoria tem eventos relacionados'] );
         }
 
         $category->delete();
-        return redirect()->route('categories.index')->with('success', 'Category successfully deleted');
+        return redirect()->route('categories.index')->with('success', 'A categoria foi apagada com sucesso');
     } /**O método “delete” permite eliminar uma categoria.
         Só é possível eliminar uma categoria se esta não tiver posts associados, ou seja, se o relacionamento
     não existir.*/

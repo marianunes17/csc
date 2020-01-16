@@ -11,12 +11,14 @@
         <div class="card-header py-3">
             <a class="btn btn-primary" href="{{route('categories.create')}}">
                 <!-- rota para criar a categoria -->
+
                 <i class="fas fa-plus"></i> Adicionar Categoria
             </a>
         </div>
         <div class="card-body">
             @if (count($categories))
             <!--Se tiver categorias mostra-as-->
+
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -48,7 +50,7 @@
 
                                 <form method="POST" action="{{route('categories.destroy',$category)}}" role="form"
                                     class="d-inline"
-                                    onsubmit="return confirm('Are you sure you want to delete this record?');">
+                                    onsubmit="return confirm('Tem a certeza que deseja excluir esta categoria?');">
                                     @csrf
                                     <!--Proteção do website contra ataques de cross-site request forgery (CSRF),
                         ou seja, Contra pedidos que provêm de outros websites
@@ -66,7 +68,7 @@
                 </table>
             </div>
             @else
-            <h6>No categorias registered</h6>
+            <h6>Não há categorias</h6>
             <!--Caso não tenha categorias mostra esta mensagem-->
             @endif
         </div>

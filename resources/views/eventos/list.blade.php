@@ -12,6 +12,11 @@
             <a class="btn btn-primary" href="{{route('eventos.create')}}">
                 <i class="fas fa-plus"></i> Adicionar Eventos
             </a>
+
+            <a href="{{route('csc.eventos')}}" class="btn btn-outline-primary float-right" target="_blank">
+                Pré-Visualizar
+                <i class="fas fa-eye"></i>
+            </a>
         </div>
         <div class="card-body">
             @if (count($eventos))
