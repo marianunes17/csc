@@ -1,13 +1,13 @@
 @extends('layout.admin')
 
-@section("title", "Editar Parcerias")
+@section("title", "Enviar resposta")
 
 @section('content')
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
        <div class="card-header py-3">
-           Editar Parcerias
+           Enviar Resposta
        </div>
        <div class="card-body">
 

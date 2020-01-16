@@ -9,9 +9,6 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('contactos.create')}}">
-                <i class="fas fa-plus"></i> Adicionar Contacto
-            </a>
             <a href="{{route('csc.contactos')}}" class="btn btn-outline-primary float-right" target="_blank">
                 Pré-Visualizar
                 <i class="fas fa-eye"></i>
@@ -48,9 +45,9 @@
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a href="{{route('contactos.edit',$contactos)}}"
-                                    class="btn btn-sm btn-link d-inline text-decoration-none" title="Editar Contacto">
-                                    <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
+                                <a href="mailto:{{$contactos->Email}}"
+                                    class="btn btn-sm btn-link d-inline text-decoration-none" title="Enviar Mensagem">
+                                    <i class="fas fa-envelope fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
                                 <form method="POST" action="{{route('contactos.destroy',$contactos)}}" role="form"
