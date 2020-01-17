@@ -36,7 +36,7 @@ class UpdateCategoryRequest extends FormRequest {
     /**regex - Define quais os carateres que podem ser utilizados */
 
     public function messages() {
-        return ['name.regex' => 'Name should contain only letters and spaces'];
+        return ['name.regex' => 'O nome deve conter apenas letras e espaços'];
 
     }
 }

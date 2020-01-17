@@ -19,4 +19,3 @@
         @endforeach
     </select>
 </div>
-
