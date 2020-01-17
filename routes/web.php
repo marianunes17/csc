@@ -44,8 +44,6 @@ Route::resource('/admin/categories', 'CategoryController');
 Route::redirect('/admin/categoria', '/admin/categories');
 Route::redirect('/admin/categorias', '/admin/categories');
 Route::redirect('/admin/category', '/admin/categories');
-
-Route::redirect('/admin/category', '/admin/categories');
 });
 
 
