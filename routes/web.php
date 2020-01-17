@@ -27,7 +27,12 @@ Route::get('/registar', 'PageController@registar')->name("csc.registar");
 Route::get('/admin','DashboardController@show')->name("dashboard");
 
 Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
-Route::resource('/admin/utilizadores', 'UserController');
+
+Route::group(['middleware' => ['auth', 'verified']], function () {
+ Route::get('/users/{user}/send_reactivate_mail',
+ "UserController@send_reactivate_email")->name('users.sendActivationEmail');
+
+Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/testemunhos', 'TestemunhosController');
 Route::resource('/admin/contactos', 'ContactosController');
@@ -39,3 +44,9 @@ Route::resource('/admin/categories', 'CategoryController');
 Route::redirect('/admin/categoria', '/admin/categories');
 Route::redirect('/admin/categorias', '/admin/categories');
 Route::redirect('/admin/category', '/admin/categories');
+});
+
+
+Auth::routes(['register' => false, 'verify' => true]);
+
+Route::get('/admin', 'HomeController@index')->name('admin');

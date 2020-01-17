@@ -35,8 +35,8 @@
             <span>Utilizadores</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="#">Adicionar Utilizador</a>
-            <a class="dropdown-item" href="#">Lista de Utilizadores</a>
+            <a class="dropdown-item" href="{{route('users.create')}}">Adicionar Utilizador</a>
+            <a class="dropdown-item" href="{{route('users.index')}}">Lista de Utilizadores</a>
         </div>
     </li>
     <li class="nav-item dropdown">
