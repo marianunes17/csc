@@ -41,12 +41,12 @@ Route::resource('/admin/eventos', 'EventosController');
 Route::redirect('/admin/evento', '/admin/eventos');
 
 Route::resource('/admin/categories', 'CategoryController');
-/*Route::redirect('/admin/categoria', '/admin/categories');
+Route::redirect('/admin/categoria', '/admin/categories');
 Route::redirect('/admin/categorias', '/admin/categories');
 Route::redirect('/admin/category', '/admin/categories');
 
 Route::redirect('/admin/category', '/admin/categories');
-});*/
+});
 
 
 Auth::routes(['register' => false, 'verify' => true]);
