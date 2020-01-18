@@ -68,8 +68,8 @@
         </div>
         <div class="col-md-8 mx-auto" id="zonaContactos">
             @if ($errors->any())
-                @include ('partials.errors')
-                @endif
+            @include ('partials.errors')
+            @endif
             <form method="post" action="{{route('contactos.store')}}">
                 @csrf
                 @method('post')
@@ -77,13 +77,15 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="nome"></label>
-                            <input id="nome" name="nome" class="form-control" placeholder="Nome" value="{{old('nome')}}">
+                            <input id="nome" name="nome" class="form-control" placeholder="Nome"
+                                value="{{old('nome')}}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="asssunto"></label>
-                            <input id="assunto" name="assunto" class="form-control" placeholder="Assunto" value="{{old('assunto')}}">
+                            <input id="assunto" name="assunto" class="form-control" placeholder="Assunto"
+                                value="{{old('assunto')}}">
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -96,7 +98,8 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="mensagem"></label>
-                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control"
+                                placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
                         </div>
                     </div>
                     <div class="col-sm-12 text-center">

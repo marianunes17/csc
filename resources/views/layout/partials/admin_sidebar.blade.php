@@ -1,8 +1,7 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
     <a href="{{route('csc.index')}}" target="_blank">
-        <li class="text-center"><img
-                src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro
+        <li class="text-center"><img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro
                 Social de
                 Carnide logo" class="w-75"></li>
         <h6 class="text-white text-center">Centro Social de Carnide</h6>
@@ -28,8 +27,7 @@
     </li>
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-users"></i>
             <span>Utilizadores</span>
@@ -41,8 +39,7 @@
     </li>
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-handshake"></i>
             <span>Parcerias</span>
@@ -57,15 +54,13 @@
 
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
             <span>Eventos</span>
         </a>
 
-        <div id="collapseEventos" class="dropdown-menu"
-            aria-labelledby="pagesDropdown">
+        <div id="collapseEventos" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header pl-3">Eventos:</h6>
                 <a class="dropdown-item" href="{{route('eventos.index')}}">Lista
@@ -88,14 +83,12 @@
 
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-            role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-invoice"></i>
             <span>Formulários</span>
         </a>
-        <div id="collapseForm" class="dropdown-menu"
-            aria-labelledby="pagesDropdown">
+        <div id="collapseForm" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="dropdown-item" href="{{route('contactos.index')}}">Contactos</a>
                 <a class="dropdown-item" href="{{route('testemunhos.index')}}">Testemunhos</a>
