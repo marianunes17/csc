@@ -91,7 +91,7 @@ class CategoryController extends Controller
         $category->category_id=$fields['category'];
         $category->save();
         return redirect()->route('categories.index')->with('success',
-        'Categoria editada com sucesso');
+        'A categoria foi editada com sucesso');
     } /*Permita guardar os dados submetidos através do formulário. */
 
 

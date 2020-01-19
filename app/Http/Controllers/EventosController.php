@@ -62,7 +62,7 @@ class EventosController extends Controller
             $evento->save();
         }
 
-        return redirect()->route('eventos.index')->with('success', 'eventos successfully created');
+        return redirect()->route('eventos.index')->with('success', 'O eventos foi criado com sucesso');
     }
 
     /**
@@ -102,7 +102,7 @@ class EventosController extends Controller
         $evento->save();
         return redirect()->route('eventos.index')->with(
             'success',
-            'evento successfully updated'
+            'O evento foi editado com sucesso'
         );
     }
 
@@ -115,6 +115,6 @@ class EventosController extends Controller
     public function destroy(Evento $evento)
     {
         $evento->delete();
-        return redirect()->route('eventos.index')->with('success', 'Category successfully deleted');
+        return redirect()->route('eventos.index')->with('success', 'O evento foi apagado com sucesso');
     }
 }
