@@ -28,6 +28,11 @@ Route::get('/admin','DashboardController@show')->name("dashboard");
 
 Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
 
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/users/{user}/send_reactivate_mail',
+    "UserController@send_reactivate_email")->name('users.sendActivationEmail');
+    Route::get('/admin', 'HomeController@index')->name('admin')
+
 Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/eventos', 'EventosController');
@@ -38,3 +43,7 @@ Route::resource('/admin/categories', 'CategoryController');
 Route::redirect('/admin/categoria', '/admin/categories');
 Route::redirect('/admin/categorias', '/admin/categories');
 Route::redirect('/admin/category', '/admin/categories');
+
+});
+
+Auth::routes(['register' => false, 'verify' => true]);
