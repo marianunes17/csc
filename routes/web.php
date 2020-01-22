@@ -24,14 +24,19 @@ Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage"
 
 Route::get('/registar', 'PageController@registar')->name("csc.registar");
 
-Route::get('/admin','DashboardController@show')->name("dashboard");
 
 Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
 
+
 Route::group(['middleware' => ['auth', 'verified']], function () {
+    
     Route::get('/users/{user}/send_reactivate_mail',
     "UserController@send_reactivate_email")->name('users.sendActivationEmail');
-    Route::get('/admin', 'HomeController@index')->name('admin')
+    
+    Route::get('/admin','DashboardController@show')->name("dashboard");
+
+    
+
 
 Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');

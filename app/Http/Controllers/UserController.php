@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\StoreUserRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
@@ -11,9 +15,25 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if (count($request->all()) == 0) {
+        $users=User::all();
+            } else {
+        $users = User::query();
+        if ($request->filled('name')) {
+        $users->where('name', 'like', '%' . $request->name . '%');
+        }
+        if ($request->filled('email')) {
+        $users->where('email', 'like', '%' . $request->email . '%');
+        }
+        if ($request->filled('role')) {
+        $users->where('role', $request->role);
+        }
+        $users=$users->get();
+        }
+            
+            return view('users.list', compact('users'));
     }
 
     /**
@@ -23,7 +43,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $user = new User;
+        return view('users.add', compact('user'));
     }
 
     /**
@@ -32,9 +53,22 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+        $fields = $request->validated();
+        $user = new User;
+        $user->fill($fields);
+        $user->password = Hash::make('GamesMultimedia');
+        $user->save();
+        if ($request->hasFile('photo')) {
+        $photo = $request->file('photo');
+        $profileImg = $user->id . '_' . time() . '.' . $photo->getClientOriginalExtension();
+        Storage::disk('public')->putFileAs('users_photos', $photo, $profileImg);
+        $user->photo = $profileImg;
+        $user->save();
+        }
+        $user->sendEmailVerificationNotification();
+        return redirect()->route('users.index')->with('success', 'User successfully created');
     }
 
     /**
@@ -43,9 +77,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+       return view('users.show', compact("user"));
     }
 
     /**
@@ -54,9 +88,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+       return view('users.edit', compact('user'));
     }
 
     /**
@@ -66,9 +100,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        //
+         if ($user->can('updateRole',$user)){
+            $fields = $request->validated();
+        }
+        else{
+            $fields = $request->except("role");
+        }
+        $user->fill($fields);
+        $user->save();
+        return redirect()->route('users.index')->with('success', 'User successfully updated');
     }
 
     /**
@@ -77,8 +119,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index')->with('success', 'User successfully deleted');
     }
+
+    public function send_reactivate_email(User $user)
+    {
+        $user->sendEmailVerificationNotification();
+        return redirect()->route('users.index')->with('success', 'Email successfully sent');
+    }
+
 }
