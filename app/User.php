@@ -1,13 +1,11 @@
  <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class User extends Authenticatable implements MustVerifyEmail
-{
+class User extends Authenticatable implements MustVerifyEmail{
      use Notifiable;
 	 use SoftDeletes;
 	 protected $fillable = ['name', 'email', 'password', 'role', 'photo'];
