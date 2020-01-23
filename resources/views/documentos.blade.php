@@ -19,24 +19,24 @@
 
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($tipos as $i => $tipo)
-                        @if ( (request()->query('cat_id')==$tipo->id) || (request()->query('pai')==$tipo->id)
-                        || ($i==0 && request()->query('cat_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?cat_id={{$categoria->id}}"
+                        @if ( (request()->query('tipo_id')==$tipo->id) || (request()->query('pai')==$tipo->id)
+                        || ($i==0 && request()->query('tipo_id')==""))
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$categoria->id}}"
                                 class="nav-link active categorias">{{$tipo->name}}</a></li>
                         @if(count($tipos_sub))
                         <ul>
-                            @foreach($tipos_sub as $cat)
+                            @foreach($tipos_sub as $tipo)
                             <li>
-                                <a href="{{route('csc.documentos')}}?cat_id={{$cat->id}}&pai={{$tipo->id}}"
+                                <a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}&pai={{$tipo->id}}"
                                     class="nav-link categorias">
-                                    {{$cat->name}}
+                                    {{$tipo->name}}
                                 </a>
                             </li>
                             @endforeach
                         </ul>
                         @endif
                         @else
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?cat_id={{$tipo->id}}" class="nav-link
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}" class="nav-link
                             @if (request()->query('pai')==$tipo->id) active @endif
                             categorias">{{$categoria->name}}</a></li>
                         @endif

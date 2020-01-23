@@ -39,9 +39,26 @@ class PageController extends Controller
         return view('parcerias',compact('parcerias'))->with('menu', 'Parcerias');
     }
 
-    public function documentos(){
-        return view('documentos')->with('menu', 'Documentos');
+    public function documentos(Request $request){
+        $tipos=tipo::where('tipo_id', null)->get();
+
+        if ($request->has('tipo_id')){
+            $tipo_id=$request->query('tipo_id');
+            $tipos_s=Tipo::where('tipo_id', $tipo_id)->orWhere('id',$tipo_id)->pluck('id');
+            $documentos=Documento::whereIn('tipo_id', $tipos_s)->get();
+        }else{
+            $tipo_id=$tipos[0]->id;
+            $documentos=Documento::where('tipo_id',$tipo_id)->get();
+        }
+        if ($request->has('pai')) {
+            $tipo_id=$request->has('pai');
+        }
+        $tipos_sub=Tipo::where('tipo_id', $tipo_id)->get();
+
+        return view('documentos', compact('tipos','documentos','tipos_sub'))->with('menu', 'Documentos');
+
     }
+
 
 
     public function servicos(){

@@ -57,7 +57,7 @@ class TipoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Tipos  $tipo
      * @return \Illuminate\Http\Response
      */
     public function show(Tipo $tipo){
@@ -103,9 +103,9 @@ class TipoController extends Controller
      */
     public function destroy(Tipo $tipo) {
 
-        if ($tipo->eventos()->exists()){
+        if ($tipo->documentos()->exists()){
             return redirect()->route('tipos.index')->withErrors(
-            ['delete'=>'A categoria tem eventos relacionados'] );
+            ['delete'=>'A categoria tem documentos relacionados'] );
         }
 
         $tipo->delete();

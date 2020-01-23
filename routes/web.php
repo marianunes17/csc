@@ -37,13 +37,17 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/admin','DashboardController@show')->name("dashboard");
 
 
+Route::resource('/admin/documentos', 'DocumentoController');
 Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/parcerias', 'ParceriaController');
+Route::resource('/admin/tipos', 'TipoController');
+Route::resource('/admin/categories', 'CategoryController');
 Route::resource('/admin/eventos', 'EventosController');
+Route::resource('/admin/categories', 'CategoryController');
 Route::resource('/admin/testemunhos', 'TestemunhosController');
 Route::resource('/admin/contactos', 'ContactosController');
 
-Route::resource('/admin/categories', 'CategoryController');
+
 Route::redirect('/admin/categoria', '/admin/categories');
 Route::redirect('/admin/categorias', '/admin/categories');
 Route::redirect('/admin/category', '/admin/categories');
