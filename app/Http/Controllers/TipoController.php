@@ -1,11 +1,9 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Tipo;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreTipoRequest;
-use App\Http\Requests\UpdateTipoRequest;
-use Illuminate\Support\Facades\Storage;
 
 class TipoController extends Controller
 {
@@ -14,7 +12,7 @@ class TipoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() /*Metodo chamado para apresentar todos os registos */
+    public function index()
     {
         $tipos=Tipo::all();
         return view('tipos.list', compact('tipos')); /*Chamar a vista categorias.list,
@@ -31,7 +29,6 @@ class TipoController extends Controller
         $tipo= new Tipo;
         return view('tipos.add', compact("tipo","tipos"));
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -53,14 +50,13 @@ class TipoController extends Controller
         return redirect()->route('tipos.index')->with('success', 'A categoria foi criada com sucesso');
     }
 
-
     /**
      * Display the specified resource.
      *
-     * @param  \App\Tipos  $tipo
+     * @param  \App\Tipo  $tipo
      * @return \Illuminate\Http\Response
      */
-    public function show(Tipo $tipo){
+    public function showshow(Tipo $tipo){
         return view('tipos.show',compact('tipo'));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
@@ -76,15 +72,13 @@ class TipoController extends Controller
         return view('tipos.edit',compact('tipo','tipos'));
     }
 
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\tipo  $tipo
+     * @param  \App\Tipo  $tipo
      * @return \Illuminate\Http\Response
      */
-
     public function update(UpdateTipoRequest $request, Tipo $tipo){
         $fields=$request->validated();
         $tipo->fill($fields);
@@ -92,13 +86,12 @@ class TipoController extends Controller
         $tipo->save();
         return redirect()->route('tipos.index')->with('success',
         'A categoria foi editada com sucesso');
-    } /*Permita guardar os dados submetidos através do formulário. */
-
+    }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\tipo  $tipo
+     * @param  \App\Tipo  $tipo
      * @return \Illuminate\Http\Response
      */
     public function destroy(Tipo $tipo) {
@@ -110,7 +103,5 @@ class TipoController extends Controller
 
         $tipo->delete();
         return redirect()->route('tipos.index')->with('success', 'A categoria foi apagada com sucesso');
-    } /**O método “delete” permite eliminar uma categoria.
-        Só é possível eliminar uma categoria se esta não tiver posts associados, ou seja, se o relacionamento
-    não existir.*/
+    }
 }

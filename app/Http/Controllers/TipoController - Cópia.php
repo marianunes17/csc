@@ -1,13 +1,13 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Tipo;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Requests\StoreTipoRequest;
+use App\Http\Requests\UpdateTipoRequest;
 use Illuminate\Support\Facades\Storage;
 
-class CategoryController extends Controller
+class TipoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class CategoryController extends Controller
      */
     public function index() /*Metodo chamado para apresentar todos os registos */
     {
-        $categories=Category::all();
-        return view('categories.list', compact('categories')); /*Chamar a vista categorias.list,
+        $tipos=Tipo::all();
+        return view('tipos.list', compact('tipos')); /*Chamar a vista categorias.list,
         compact da variavel, que cria um array com a variavel com o mesmo nome e faz o mesmo q a linha anterior*/
     }
 
@@ -28,9 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $category= new Category;
-        $categories=Category::all();
-        return view('categories.add', compact("category","categories"));
+        $tipo= new Tipo;
+        return view('tipos.add', compact("tipo","tipos"));
     }
 
 
@@ -40,42 +39,41 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreTipoRequest $request)
     {
         $fields=$request->validated();
         /**Se a validação for efetuada com sucesso, o código continuará a ser executado normalmente,
          se a validação falhar, aparecerá uma resposta de erro apropriada será automaticamente
          enviada de volta ao utilizador. */
 
-        $category=new Category;
-        $category->fill($fields);
-        $category->category_id=$fields['category'];
-        $category->save();
-        return redirect()->route('categories.index')->with('success', 'A categoria foi criada com sucesso');
+        $tipo=new Tipo;
+        $tipo->fill($fields);
+        $tipo->tipo_id=$fields['tipo'];
+        $tipo->save();
+        return redirect()->route('tipos.index')->with('success', 'A categoria foi criada com sucesso');
     }
 
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Tipos  $tipo
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category){
-        return view('categories.show',compact('category'));
+    public function show(Tipo $tipo){
+        return view('tipos.show',compact('tipo'));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\tipo  $tipo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Tipo $tipo)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
-        $categories=Category::all();
-        return view('categories.edit',compact('category','categories'));
+        return view('tipos.edit',compact('tipo','tipos'));
     }
 
 
@@ -83,16 +81,16 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Category  $category
+     * @param  \App\tipo  $tipo
      * @return \Illuminate\Http\Response
      */
 
-    public function update(UpdateCategoryRequest $request, Category $category){
+    public function update(UpdateTipoRequest $request, Tipo $tipo){
         $fields=$request->validated();
-        $category->fill($fields);
-        $category->category_id=$fields['category'];
-        $category->save();
-        return redirect()->route('categories.index')->with('success',
+        $tipo->fill($fields);
+        $tipo->tipo_id=$fields['tipo'];
+        $tipo->save();
+        return redirect()->route('tipos.index')->with('success',
         'A categoria foi editada com sucesso');
     } /*Permita guardar os dados submetidos através do formulário. */
 
@@ -100,18 +98,18 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Category  $category
+     * @param  \App\tipo  $tipo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category) {
+    public function destroy(Tipo $tipo) {
 
-        if ($category->eventos()->exists()){
-            return redirect()->route('categories.index')->withErrors(
-            ['delete'=>'A categoria tem eventos relacionados'] );
+        if ($tipo->documentos()->exists()){
+            return redirect()->route('tipos.index')->withErrors(
+            ['delete'=>'A categoria tem documentos relacionados'] );
         }
 
-        $category->delete();
-        return redirect()->route('categories.index')->with('success', 'A categoria foi apagada com sucesso');
+        $tipo->delete();
+        return redirect()->route('tipos.index')->with('success', 'A categoria foi apagada com sucesso');
     } /**O método “delete” permite eliminar uma categoria.
         Só é possível eliminar uma categoria se esta não tiver posts associados, ou seja, se o relacionamento
     não existir.*/

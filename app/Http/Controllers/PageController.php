@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Evento;
 use App\Testemunho;
 use App\Category;
+use App\Tipo;
 use Illuminate\Http\Request;
 use App\Parceria;
 
@@ -40,7 +41,7 @@ class PageController extends Controller
     }
 
     public function documentos(Request $request){
-        $tipos=tipo::where('tipo_id', null)->get();
+        $tipos=Tipo::where('tipo_id', null)->get();
 
         if ($request->has('tipo_id')){
             $tipo_id=$request->query('tipo_id');
@@ -58,8 +59,6 @@ class PageController extends Controller
         return view('documentos', compact('tipos','documentos','tipos_sub'))->with('menu', 'Documentos');
 
     }
-
-
 
     public function servicos(){
         return view('servicos')->with('menu', 'Servicos');
