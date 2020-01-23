@@ -112,6 +112,9 @@
                                             <li class="nav-item">
                                                 <a href="{{route('csc.parcerias')}}" class="nav-link">Parcerias</a>
                                             </li>
+                                            <li class="nav-item">
+                                                <a href="{{route('csc.documentos')}}" class="nav-link">Documentos</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
