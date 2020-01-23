@@ -39,6 +39,10 @@ class PageController extends Controller
         return view('parcerias',compact('parcerias'))->with('menu', 'Parcerias');
     }
 
+    public function documentos(){
+        return view('documentos')->with('menu', 'Documentos');
+    }
+
 
     public function servicos(){
         return view('servicos')->with('menu', 'Servicos');
