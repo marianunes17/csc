@@ -6,8 +6,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content=" Bem Vindo ao Centro Social de Carnide! Somos uma
+    instituição sem fins lucrativos que temos como objetivo apoiar idosos, crianças e os
+    seus familiares.">
+
+    <meta name="keywords" content="centro social, lar, centro de dia, creche, idosos, crianças,
+    apoio, familia">
+
+    <meta name="author" content="Artur Cardoso, Carolina Dias, Duarte Ferreira, João Rosa e Maria Nunes">
+
 
     <title>CSC | @yield('title') </title>
 
