@@ -24,12 +24,12 @@ class UpdateTipoRequest extends FormRequest
     public function rules()
     {
 
-/*"name" => 'required|min:3|max:20|unique:categories,name,'. $this->Tipo->id.'|
+/*"name" => 'required|min:3|max:20|unique:tipos,name,'. $this->Tipo->id.'|
         regex:/^[A-ZÀ-úa-z\s]+$/',*/
         return [
         "name" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
         "description" => 'required',
-        'tipo' => 'nullable|exists:categories,id'
+        'tipo' => 'nullable|exists:tipos,id'
         ];
     }
 
