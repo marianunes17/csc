@@ -14,6 +14,8 @@ use App\Equipa;
 use App\Tipo;
 use Illuminate\Http\Request;
 use App\Parceria;
+use App\Documentos;
+use App\Tipos;
 
 
 class PageController extends Controller

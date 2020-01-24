@@ -29,7 +29,7 @@ class DocumentoController extends Controller
      */
     public function create()
     {
-        $tipos = Tipos::orderBy("name")->get();
+        $tipos = Tipo::orderBy("name")->get();
         $documento = new Documento;
         return view('documentos.add', compact("tipos", "documento"));
     }
@@ -40,7 +40,7 @@ class DocumentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDocumentoRequest $request)
+    public function store(StoreDocumentosRequest $request)
     {
         $fields = $request->validated();
         $documento = new Documento;

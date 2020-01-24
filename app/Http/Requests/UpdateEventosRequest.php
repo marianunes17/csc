@@ -34,6 +34,6 @@ class UpdateEventosRequest extends FormRequest
 
     public function messages()
     {
-        return ['titulo.regex' => 'Name should contain only letters and spaces'];
+        return ['nome.regex' => 'Name should contain only letters and spaces'];
     }
 }
