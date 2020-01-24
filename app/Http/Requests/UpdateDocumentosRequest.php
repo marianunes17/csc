@@ -35,5 +35,5 @@ class UpdateDocumentosRequest extends FormRequest
     public function messages()
     {
         return ['nome.regex' => 'Name should contain only letters and spaces'];
-    }
+    }a
 }
