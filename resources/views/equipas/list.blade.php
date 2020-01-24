@@ -12,7 +12,7 @@
             <a class="btn btn-primary" href="{{route('equipas.create')}}">
                 <i class="fas fa-plus"></i> Adicionar Membro Equipa
             </a>
-            <a href="{{route('csc.equipas')}}" class="btn btn-outline-primary float-right" target="_blank">
+            <a href="{{route('csc.equipa')}}" class="btn btn-outline-primary float-right" target="_blank">
                 Visualizar
                 <i class="fas fa-eye"></i>
             </a>
