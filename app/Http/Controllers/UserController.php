@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\User;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+        {
+        $this->authorizeResource(User::class, 'user');
+        }
     /**
      * Display a listing of the resource.
      *
@@ -58,15 +64,9 @@ class UserController extends Controller
         $fields = $request->validated();
         $user = new User;
         $user->fill($fields);
-        $user->password = Hash::make('GamesMultimedia');
+        $user->password = Hash::make('csc');
         $user->save();
-        if ($request->hasFile('photo')) {
-        $photo = $request->file('photo');
-        $profileImg = $user->id . '_' . time() . '.' . $photo->getClientOriginalExtension();
-        Storage::disk('public')->putFileAs('users_photos', $photo, $profileImg);
-        $user->photo = $profileImg;
-        $user->save();
-        }
+        
         $user->sendEmailVerificationNotification();
         return redirect()->route('users.index')->with('success', 'User successfully created');
     }

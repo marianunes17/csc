@@ -11,7 +11,7 @@ placeholder="exemplo@gmail.com" value="{{old('email',$user->email)}}" />
 </div>
 
 
-
+@can("updateRole",$user)
 <div class="form-group">
     <label for="inputRole">Tipo de Utilizador</label>
     <select name="role" id="inputRole" class="form-control">
@@ -19,4 +19,5 @@ placeholder="exemplo@gmail.com" value="{{old('email',$user->email)}}" />
         <option {{old('role',$user->role)=='Normal'?"selected":""}} value="Normal">Normal</option>
     </select>
 </div>
+@endcan
 
