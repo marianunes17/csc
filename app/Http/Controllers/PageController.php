@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Evento;
 use App\Testemunho;
 use App\Category;
+use App\Equipa;
 use App\Tipo;
 use Illuminate\Http\Request;
 use App\Parceria;
@@ -32,7 +33,8 @@ class PageController extends Controller
     }
 
     public function equipa(){
-        return view('equipa')->with('menu', 'Equipa');
+        $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
+        return view('equipa', compact('testemunhos'))->with('menu', 'Equipa');
     }
 
     public function parcerias(){

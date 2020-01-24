@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipa extends Model
 {
-    protected $fillable = [ 'nome', 'descricao', 'imagem' ];
+    protected $fillable = [ 'titulo','cargo', 'descricao', 'imagem' ];
     //protected $timestamps=false;
 }

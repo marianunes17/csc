@@ -69,7 +69,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 text-center-md">
-                    <p>Copyright &copy; by Centro Social de Carnide, 2019</p>
+                    <p>Copyright &copy; by Centro Social de Carnide, 2020</p>
                 </div>
             </div>
         </div>
