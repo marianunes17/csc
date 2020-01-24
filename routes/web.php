@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
 Route::resource('/admin/documentos', 'DocumentoController');
 Route::resource('/admin/users', 'UserController');
+Route::resource('/admin/equipas', 'EquipaController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/tipos', 'TipoController');
 Route::resource('/admin/categories', 'CategoryController');

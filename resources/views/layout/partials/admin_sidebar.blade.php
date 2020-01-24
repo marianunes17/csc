@@ -62,6 +62,20 @@
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-tie"></i>
+            <span>Equipa</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{route('equipas.create')}}">Adicionar
+                Equipa</a>
+            <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
+                de Equipa</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <hr class="menu-dividir">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-handshake"></i>
             <span>Parcerias</span>
         </a>
