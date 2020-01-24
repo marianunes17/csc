@@ -10,8 +10,12 @@ namespace App\Http\Controllers;
 use App\Evento;
 use App\Testemunho;
 use App\Category;
+use App\Equipa;
+use App\Tipo;
 use Illuminate\Http\Request;
 use App\Parceria;
+use App\Documentos;
+use App\Tipos;
 
 
 class PageController extends Controller
@@ -31,7 +35,8 @@ class PageController extends Controller
     }
 
     public function equipa(){
-        return view('equipa')->with('menu', 'Equipa');
+        $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
+        return view('equipa', compact('testemunhos'))->with('menu', 'Equipa');
     }
 
     public function parcerias(){
@@ -39,6 +44,25 @@ class PageController extends Controller
         return view('parcerias',compact('parcerias'))->with('menu', 'Parcerias');
     }
 
+    public function documentos(Request $request){
+        $tipos=Tipo::where('tipo_id', null)->get();
+
+        if ($request->has('tipo_id')){
+            $tipo_id=$request->query('tipo_id');
+            $tipos_s=Tipo::where('tipo_id', $tipo_id)->orWhere('id',$tipo_id)->pluck('id');
+            $documentos=Documento::whereIn('tipo_id', $tipos_s)->get();
+        }else{
+            $tipo_id=$tipos[0]->id;
+            $documentos=Documento::where('tipo_id',$tipo_id)->get();
+        }
+        if ($request->has('pai')) {
+            $tipo_id=$request->has('pai');
+        }
+        $tipos_sub=Tipo::where('tipo_id', $tipo_id)->get();
+
+        return view('documentos', compact('tipos','documentos','tipos_sub'))->with('menu', 'Documentos');
+
+    }
 
     public function servicos(){
         return view('servicos')->with('menu', 'Servicos');

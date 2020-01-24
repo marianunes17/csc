@@ -1,65 +1,70 @@
 @extends ("layout.admin")
 
-@section("title", "Parcerias")
+@section("title", "Documentos")
 
 @section("content")
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 pl-4">Parcerias</h1>
+    <h1 class="h3 mb-2 text-gray-800 pl-4">Documentos</h1>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('parcerias.create')}}">
-                <i class="fas fa-plus"></i> Adicionar Parceria
+            <a class="btn btn-primary" href="{{route('documentos.create')}}">
+                <i class="fas fa-plus"></i> Adicionar Documentos
             </a>
-            <a href="{{route('csc.parcerias')}}" class="btn btn-outline-primary float-right" target="_blank">
+
+            <a href="{{route('csc.documentos')}}" class="btn btn-outline-primary float-right" target="_blank">
                 Visualizar
                 <i class="fas fa-eye"></i>
             </a>
         </div>
         <div class="card-body">
-            @if (count($parcerias))
+            @if (count($documentos))
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Imagem</th>
+                            <th>Documento</th>
                             <th>Título</th>
                             <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Data</th>
+
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($parcerias as $parceria)
+                        @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                @if ($parceria->imagem)
-                                <img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}"
-                                    class="w-50" alt="parcerias">
-                                @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="parcerias">
+                                @if ($documento->imagem)
+                                <object data="meuarquivo.pdf" type="application/pdf">
+                                    <p>Seu navegador não tem um plugin pra PDF</p>
+                                </object>
+
                                 @endif
                             </td>
 
-                            <td>{{$parceria->titulo}}</td>
-                            <td>{{$parceria->descricao}}</td>
+                            <td>{{$documento->nome}}</td>
+                            <td>{{$documento->descricao}}</td>
+                            <td>{{$documento->tipo->name}}</td>
+                            <td>{{$documento->data}}</td>
 
 
                             </td>
                             <td nowrap>
-                                <a href="{{route('parcerias.show',$parceria)}}"
+                                <a href="{{route('documentos.show',$documento)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a href="{{route('parcerias.edit',$parceria)}}"
+                                <a href="{{route('documentos.edit',$documento)}}"
                                     class="btn btn-sm btn-link d-inline text-decoration-none">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
-                                <form method="POST" action="{{route('parcerias.destroy',$parceria)}}" role="form"
-                                    class="d-inline"
-                                    onsubmit="return confirm('Tem a certeza que quer eliminar a parceria?');">
+                                <form method="POST" action="{{route('documentos.destroy',$documento)}}" role="form"
+                                    class="d-inline" onsubmit="return confirm('Tem a certeza que pretende apagar o documento ?');">
                                     @csrf
                                     @method("DELETE")
                                     <button type="submit" class="btn btn-sm btn-link text-decoration-none d-inline">
@@ -72,11 +77,10 @@
                 </table>
             </div>
             @else
-            <h6>Não existem parcerias registadas</h6>
+            <h6>Não existem documento registados</h6>
             @endif
         </div>
+        …
     </div>
 </div>
-
-
 @endsection

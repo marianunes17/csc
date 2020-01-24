@@ -17,7 +17,7 @@
                         src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}"
                         alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{$parceria->titulo}}</h5>
+                        <h5 class="card-title mt-4">{{$parceria->titulo}}</h5>
                         <p class="card-text">{{$parceria->descricao}}</p>
                     </div>
                 </div>

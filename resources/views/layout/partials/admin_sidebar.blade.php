@@ -18,13 +18,34 @@
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item dropdown">
         <hr class="menu-dividir">
-        <a class="nav-link" href="#">
-            <i class="fas fa-coins"></i>
-            <span>Cotas</span>
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-file-invoice"></i>
+            <span>Documentos</span>
         </a>
+
+        <div id="collapseDocumentos" class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header pl-3">Documentos:</h6>
+                <a class="dropdown-item" href="{{route('documentos.index')}}">Lista
+                    de documentos</a>
+                <a class="dropdown-item" href="{{route('documentos.create')}}">Adicionar
+                    evento</a>
+
+                <div class="dropdown-divider"></div>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header pl-3">Categorias dos documentos</h6>
+                <a class="dropdown-item" href="{{route('tipos.index')}}">Lista
+                    de
+                    Categorias</a>
+                <a class="dropdown-item" href="{{route('tipos.create')}}">Adicionar
+                    Categoria</a>
+            </div>
+        </div>
     </li>
+
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
@@ -35,6 +56,20 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="{{route('users.create')}}">Adicionar Utilizador</a>
             <a class="dropdown-item" href="{{route('users.index')}}">Lista de Utilizadores</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <hr class="menu-dividir">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-tie"></i>
+            <span>Equipa</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{route('equipas.create')}}">Adicionar
+                Equipa</a>
+            <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
+                de Equipa</a>
         </div>
     </li>
     <li class="nav-item dropdown">

@@ -6,7 +6,7 @@ significa q extende a view master -->
 @section("title", "Centro Social de Carnide")
 
 @section("content")
- @if (!empty(session('success')))
+@if (!empty(session('success')))
 @include ('partials.success')
 @endif
 <section style="background: url('img/centrocrs.jpg') center center repeat; background-size: cover;"
@@ -149,30 +149,33 @@ significa q extende a view master -->
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="nome"></label>
-                                <input id="nome" name="nome" type="text" class="form-control" placeholder="Primeiro Nome"
-value="{{old('nome')}}">
+                                <input id="nome" name="nome" type="text" class="form-control"
+                                    placeholder="Primeiro Nome" value="{{old('nome')}}">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="asssunto"></label>
-                                <input id="assunto" name="sobrenome" type="text" class="form-control" placeholder="Sobrenome" value="{{old('sobrenome')}}">
+                                <input id="assunto" name="sobrenome" type="text" class="form-control"
+                                    placeholder="Sobrenome" value="{{old('sobrenome')}}">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="email"></label>
-                                <input id="email" type="email" name="email" class="form-control" placeholder="E-mail" value="{{old('email')}}">
+                                <input id="email" type="email" name="email" class="form-control" placeholder="E-mail"
+                                    value="{{old('email')}}">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="message"></label>
-                                <textarea id="message" name="testemunho" class="form-control" placeholder="Testemunho">{{old('testemunho')}}</textarea>
+                                <textarea id="message" name="testemunho" class="form-control"
+                                    placeholder="Testemunho">{{old('testemunho')}}</textarea>
                             </div>
                         </div>
                         <div class="col-sm-12 text-right">
-                               <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
+                            <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
                                 Enviar</button>
                         </div>
                     </div>
@@ -188,7 +191,8 @@ value="{{old('nome')}}">
         </div>
         <ul class="list-unstyled owl-carousel customers no-mb">
             @foreach ($parcerias as $parceria)
-            <li class="item"><img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}" alt="" class="img-fluid"></li>
+            <li class="item"><img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}" alt=""
+                    class="img-fluid"></li>
             @endforeach
         </ul>
     </div>

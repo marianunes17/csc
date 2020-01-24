@@ -11,11 +11,11 @@
 </div>
 
 <div class="form-group">
-    <label for="inputCategory">Categoria</label>
+    <label for="inputCategory">Category</label>
     <select name="category" id="inputCategory" class="form-control">
-        <option value="" selected>Categoria pai</option>
-        @foreach ($category as $category_id)
-        <option {{ old('$category_id', $category->category_id) == $category->id ? "selected":""}} value="{{$category->id}}" >{{$category->name}}</option>
+        <option value="" selected>Category pai</option>
+        @foreach ($categories as $category_)
+        <option {{ old('$category', $category->category_id) == $category_->id ? "selected":""}} value="{{$category_->id}}" >{{$category_->name}}</option>
         @endforeach
     </select>
 </div>

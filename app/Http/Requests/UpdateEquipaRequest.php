@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateEventosRequest extends FormRequest
+class UpdateEquipaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,16 +24,10 @@ class UpdateEventosRequest extends FormRequest
     public function rules()
     {
         return [
-            "nome" => 'required|min:3|max:20|unique:eventos,nome,' .
-                $this->evento->id . '|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "titulo" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "cargo" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
-            "category" => 'required',
-            "imagem" => 'nullable'
+            "imagem"=>'required',
         ];
-    }
-
-    public function messages()
-    {
-        return ['nome.regex' => 'Name should contain only letters and spaces'];
     }
 }
