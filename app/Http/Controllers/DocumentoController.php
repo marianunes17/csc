@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Documento;
 use App\Tipo;
 use Illuminate\Http\Request;
-
-use Illuminate\Http\Request;
 use App\Http\Requests\StoreDocumentosRequest;
 use App\Http\Requests\UpdateDocumentosRequest;
 use Illuminate\Support\Facades\Storage;

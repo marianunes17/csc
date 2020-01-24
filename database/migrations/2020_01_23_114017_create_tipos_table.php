@@ -17,7 +17,7 @@ class CreateTiposTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', '20');
             $table->string('description');
-            $table->string('tipoParent');
+            $table->string('tipoParent')->nullable();
             $table->timestamps();
         });
     }

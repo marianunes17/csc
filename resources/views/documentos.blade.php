@@ -12,7 +12,7 @@
         <div class="col-lg-3">
             <div class="panel panel-default sidebar-menu with-icons">
                 <div class="panel-heading">
-                    <h3 class="h4 panel-title">Categorias</h3>
+                    <h3 class="h4 panel-title">Tipos</h3>
                 </div>
 
                 <div class="panel-body">
@@ -21,14 +21,14 @@
                         @foreach($tipos as $i => $tipo)
                         @if ( (request()->query('tipo_id')==$tipo->id) || (request()->query('pai')==$tipo->id)
                         || ($i==0 && request()->query('tipo_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$categoria->id}}"
-                                class="nav-link active categorias">{{$tipo->name}}</a></li>
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}"
+                                class="nav-link active tipos">{{$tipo->name}}</a></li>
                         @if(count($tipos_sub))
                         <ul>
                             @foreach($tipos_sub as $tipo)
                             <li>
                                 <a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}&pai={{$tipo->id}}"
-                                    class="nav-link categorias">
+                                    class="nav-link Tipos">
                                     {{$tipo->name}}
                                 </a>
                             </li>
@@ -38,7 +38,7 @@
                         @else
                         <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}" class="nav-link
                             @if (request()->query('pai')==$tipo->id) active @endif
-                            categorias">{{$categoria->name}}</a></li>
+                            tipos">{{$tipo->name}}</a></li>
                         @endif
                         @endforeach
                     </ul>

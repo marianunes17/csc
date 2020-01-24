@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Tipo;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTipoRequest;
+use App\Http\Requests\UpdateTipoRequest;
+use Illuminate\Support\Facades\Storage;
 
 class TipoController extends Controller
 {
@@ -27,6 +30,7 @@ class TipoController extends Controller
     public function create()
     {
         $tipo= new Tipo;
+        $tipos=Tipo::all();
         return view('tipos.add', compact("tipo","tipos"));
     }
 
@@ -56,7 +60,7 @@ class TipoController extends Controller
      * @param  \App\Tipo  $tipo
      * @return \Illuminate\Http\Response
      */
-    public function showshow(Tipo $tipo){
+    public function show(Tipo $tipo){
         return view('tipos.show',compact('tipo'));
     } /*o método “show” permite devolver a vista que vai mostrar a informação da categoria: */
 
@@ -69,6 +73,7 @@ class TipoController extends Controller
     public function edit(Tipo $tipo)
     /**o método “edit” permite mostrar o formulário para editar a categoria */
     {
+        $tipos=Tipo::all();
         return view('tipos.edit',compact('tipo','tipos'));
     }
 

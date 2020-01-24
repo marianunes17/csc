@@ -14,8 +14,8 @@
     <label for="inputTipo">Tipo</label>
     <select name="tipo" id="inputTipo" class="form-control">
         <option value="" selected>Tipo pai</option>
-        @foreach ($tipo as $tipo_id)
-        <option {{ old('$tipo_id', $tipo->tipo_id) == $tipo->id ? "selected":""}} value="{{$tipo->id}}" >{{$tipo->name}}</option>
+        @foreach ($tipos as $tipo_)
+        <option {{ old('$tipo', $tipo->tipo_id) == $tipo_->id ? "selected":""}} value="{{$tipo_->id}}" >{{$tipo->name}}</option>
         @endforeach
     </select>
 </div>
