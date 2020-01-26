@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCategoryRequest extends FormRequest
+class StoreCategoriaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,9 @@ class StoreCategoryRequest extends FormRequest
      * @return array
      */
     public function rules(){
-        return [ "name" => 'required|min:3|max:20|unique:categories,name|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "description" => 'required',
-            'category' => 'nullable|exists:categories,id'
+        return [ "nome" => 'required|min:3|max:20|unique:categorias,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "descricao" => 'required',
+            'categoria' => 'nullable|exists:categorias,id'
         ];
     }
 /**regex:/^[A-ZÀ-úa-z0-9\s]+$/' - 0-9 - Aceita numeros */

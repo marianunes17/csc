@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Evento;
-use App\Category;
+use App\Categoria;
 
 /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
 
@@ -35,9 +35,9 @@ class EventosController extends Controller
      */
     public function create()
     {
-        $categories = Category::orderBy("name")->get();
+        $categorias = Categoria::orderBy("name")->get();
         $evento = new Evento;
-        return view('eventos.add', compact("categories", "evento"));
+        return view('eventos.add', compact("categorias", "evento"));
     }
 
     /**
@@ -51,7 +51,7 @@ class EventosController extends Controller
         $fields = $request->validated();
         $evento = new Evento;
         $evento->fill($fields);
-        $evento->category_id = $fields["category"];
+        $evento->categoria_id = $fields["categoria"];
         $evento->save();
 
         if ($request->hasFile('imagem')) {
@@ -84,8 +84,8 @@ class EventosController extends Controller
      */
     public function edit(Evento $evento)
     {
-        $categories = Category::orderBy("name")->get();
-        return view('eventos.edit', compact('categories', 'evento'));
+        $categorias = Categoria::orderBy("nome")->get();
+        return view('eventos.edit', compact('categorias', 'evento'));
     }
 
     /**

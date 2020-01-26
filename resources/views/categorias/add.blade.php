@@ -12,12 +12,12 @@
 		</div>
 		<div class="card-body">
 
-			<form method="POST" action="{{route('categories.store')}}" class="form-group" >
+			<form method="POST" action="{{route('categorias.store')}}" class="form-group" >
                 @csrf
-                @include('categories.partials.add-edit')
+                @include('categorias.partials.add-edit')
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="ok">Guardar</button>
-                    <a href="{{route('categories.index')}}" class="btn btn-default">Cancelar</a>
+                    <a href="{{route('categorias.index')}}" class="btn btn-default">Cancelar</a>
                 </div>
             </form>
 		</div>

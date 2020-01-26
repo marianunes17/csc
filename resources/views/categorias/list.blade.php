@@ -9,14 +9,14 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{route('categories.create')}}">
+            <a class="btn btn-primary" href="{{route('categorias.create')}}">
                 <!-- rota para criar a categoria -->
 
                 <i class="fas fa-plus"></i> Adicionar Categoria
             </a>
         </div>
         <div class="card-body">
-            @if (count($categories))
+            @if (count($categorias))
             <!--Se tiver categorias mostra-as-->
 
             <div class="table-responsive">
@@ -30,25 +30,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($categories as $category)
+                        @foreach($categorias as $categoria)
                         <tr>
-                            <td>{{$category->name}}</td>
-                            <td>{{$category->description}}</td>
+                            <td>{{$categoria->name}}</td>
+                            <td>{{$categoria->description}}</td>
                             <td>
-                                @if ($category->category_id)
-                                {{$category->categoryParent->name}}
+                                @if ($categoria->categoria_id)
+                                {{$categoria->categoriaParent->name}}
                                 @endif
                             </td>
                             <td nowrap>
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.show',$category)}}">
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.show',$categoria)}}">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
-                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categories.edit',$category)}}">
+                                <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('categorias.edit',$categoria)}}">
                                     <i class="fas fa-pen fa-xs text-warning" style="font-size: 15px;"></i>
                                 </a>
 
-                                <form method="POST" action="{{route('categories.destroy',$category)}}" role="form"
+                                <form method="POST" action="{{route('categorias.destroy',$categoria)}}" role="form"
                                     class="d-inline"
                                     onsubmit="return confirm('Tem a certeza que deseja excluir esta categoria?');">
                                     @csrf

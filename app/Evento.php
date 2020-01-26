@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Evento extends Model
 {
     protected $fillable = [
-        'nome', 'descricao', 'data', 'imagem', 'category_id'
+        'nome', 'descricao', 'data', 'imagem', 'categoria_id'
     ];
     /*É sempre obrigatorio indicar os campos que estão a ser preenchidos*/
 
-    public function category(){ /*Relacionamento com a tabela Category*/
-        return $this->belongsTo("App\Category","category_id");
+    public function categoria(){ /*Relacionamento com a tabela categoria*/
+        return $this->belongsTo("App\Categoria","categoria_id");
     }
 }

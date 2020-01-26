@@ -24,7 +24,7 @@ class StoreEventosRequest extends FormRequest{
 
             "nome" => 'required|min:3|max:20|unique:eventos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
-            "category"=>'required',
+            "categoria"=>'required',
             "imagem"=>'nullable',
             "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"'
 

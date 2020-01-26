@@ -20,10 +20,10 @@
 </div>
 
 <div class="form-group">
-    <label for="inputCategory">Categoria</label>
-    <select name="category" id="inputCategory" class="form-control">
-        @foreach ($categories as $category)
-        <option {{ old('$category', $evento->category_id) == $category->id ? "selected":""}} value="{{$category->id}}" >{{$category->name}}</option>
+    <label for="inputCategoria">Categoria</label>
+    <select name="categoria" id="inputCategoria" class="form-control">
+        @foreach ($categorias as $categoria)
+        <option {{ old('$categoria', $evento->categoria_id) == $categoria->id ? "selected":""}} value="{{$categoria->id}}" >{{$categoria->name}}</option>
         @endforeach
     </select>
 </div>

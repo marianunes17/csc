@@ -47,7 +47,7 @@
 
                             <td>{{$evento->nome}}</td>
                             <td>{{$evento->descricao}}</td>
-                            <td>{{$evento->category->name}}</td>
+                            <td>{{$evento->categoria->name}}</td>
                             <td>{{$evento->data}}</td>
 
 

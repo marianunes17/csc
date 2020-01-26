@@ -17,14 +17,14 @@
 
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
-                        @foreach($categories as $i => $categoria)
+                        @foreach($categorias as $i => $categoria)
                         @if ( (request()->query('cat_id')==$categoria->id) || (request()->query('pai')==$categoria->id)
                         || ($i==0 && request()->query('cat_id')==""))
                             <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
                                 class="nav-link active categorias">{{$categoria->name}}</a></li>
-                            @if(count($categories_sub))
+                            @if(count($categorias_sub))
                             <ul>
-                                @foreach($categories_sub as $cat)
+                                @foreach($categorias_sub as $cat)
                                 <li>
                                     <a href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&pai={{$categoria->id}}" class="nav-link categorias">
                                     {{$cat->name}}
@@ -73,7 +73,7 @@
                 </div>
                 <div class="card-footer card-footer-event text-muted d-inline-block">
                 <span class="float-left"> {{$evento->data}} </span>
-                    <span class="float-right">{{$evento->category->name}}</span>
+                    <span class="float-right">{{$evento->categoria->name}}</span>
                 </div>
 
             </div>

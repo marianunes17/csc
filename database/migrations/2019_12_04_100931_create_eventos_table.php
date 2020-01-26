@@ -19,9 +19,9 @@ class CreateEventosTable extends Migration
             $table->dateTime('data');
             $table->text('descricao');
             $table->string('imagem')->nullable();
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('categoria_id');
             $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 

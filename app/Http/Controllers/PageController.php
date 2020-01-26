@@ -9,7 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Evento;
 use App\Testemunho;
-use App\Category;
+use App\Categoria;
 use App\Equipa;
 use App\Tipo;
 use Illuminate\Http\Request;
@@ -69,22 +69,22 @@ class PageController extends Controller
     }
 
     public function eventos(Request $request){
-        $categories=Category::where('category_id', null)->get();
+        $categorias=Categoria::where('categoria_id', null)->get();
 
         if ($request->has('cat_id')){
             $cat_id=$request->query('cat_id');
-            $categories_s=Category::where('category_id', $cat_id)->orWhere('id',$cat_id)->pluck('id');
-            $eventos=Evento::whereIn('category_id', $categories_s)->get();
+            $categorias_s=Categoria::where('categoria_id', $cat_id)->orWhere('id',$cat_id)->pluck('id');
+            $eventos=Evento::whereIn('categoria_id', $categorias_s)->get();
         }else{
-            $cat_id=$categories[0]->id;
-            $eventos=Evento::where('category_id',$cat_id)->get();
+            $cat_id=$categorias[0]->id;
+            $eventos=Evento::where('categoria_id',$cat_id)->get();
         }
         if ($request->has('pai')) {
             $cat_id=$request->has('pai');
         }
-        $categories_sub=Category::where('category_id', $cat_id)->get();
+        $categorias_sub=Categoria::where('categoria_id', $cat_id)->get();
 
-        return view('eventos', compact('categories','eventos','categories_sub'))->with('menu', 'Eventos');
+        return view('eventos', compact('categorias','eventos','categorias_sub'))->with('menu', 'Eventos');
 
     }
 

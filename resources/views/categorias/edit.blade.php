@@ -12,8 +12,8 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('categories.update',$category)}}" class="form-group inline">
-                @include('categories.partials.add-edit')
+			<form method="POST" action="{{route('categorias.update',$categoria)}}" class="form-group inline">
+                @include('categorias.partials.add-edit')
                 @csrf
                 @method("PUT")
                 <!--O formulário apenas suporta o post e o get, por isso tem de ser acrescentar @ method("PUT")
@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-                    <a href="{{route('categories.index')}}" class="btn btn-default">Cancelar</a>
+                    <a href="{{route('categorias.index')}}" class="btn btn-default">Cancelar</a>
                     <!--Quando cancela vai para o index-->
                 </div>
             </form>

@@ -42,16 +42,14 @@ Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/equipas', 'EquipaController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/tipos', 'TipoController');
-Route::resource('/admin/categories', 'CategoryController');
+Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/eventos', 'EventosController');
-Route::resource('/admin/categories', 'CategoryController');
+Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/testemunhos', 'TestemunhosController');
 Route::resource('/admin/contactos', 'ContactosController');
 
 
-Route::redirect('/admin/categoria', '/admin/categories');
-Route::redirect('/admin/categorias', '/admin/categories');
-Route::redirect('/admin/category', '/admin/categories');
+Route::redirect('/admin/categoria', '/admin/categorias');
 
 /*
 });

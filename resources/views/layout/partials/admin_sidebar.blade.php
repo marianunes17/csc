@@ -106,10 +106,10 @@
                 <div class="dropdown-divider"></div>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header pl-3">Categorias dos eventos</h6>
-                <a class="dropdown-item" href="{{route('categories.index')}}">Lista
+                <a class="dropdown-item" href="{{route('categorias.index')}}">Lista
                     de
                     Categorias</a>
-                <a class="dropdown-item" href="{{route('categories.create')}}">Adicionar
+                <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
                     Categoria</a>
             </div>
         </div>
