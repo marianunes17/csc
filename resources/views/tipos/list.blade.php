@@ -32,11 +32,11 @@
                     <tbody>
                         @foreach($tipos as $tipo)
                         <tr>
-                            <td>{{$tipo->name}}</td>
-                            <td>{{$tipo->description}}</td>
+                            <td>{{$tipo->nome}}</td>
+                            <td>{{$tipo->descricao}}</td>
                             <td>
                                 @if ($tipo->tipo_id)
-                                {{$tipo->tipoParent->name}}
+                                {{$tipo->tipoParent->nome}}
                                 @endif
                             </td>
                             <td nowrap>

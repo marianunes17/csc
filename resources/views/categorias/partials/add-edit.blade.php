@@ -1,13 +1,13 @@
 <div class="form-group">
-    <label for="inputName">Nome</label>
-    <input type="text" class="form-control" name="name" id="inputName"
-    value="{{old('name',$categoria->name)}}" />
+    <label for="inputNome">Nome</label>
+    <input type="text" class="form-control" name="nome" id="inputNome"
+    value="{{old('nome',$categoria->nome)}}" />
     <!--Old - Se der erro vai mostrar o que estava no antigo-->
 </div>
 
 <div class="form-group">
-    <label for="inputDescription">Descrição</label>
-    <textarea class="form-control" name="description" id="inputDescription">{{old('description',$categoria->description)}}</textarea>
+    <label for="inputDescricao">Descrição</label>
+    <textarea class="form-control" name="descricao" id="inputDescricao">{{old('descricao',$categoria->descricao)}}</textarea>
 </div>
 
 <div class="form-group">

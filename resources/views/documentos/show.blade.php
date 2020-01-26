@@ -18,7 +18,7 @@
 
 			<div><strong>Título:</strong> {{$documento->nome}} </div>
             <div><strong>Descrição:</strong> {{$documento->descricao}} </div>
-            <div><strong>Categoria:</strong> {{$documento->tipo->name}} </div>
+            <div><strong>Categoria:</strong> {{$documento->tipo->nome}} </div>
 		</div>
 	</div>
 </div>

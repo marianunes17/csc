@@ -34,8 +34,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/users/{user}/send_reactivate_mail',
     "UserController@send_reactivate_email")->name('users.sendActivationEmail');
 */
-    Route::get('/admin','DashboardController@show')->name("dashboard");
-
+Route::get('/admin','DashboardController@show')->name("dashboard");
 
 Route::resource('/admin/documentos', 'DocumentoController');
 Route::resource('/admin/users', 'UserController');

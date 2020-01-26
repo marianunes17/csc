@@ -41,7 +41,7 @@
 
                             <td>{{$documento->nome}}</td>
                             <td>{{$documento->descricao}}</td>
-                            <td>{{$documento->tipo->name}}</td>
+                            <td>{{$documento->tipo->nome}}</td>
                             <td>{{$documento->data}}</td>
 
 

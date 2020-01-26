@@ -12,12 +12,12 @@
         </div>
         <div class="card-body">
 
-			<div> <strong>Nome:</strong> {{$tipo->name}} </div>
-            <div> <strong>Descrição:</strong> {{$tipo->description}} </div>
+			<div> <strong>Nome:</strong> {{$tipo->nome}} </div>
+            <div> <strong>Descrição:</strong> {{$tipo->descricao}} </div>
 
 
             @if ($tipo->tipo_id)
-            <div> <strong>Tipo pai:</strong> {{$tipo->tipoParent->name}} </div>
+            <div> <strong>Tipo pai:</strong> {{$tipo->tipoParent->nome}} </div>
             @endif
 		</div>
 	</div>

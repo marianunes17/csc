@@ -29,7 +29,7 @@
     */
     public function create()
     {
-        $tipos = Tipo::orderBy("name")->get();
+        $tipos = Tipo::orderBy("nome")->get();
         $documento = new Documento;
         return view('documentos.add', compact("tipos", "evento"));
     }
@@ -72,7 +72,7 @@
     */
     public function edit(Documento $documento)
     {
-        $tipos = Tipo::orderBy("name")->get();
+        $tipos = Tipo::orderBy("nome")->get();
         return view('documentos.edit', compact('tipos', 'documento'));
     }
 

@@ -32,11 +32,11 @@
                     <tbody>
                         @foreach($categorias as $categoria)
                         <tr>
-                            <td>{{$categoria->name}}</td>
-                            <td>{{$categoria->description}}</td>
+                            <td>{{$categoria->nome}}</td>
+                            <td>{{$categoria->descricao}}</td>
                             <td>
                                 @if ($categoria->categoria_id)
-                                {{$categoria->categoriaParent->name}}
+                                {{$categoria->categoriaParent->nome}}
                                 @endif
                             </td>
                             <td nowrap>

@@ -23,7 +23,7 @@
     <label for="inputCategoria">Categoria</label>
     <select name="categoria" id="inputCategoria" class="form-control">
         @foreach ($categorias as $categoria)
-        <option {{ old('$categoria', $evento->categoria_id) == $categoria->id ? "selected":""}} value="{{$categoria->id}}" >{{$categoria->name}}</option>
+        <option {{ old('$categoria', $evento->categoria_id) == $categoria->id ? "selected":""}} value="{{$categoria->id}}" >{{$categoria->nome}}</option>
         @endforeach
     </select>
 </div>
