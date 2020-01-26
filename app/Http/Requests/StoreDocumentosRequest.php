@@ -31,6 +31,6 @@ class StoreDocumentoRequest extends FormRequest
         ];
     }
     public function messages() {
-        return ['nome.regex' => 'Name should contain only letters and spaces'];
+        return ['name.regex' => 'Name should contain only letters and spaces'];
     }
 }

@@ -37,12 +37,6 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                @if ($documento->imagem)
-                                <object data="meuarquivo.pdf" type="application/pdf">
-                                    <p>Seu navegador não tem um plugin pra PDF</p>
-                                </object>
-
-                                @endif
                             </td>
 
                             <td>{{$documento->nome}}</td>

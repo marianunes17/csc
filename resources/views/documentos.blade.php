@@ -18,27 +18,27 @@
                 <div class="panel-body">
 
                     <ul class="nav nav-pills flex-column text-sm">
-                        @foreach($tipos as $i => $tipo)
-                        @if ( (request()->query('tipo_id')==$tipo->id) || (request()->query('pai')==$tipo->id)
-                        || ($i==0 && request()->query('tipo_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}"
-                                class="nav-link active tipos">{{$tipo->name}}</a></li>
+                        @foreach($tipos as $i => $tipo1)
+                        @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('pai')==$tipo1->id)
+                        || ($i==0 && request()->query('tip_id')==""))
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo->id}}"
+                                class="nav-link active tipos">{{$tipo1->name}}</a></li>
                         @if(count($tipos_sub))
                         <ul>
-                            @foreach($tipos_sub as $tipo)
+                            @foreach($tipos_sub as $tip)
                             <li>
-                                <a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}&pai={{$tipo->id}}"
-                                    class="nav-link Tipos">
-                                    {{$tipo->name}}
+                                <a href="{{route('csc.documentos')}}?tip_id={{$tip->id}}&pai={{$tipo1->id}}"
+                                    class="nav-link tipos1">
+                                    {{$tip->name}}
                                 </a>
                             </li>
                             @endforeach
                         </ul>
                         @endif
                         @else
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tipo_id={{$tipo->id}}" class="nav-link
-                            @if (request()->query('pai')==$tipo->id) active @endif
-                            tipos">{{$tipo->name}}</a></li>
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}" class="nav-link
+                            @if (request()->query('pai')==$tipo1->id) active @endif
+                            tipos1">{{$tipo1->name}}</a></li>
                         @endif
                         @endforeach
                     </ul>
