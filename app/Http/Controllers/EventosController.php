@@ -35,7 +35,7 @@ class EventosController extends Controller
      */
     public function create()
     {
-        $categorias = Categoria::orderBy("name")->get();
+        $categorias = Categoria::orderBy("nome")->get();
         $evento = new Evento;
         return view('eventos.add', compact("categorias", "evento"));
     }
