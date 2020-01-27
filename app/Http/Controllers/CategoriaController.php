@@ -28,7 +28,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        $categoria= new categoria;
+        $categoria= new Categoria;
         $categorias=Categoria::all();
         return view('categorias.add', compact("categoria","categorias"));
     }
@@ -83,7 +83,7 @@ class CategoriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Categoria $categoria
+     * @param  \App\categorias $categorias
      * @return \Illuminate\Http\Response
      */
 
@@ -100,7 +100,7 @@ class CategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
     public function destroy(Categoria $categoria) {

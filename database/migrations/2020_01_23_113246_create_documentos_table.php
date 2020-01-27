@@ -20,7 +20,7 @@ class CreateDocumentosTable extends Migration
             $table->text('descricao');
             $table->unsignedBigInteger('tipo_id');
             $table->timestamps();
-           /* $table->foreign('tipo_id')->references('id')->on('tipos'); */
+            $table->foreign('tipo_id')->references('id')->on('tipos');
         });
     }
 
