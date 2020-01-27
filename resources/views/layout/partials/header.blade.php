@@ -13,8 +13,8 @@
                             <span class="d-none d-md-inline-block">Entrar</span>
                         </a>
 
-                        <a href="{{route('csc.registar')}}" class="signup-btn"><i class="fa fa-user"></i>
-                            <span class="d-none d-md-inline-block">Registar</span></a>
+                        <!--<a href="{{route('csc.registar')}}" class="signup-btn"><i class="fa fa-user"></i>
+                            <span class="d-none d-md-inline-block">Registar</span></a>-->
                     </div>
 
 
@@ -22,10 +22,15 @@
                         <li class="list-inline-item"><a
                                 href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
                                 target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <!-- <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+
                         <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i
                                     class="fa fa-envelope"></i></a></li>
+
+                        <li class="list-inline-item">
+                            <a>
+                                <i class="fa fa-phone"></i>
+                            </a><span class="ml-2">236 946 189</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,8 +63,9 @@
                         <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
                     </p>
                 </form>
-                <p class="text-center text-muted">Ainda não se registou?</p>
+                <!-- <p class="text-center text-muted">Ainda não se registou?</p>
                 <p class="text-center text-muted"><a href="{{route('csc.registar')}}"><strong>Registe-se Agora</strong></a>! É fácil e demora apenas 1 minuto.</p>
+               -->
             </div>
         </div>
     </div>
@@ -70,7 +76,7 @@
             <a href="{{route('csc.index')}}" class="navbar-brand home">
                 <img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro Social de
                     Carnide logo" class="d-none d-md-inline-block logo">
-                    <span class="site-description">Centro Social
+                <span class="site-description">Centro Social
                     de
                     Carnide</span>
             </a>

@@ -92,9 +92,9 @@ class PageController extends Controller
         return view('contactos')->with('menu', 'Contactos');
     }
 
-    public function registar(){
+    /*public function registar(){
         return view('registar')->with('menu', 'Registar');
-    }
+    }*/
 
     public function landingpage(){
         return view('landingpage')->with('menu', 'landingpage');

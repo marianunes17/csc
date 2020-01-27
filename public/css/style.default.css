@@ -79,6 +79,7 @@ p.lead {
 
 .logo {
   max-width: 150px;
+  display: inline-block !important;
 }
 
 .social a:hover{
@@ -4091,7 +4092,7 @@ a>code {
   margin-bottom: 15px;
 }
 
-@media (max-width:1200px) and (min-width:990px){
+@media (max-width:1199px) and (min-width:990px){
     .navbar-brand{
         margin-right: 0 !important;
     }
@@ -4104,7 +4105,7 @@ a>code {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .card-deck {
     margin-right: -15px;
     margin-left: -15px;
@@ -4114,6 +4115,32 @@ a>code {
     margin-right: 15px;
     margin-left: 15px;
   }
+  .logo{
+      max-width: 100px;
+      position: relative;
+      left:-10px;
+  }
+  .site-description{
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 405px) {
+    .site-description{
+        font-size: 14px;
+    }
+    .logo{
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 340px) {
+    .site-description{
+        font-size: 12px;
+    }
+    .logo{
+        max-width: 70px;
+    }
 }
 
 .btn-outline-primary{
