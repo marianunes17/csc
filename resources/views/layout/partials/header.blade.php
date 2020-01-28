@@ -27,9 +27,9 @@
                                     class="fa fa-envelope"></i></a></li>
 
                         <li class="list-inline-item">
-                            <a>
+                            <a href="tel:236946189">
                                 <i class="fa fa-phone"></i>
-                            </a><span class="ml-2">236 946 189</span>
+                            </a><a href="tel:236946189" class="ml-2 d-inline text-white" style="color: #eee; font-size: 0.75rem; background: transparent;">236 946 189</a>
                         </li>
                     </ul>
                 </div>
