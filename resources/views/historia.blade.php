@@ -7,8 +7,8 @@
 @include ('layout.partials.banner')
 
 <div id="content">
-    <div class="container">
-        <section class="bar">
+    <div class="bar">
+        <div class="container">
             <div class="row">
                 <div class="heading text-center">
                     <div class="col-md-12">
@@ -28,6 +28,18 @@
                         numa gestão rigorosa, com vista à sua sustentabilidade e à garantia dos investimentos
                         necessários à prossecução dos seus objetivos, procurando atingir níveis cada vez mais existentes
                         de qualidade, humanização e segurança e foco no cliente.</p>
+                </div>
+            </div>
+        </div>
+        <section class="bar bg-gray mt-5">
+            <div class="container">
+                <div class="heading text-center">
+                    <div class="heading">
+                        <h2>Vídeo Promocional</h2>
+                    </div>
+                    <p class="mt-3 mb-5">De modo a promover e publicitar a nossa instituição, criámos um Vídeo Promocional! </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FETHEaSD7Ro" frameborder="0"
+                        allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -93,6 +105,7 @@
         </section>
     </div>
 </div>
+
 
 
 @endsection
