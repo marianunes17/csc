@@ -51,8 +51,8 @@ class DashboardController extends Controller
         $total_users=User::count();
         $total_events=Evento::count();
         $total_testimonials=Testemunho::count();
-        $total_partnership=Parceria::count();
-        return view('dashboard.show',compact('total_users','total_testimonials','$total_partnership','total_events'));
+        $total_partnerships=Parceria::count();
+        return view('dashboard.show',compact('total_users','total_testimonials','$total_s','total_events', 'total_partnerships'));
     }
 
     /**
