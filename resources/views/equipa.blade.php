@@ -19,12 +19,14 @@
                         Junte-se a nós e faça parte de algo especial.</p>
                     <div class="row text-center">
                         @foreach ($equipas as $team)
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <div data-animate="fadeInUp" class="team-member">
-                                <div class="image"><a href="team-member.html">
+                                <div class="image">
+
                                     <img src="{{Storage::disk('public')->url('equipa_images/').$team->imagem}}" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">{{$team->titulo}}</a></h3>
+                                        class="img-fluid rounded-circle">
+                                </div>
+                                <h3>{{$team->titulo}}</h3>
                                 <p class="role">{{$team->cargo}}</p>
                                 <div class="text">
                                     <p>{{$team->descricao}}</p>
@@ -34,7 +36,6 @@
                         @endforeach
                     </div>
                     <div class="row text-center mt-5">
-                        <div class="col"></div>
                         <div class="col-md-2 col-sm-3">
                             <div data-animate="fadeInUp" class="team-member">
                                 <div class="image"><a href="team-member.html"><img src="img/person-1.jpg" alt=""

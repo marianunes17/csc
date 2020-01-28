@@ -24,8 +24,8 @@ class StoreEquipaRequest extends FormRequest
     public function rules()
     {
         return [
-            "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
-            "cargo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+            "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
+            "cargo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
             "descricao" => 'required',
             "imagem"=>'required',
         ];
