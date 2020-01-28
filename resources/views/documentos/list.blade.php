@@ -37,6 +37,12 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
+                                @if ($documento->imagem)
+                                <a href="{{Storage::disk('public')->url('documentos_images/').$documento->imagem}}"
+                                    class="img-documentos" target="_blank">
+                                @else
+                                <iframe src="{{asset('img/no-image.png')}}" class="img-documentos" alt="documentos image"> </iframe>
+                                @endif
                             </td>
 
                             <td>{{$documento->nome}}</td>

@@ -13,7 +13,7 @@
         <div class="card-body">
 
 			<div>
-				<img alt="Post image" src="{{Storage::disk('public')->url('documentos_images/').$documento->imagem}}">
+				<iframe alt="documento ifram" src="{{Storage::disk('public')->url('documentos_images/').$documento->imagem}}"> </iframe>
 			</div>
 
 			<div><strong>Título:</strong> {{$documento->nome}} </div>

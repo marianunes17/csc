@@ -15,8 +15,7 @@
     <input type="file" class="form-control-file" name="imagem" id="inputImagem"
         aria-describedby="fileHelp" />
     <small id="fileHelp" class="form-text text-muted">
-        Please upload a valid file imagem. Size of imagem should not be more than
-        2MB </small>
+        O tamanho da imagem não deve exceder 2 MB </small>
 </div>
 
 <div class="form-group">
