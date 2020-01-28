@@ -45,22 +45,14 @@
                 <hr class="d-block d-lg-none">
             </div>
             <div class="col-lg-4">
-                <h4 class="h6">Newsletter</h4>
-                <p>Subscreva a nossa Newsletter para conhecer sempre as novidades em 1ª mão!</p>
-                <form>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <div class="input-group-append">
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-send"></i></button>
-                        </div>
-                    </div>
-                </form>
-                <hr>
-                <h4 class="h6">Redes Sociais</h4>
+
+                <h4 class="h6">Redes Sociais | E-mail</h4>
                 <ul class="list-unstyled social">
                     <li class="list-inline-item"><a
                             href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/" target="_blank"><i
                                 class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i
+                                    class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
         </div>
