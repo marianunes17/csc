@@ -1,4 +1,3 @@
-
 @extends('layout.admin')
 
 @section("title", "Parcerias")
@@ -7,20 +6,20 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-       <div class="card-header py-3">
-           Parcerias
-       </div>
-       <div class="card-body">
+        <h5 class="card-header py-3">
+            Parcerias
+        </h5>
+        <div class="card-body">
 
-           <div>
-               <img alt="Post image" src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}">
-           </div>
+            <div>
+                <img alt="Post image" src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}">
+            </div>
 
-           <div><strong>Título:</strong> {{$parceria->titulo}} </div>
-           <div><strong>Descrição:</strong> {{$parceria->descricao}} </div>
-           <div><strong>Imagem:</strong> {{$parceria->imagem}} </div>
-       </div>
-   </div>
+            <div><strong>Título:</strong> {{$parceria->titulo}} </div>
+            <div><strong>Descrição:</strong> {{$parceria->descricao}} </div>
+            <div><strong>Imagem:</strong> {{$parceria->imagem}} </div>
+        </div>
+    </div>
 </div>
 
 @endsection

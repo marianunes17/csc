@@ -17,7 +17,7 @@
             </div>
             <div class="mr-5">{{$total_users}} Utilizadores</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="">
+          <a class="card-footer text-white clearfix small z-1" href="#">
             <span class="float-left">Ver Mais</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>
@@ -33,7 +33,7 @@
             </div>
             <div class="mr-5">{{$total_testimonials}} Testemunhos</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="{{route('contactos.index')}}">
+          <a class="card-footer text-white clearfix small z-1" href="{{route('testemunhos.index')}}">
             <span class="float-left">Ver Mais</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>
@@ -47,10 +47,10 @@
             <div class="card-body-icon">
               <i class="fas fa-fw fa-shopping-cart"></i>
             </div>
-            <div class="mr-5">123 New Orders!</div>
+            <div class="mr-5">{{$total_partnership}} Parcerias</div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="#">
-            <span class="float-left">View Details</span>
+          <a class="card-footer text-white clearfix small z-1" href="{{route('parcerias.index')}}">
+            <span class="float-left">Ver Mais</span>
             <span class="float-right">
               <i class="fas fa-angle-right"></i>
             </span>
@@ -73,17 +73,6 @@
           </a>
         </div>
       </div>
-    </div>
-
-    <!-- Area Chart Example-->
-    <div class="card mb-3">
-      <div class="card-header">
-        <i class="fas fa-chart-area"></i>
-        Area Chart Example</div>
-      <div class="card-body">
-        <canvas id="myAreaChart" width="100%" height="30"></canvas>
-      </div>
-      <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
     </div>
 
     <!-- DataTables Example -->
