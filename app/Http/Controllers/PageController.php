@@ -35,8 +35,9 @@ class PageController extends Controller
     }
 
     public function equipa(){
+        $equipas=Equipa::all();
         $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
-        return view('equipa', compact('testemunhos'))->with('menu', 'Equipa');
+        return view('equipa', compact('testemunhos','equipas'))->with('menu', 'Equipa');
     }
 
     public function parcerias(){

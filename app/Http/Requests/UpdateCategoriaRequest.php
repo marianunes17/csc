@@ -28,7 +28,7 @@ class UpdateCategoriaRequest extends FormRequest
         regex:/^[A-ZÀ-úa-z\s]+$/',*/
         return [
         "nome" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
-        "descricao => 'required',
+        "descricao" => 'required',
         'categoria' => 'nullable|exists:categorias,id'
         ];
     }

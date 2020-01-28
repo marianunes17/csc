@@ -31,7 +31,7 @@
     {
         $tipos = Tipo::orderBy("nome")->get();
         $documento = new Documento;
-        return view('documentos.add', compact("tipos", "evento"));
+        return view('documentos.add', compact("tipos", "documento"));
     }
 
     /**

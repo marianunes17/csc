@@ -33,7 +33,7 @@
     {
     $tipo= new Tipo;
     $tipos=Tipo::all();
-    return view('tipos.add', compact(" tipo" ," tipos" ));
+    return view('tipos.add', compact("tipo" ,"tipos" ));
     }
 
     /**

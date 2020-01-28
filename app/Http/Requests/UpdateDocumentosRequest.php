@@ -25,7 +25,7 @@ class UpdateDocumentosRequest extends FormRequest
     {
         return [
             "nome" => 'required|min:3|max:20|unique:documentos,nome,' .
-                $this->tipo->id . '|regex:/^[A-ZÀ-úa-z\s]+$/',
+                $this->documento->id . '|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
             "tipo" => 'required',
 
@@ -35,5 +35,5 @@ class UpdateDocumentosRequest extends FormRequest
     public function messages()
     {
         return ['name.regex' => 'Name should contain only letters and spaces'];
-    }a
+    }
 }

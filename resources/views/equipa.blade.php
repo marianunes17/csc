@@ -18,11 +18,11 @@
                         desempenho nas áreas em que atuamos. Juntos superamos os desafios e entregamos resultados.
                         Junte-se a nós e faça parte de algo especial.</p>
                     <div class="row text-center">
-                        @foreach ($equipa as $team)
+                        @foreach ($equipas as $team)
                         <div class="col-md-4 col-sm-12">
                             <div data-animate="fadeInUp" class="team-member">
                                 <div class="image"><a href="team-member.html">
-                                    <img src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}" alt=""
+                                    <img src="{{Storage::disk('public')->url('equipa_images/').$team->imagem}}" alt=""
                                             class="img-fluid rounded-circle"></a></div>
                                 <h3><a href="team-member.html">{{$team->titulo}}</a></h3>
                                 <p class="role">{{$team->cargo}}</p>
