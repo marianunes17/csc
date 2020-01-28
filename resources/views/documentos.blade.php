@@ -19,17 +19,17 @@
 
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($tipos as $i => $tipo1)
-                        @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('pai')==$tipo1->id)
+                        @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('tipo_pai')==$tipo1->id)
                         || ($i==0 && request()->query('tip_id')==""))
                         <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
-                                class="nav-link active tipos">{{$tipo1->name}}</a></li>
+                                class="nav-link active tipos">{{$tipo1->nome}}</a></li>
                         @if(count($tipos_sub))
                         <ul>
                             @foreach($tipos_sub as $tip)
                             <li>
-                                <a href="{{route('csc.documentos')}}?tip_id={{$tip->id}}&pai={{$tipo1->id}}"
+                                <a href="{{route('csc.documentos')}}?tip_id={{$tip->id}}&tipo_pai={{$tipo1->id}}"
                                     class="nav-link tipos1">
-                                    {{$tip->name}}
+                                    {{$tip->nome}}
                                 </a>
                             </li>
                             @endforeach
@@ -37,8 +37,8 @@
                         @endif
                         @else
                         <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}" class="nav-link
-                            @if (request()->query('pai')==$tipo1->id) active @endif
-                            tipos1">{{$tipo1->name}}</a></li>
+                            @if (request()->query('tipo_pai')==$tipo1->id) active @endif
+                            tipos1">{{$tipo1->nome}}</a></li>
                         @endif
                         @endforeach
                     </ul>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="card-footer card-footer-event text-muted d-inline-block">
                     <span class="float-left"> {{$documento->data}} </span>
-                    <span class="float-right">{{$documento->tipo->name}}</span>
+                    <span class="float-right">{{$documento->tipo->nome}}</span>
                 </div>
 
             </div>

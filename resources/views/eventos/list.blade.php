@@ -38,8 +38,8 @@
                         <tr>
                             <td>
                                 @if ($evento->imagem)
-                                <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
-                                    class="img-eventos" alt="eventos image">
+                                <a href="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
+                                    class="img-eventos" target="_blank">
                                 @else
                                 <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="eventos image">
                                 @endif

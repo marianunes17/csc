@@ -18,16 +18,16 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($categorias as $i => $categoria)
-                        @if ( (request()->query('cat_id')==$categoria->id) || (request()->query('pai')==$categoria->id)
+                        @if ( (request()->query('cat_id')==$categoria->id) || (request()->query('cat_pai')==$categoria->id)
                         || ($i==0 && request()->query('cat_id')==""))
                             <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
-                                class="nav-link active categorias">{{$categoria->name}}</a></li>
+                                class="nav-link active categorias">{{$categoria->nome}}</a></li>
                             @if(count($categorias_sub))
                             <ul>
                                 @foreach($categorias_sub as $cat)
                                 <li>
-                                    <a href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&pai={{$categoria->id}}" class="nav-link categorias">
-                                    {{$cat->name}}
+                                    <a href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&cat_pai={{$categoria->id}}" class="nav-link categorias">
+                                    {{$cat->nome}}
                                     </a>
                                 </li>
                                 @endforeach
@@ -35,8 +35,8 @@
                             @endif
                         @else
                         <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}" class="nav-link
-                            @if (request()->query('pai')==$categoria->id) active @endif
-                            categorias">{{$categoria->name}}</a></li>
+                            @if (request()->query('cat_pai')==$categoria->id) active @endif
+                            categorias">{{$categoria->nome}}</a></li>
                         @endif
                         @endforeach
                     </ul>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="card-footer card-footer-event text-muted d-inline-block">
                 <span class="float-left"> {{$evento->data}} </span>
-                    <span class="float-right">{{$evento->categoria->name}}</span>
+                    <span class="float-right">{{$evento->categoria->nome}}</span>
                 </div>
 
             </div>

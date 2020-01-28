@@ -56,8 +56,8 @@ class PageController extends Controller
             $tipo_id=$tipos[0]->id;
             $documentos=Documento::where('tipo_id',$tipo_id)->get();
         }
-        if ($request->has('pai')) {
-            $tipo_id=$request->has('pai');
+        if ($request->has('tipo_pai')) {
+            $tipo_id=$request->has('tipo_pai');
         }
         $tipos_sub=Tipo::where('tipo_id', $tipo_id)->get();
 
@@ -80,8 +80,8 @@ class PageController extends Controller
             $cat_id=$categorias[0]->id;
             $eventos=Evento::where('categoria_id',$cat_id)->get();
         }
-        if ($request->has('pai')) {
-            $cat_id=$request->has('pai');
+        if ($request->has('cat_pai')) {
+            $cat_id=$request->has('cat_pai');
         }
         $categorias_sub=Categoria::where('categoria_id', $cat_id)->get();
 
