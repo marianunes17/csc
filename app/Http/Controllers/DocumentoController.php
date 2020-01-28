@@ -88,6 +88,7 @@
     {
     $fields = $request->validated();
     $documento->fill($fields);
+    $documento->tipo_id=$fields['tipo'];
     $documento->save();
     return redirect()->route('documentos.index')->with(
     'success',

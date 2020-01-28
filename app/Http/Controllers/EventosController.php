@@ -99,6 +99,18 @@ class EventosController extends Controller
     {
         $fields = $request->validated();
         $evento->fill($fields);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $eventoImg = $evento->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            if (!empty($evento->image)) {
+            Storage::disk('public')->delete('eventos_images/' . $evento->image);
+            }
+            Storage::disk('public')->putFileAs('eventos_images', $image, $eventoImg);
+            $evento->image = $eventoImg;
+            }
+
+        $evento->categoria_id=$fields['categoria'];
         $evento->save();
         return redirect()->route('eventos.index')->with(
             'success',
