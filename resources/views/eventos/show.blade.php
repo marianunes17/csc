@@ -19,6 +19,7 @@
 			<div><strong>Título:</strong> {{$evento->nome}} </div>
             <div><strong>Descrição:</strong> {{$evento->descricao}} </div>
             <div><strong>Categoria:</strong> {{$evento->categoria->nome}} </div>
+            <div><strong>Data:</strong> {{$evento->data}} </div>
 		</div>
 	</div>
 </div>
