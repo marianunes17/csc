@@ -67,9 +67,6 @@
                             </div>
                         </div>
                     </p>
-
-                    <p class="card-text"> Venha ter connosco! </p>
-
                 </div>
                 <div class="card-footer card-footer-event text-muted d-inline-block">
                 <span class="float-left"> {{$evento->data}} </span>
