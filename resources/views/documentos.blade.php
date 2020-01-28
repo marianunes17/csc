@@ -21,7 +21,7 @@
                         @foreach($tipos as $i => $tipo1)
                         @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('pai')==$tipo1->id)
                         || ($i==0 && request()->query('tip_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo->id}}"
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
                                 class="nav-link active tipos">{{$tipo1->name}}</a></li>
                         @if(count($tipos_sub))
                         <ul>
@@ -70,8 +70,6 @@
                             </div>
                         </div>
                     </p>
-
-                    <p class="card-text"> Venha ter connosco! </p>
 
                 </div>
                 <div class="card-footer card-footer-event text-muted d-inline-block">
