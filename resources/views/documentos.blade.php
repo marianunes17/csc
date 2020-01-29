@@ -58,8 +58,8 @@
                     <p class="card-text">
                         <div class="row">
                             <div class="col-lg-3">
-                                @if ($documento->imagem)
-                                <object data="meuarquivo.pdf" type="application/pdf">
+                                @if ($documento->file)
+                                <object  width="400" height="400" data="{{Storage::disk('public')->url('documento_files/').$documento->file}}" type="application/pdf">
                                     <p>Seu navegador não tem um plugin pra PDF</p>
                                 </object>
                                 @endif

@@ -39,6 +39,7 @@ Route::get('/admin','DashboardController@show')->name("dashboard");
 Route::resource('/admin/documentos', 'DocumentoController');
 Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/equipas', 'EquipaController');
+Route::resource('/admin/equipasdirecao', 'EquipaDirecaoController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/tipos', 'TipoController');
 Route::resource('/admin/categorias', 'CategoriaController');

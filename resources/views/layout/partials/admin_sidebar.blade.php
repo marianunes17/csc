@@ -36,12 +36,12 @@
 
                 <div class="dropdown-divider"></div>
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header pl-3">Categorias dos documentos</h6>
+                <h6 class="collapse-header pl-3">Anos dos documentos</h6>
                 <a class="dropdown-item" href="{{route('tipos.index')}}">Lista
                     de
-                    Categorias</a>
+                    Anos</a>
                 <a class="dropdown-item" href="{{route('tipos.create')}}">Adicionar
-                    Categoria</a>
+                    novos Anos</a>
             </div>
         </div>
     </li>
@@ -70,6 +70,20 @@
                 Equipa</a>
             <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
                 de Equipa</a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <hr class="menu-dividir">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-tie"></i>
+            <span> Direção</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{route('equipasdirecao.create')}}">Adicionar
+                 Direção</a>
+            <a class="dropdown-item" href="{{route('equipasdirecao.index')}}">Lista
+                de Direção</a>
         </div>
     </li>
     <li class="nav-item dropdown">
