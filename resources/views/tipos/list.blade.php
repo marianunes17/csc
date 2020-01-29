@@ -36,7 +36,7 @@
                             <td>{{$tipo->descricao}}</td>
                             <td>
                                 @if ($tipo->tipo_id)
-                                {{$tipo->tipoParent->nome}}
+                                {{$tipo->tipo_id->nome}}
                                 @endif
                             </td>
                             <td nowrap>
