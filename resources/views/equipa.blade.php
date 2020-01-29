@@ -17,9 +17,9 @@
                     <p class="lead">Contamos com uma equipa de profissionais qualificada que garante o nosso bom
                         desempenho nas áreas em que atuamos. Juntos superamos os desafios e entregamos resultados.
                         Junte-se a nós e faça parte de algo especial.</p>
-                    <div class="row text-center">
+                    <div class="row text-center justify-content-center">
                         @foreach ($equipas as $team)
-                        <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="col-lg-2 col-sm-12 ">
                             <div data-animate="fadeInUp" class="team-member">
                                 <div class="image">
 
