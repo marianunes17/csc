@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    protected $fillable = [ 'nome', 'descricao' ];
+    protected $fillable = ['nome', 'descricao'];
 
     public function eventos(){
         return $this->hasMany("App\Evento","categoria_id");

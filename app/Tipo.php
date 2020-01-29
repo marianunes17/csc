@@ -9,7 +9,7 @@ class Tipo extends Model
     protected $fillable = [ 'nome', 'descricao'];
 
     public function Documentos(){
-        return $this->hasMany("App\documento","tipo_id");
+        return $this->hasMany("App\Documento","tipo_id");
     }
 
     public function tipoParent(){ /*Relacionamento com a tabela tipo*/

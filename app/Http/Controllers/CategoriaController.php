@@ -58,7 +58,7 @@ class CategoriaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\Categoria $categoria
      * @return \Illuminate\Http\Response
      */
     public function show(Categoria $categoria){
@@ -68,7 +68,7 @@ class CategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\Categoria $categoria
      * @return \Illuminate\Http\Response
      */
     public function edit(Categoria $categoria)
@@ -100,7 +100,7 @@ class CategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\categorias  $categorias
+     * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
     public function destroy(Categoria $categoria) {

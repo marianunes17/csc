@@ -52,6 +52,7 @@ class EventosController extends Controller
         $evento = new Evento;
         $evento->fill($fields);
         $evento->categoria_id = $fields["categoria"];
+        $evento->data=date('Y-m-d H:i:s');
         $evento->save();
 
         if ($request->hasFile('imagem')) {
