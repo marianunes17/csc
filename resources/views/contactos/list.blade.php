@@ -10,7 +10,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a href="{{route('csc.contactos')}}" class="btn btn-outline-primary float-right" target="_blank">
-                Pré-Visualizar
+                Visualizar
                 <i class="fas fa-eye"></i>
             </a>
         </div>

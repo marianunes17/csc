@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use App\Parceria;
 use App\Documento;
 use App\Tipos;
+use App\EquipaDirecao;
 
 
 class PageController extends Controller
@@ -35,9 +36,10 @@ class PageController extends Controller
     }
 
     public function equipa(){
+        $equipadirecao=EquipaDirecao::all();
         $equipas=Equipa::all();
         $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
-        return view('equipa', compact('testemunhos','equipas'))->with('menu', 'Equipa');
+        return view('equipa', compact('testemunhos','equipas','equipadirecao'))->with('menu', 'Equipa');
     }
 
     public function parcerias(){

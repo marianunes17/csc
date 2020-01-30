@@ -26,7 +26,6 @@ class StoreEquipaDirecaoRequest extends FormRequest
         return [
         "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
         "cargo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
-        "file" => 'required',
         "imagem"=>'required',
         ];
     }
