@@ -7,9 +7,9 @@
 <div class="container-fluid">
 
 	<div class="card shadow mb-4">
-		<div class="card-header py-3">
+		<h5 class="card-header py-3">
 			Adicionar Tipo
-		</div>
+        </h5>
 		<div class="card-body">
 
 			<form method="POST" action="{{route('tipos.store')}}" class="form-group" >

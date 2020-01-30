@@ -9,9 +9,9 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            
+
             <a href="{{route('csc.index')}}" class="btn btn-outline-primary float-right" target="_blank">
-                Pré-Visualizar
+                Visualizar
                 <i class="fas fa-eye"></i>
             </a>
         </div>
@@ -33,7 +33,7 @@
                     <tbody>
                         @foreach($testemunhos as $testemunho)
                         <tr>
-                            
+
                             <td>
                                 {{$testemunho->nome}}
                             </td>
@@ -55,7 +55,7 @@
                             </td>
 
 
-                            
+
                             <td nowrap>
                                 <a href="{{route('testemunhos.show',$testemunho)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline" title="Visualizar testemunho">

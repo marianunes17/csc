@@ -80,7 +80,6 @@
             <h6>Não existem documento registados</h6>
             @endif
         </div>
-        …
     </div>
 </div>
 @endsection

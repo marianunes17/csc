@@ -1,5 +1,5 @@
 .menu-dividir{
-    border-top: 2px solid rgba(0, 0, 0, 0.1) !important;
+    border-top: 2px solid rgba(0, 0, 0, 0.5) !important;
     margin:5px 0px !important;
 }
 
@@ -3303,14 +3303,14 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
+  font-size: 15px;
+  color: white;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #051624;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-left: 1px solid rgb(255, 255, 255);
+
 }
 
 .dropdown-menu-left {
@@ -3462,7 +3462,7 @@ input[type="button"].btn-block {
   height: 0;
   margin: 0.5rem 0;
   overflow: hidden;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid white;
 }
 
 .dropdown-item {
@@ -3471,7 +3471,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: white;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3479,7 +3479,7 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+  color: #051624;
   text-decoration: none;
   background-color: #f8f9fa;
 }
@@ -4439,6 +4439,7 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5) !important;;
 }
 
 .navbar > .container,
@@ -6994,7 +6995,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #051624 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10539,6 +10540,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .navbar {
     display: none;
+
   }
   .badge {
     border: 1px solid #000;
@@ -10679,7 +10681,7 @@ body {
 
 .sidebar {
   width: 90px !important;
-  background-color: #212529;
+  background-color: #051624;
   min-height: calc(100vh - 56px);
 }
 
@@ -10730,7 +10732,8 @@ body {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 225px !important;
+    width: 300px !important;
+    z-index: 5;
   }
   .sidebar .nav-item .nav-link {
     display: block;
