@@ -21,7 +21,8 @@
                         @if ( (request()->query('cat_id')==$categoria->id) ||
                         (request()->query('cat_pai')==$categoria->id)
                         || ($i==0 && request()->query('cat_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
+                        <li class="nav-item">
+                            <a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
                                 class="nav-link active categorias">{{$categoria->nome}}</a></li>
                         @if(count($categorias_sub))
                         <ul>

@@ -22,7 +22,7 @@ class StoreTipoRequest extends FormRequest
      * @return array
      */
     public function rules(){
-        return [ "nome" => 'required|min:3|max:20|unique:tipos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
+        return [ "nome" => 'required|min:3|max:20|unique:tipos,nome|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
             "descricao" => 'required',
             'tipo' => 'nullable|exists:tipos,id'
         ];

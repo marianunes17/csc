@@ -16,12 +16,11 @@
                 </div>
 
                 <div class="panel-body">
-
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($tipos as $i => $tipo1)
                         @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('tipo_pai')==$tipo1->id)
                         || ($i==0 && request()->query('tip_id')==""))
-                        <li class="nav-item" style="background-color: #1D5B90 !important;">
+                        <li class="nav-item">
                             <a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
                                 class="nav-link active tipos">{{$tipo1->nome}}</a>
                         </li>
@@ -52,14 +51,14 @@
             @foreach($documentos as $documento)
             <div class="card">
 
-                <div class="card-header text-center">
+                <h4 class="card-header text-center text-uppercase py-4">
                     {{$documento->nome}}
-                </div>
+                </h4>
 
                 <div class="card-body">
                     <p class="card-text">
                         <div class="row">
-                            <div class="col-lg-9">
+                            <div class="col-lg-6">
                                 @if ($documento->file)
                                 <object width="400" height="400"
                                     data="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
@@ -69,7 +68,7 @@
                                 @endif
                             </div>
 
-                            <div class="col-lg-3">
+                            <div class="col-lg-6">
                                 {{$documento->descricao}}
                             </div>
                         </div>
