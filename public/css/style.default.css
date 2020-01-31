@@ -4000,7 +4000,6 @@ a>code {
 .card {
   background-color: #fff;
   border: 1px solid #1D5B90 !important;
-  border-radius: 10px;
 }
 
 .card>.list-group:first-child .list-group-item:first-child {
@@ -4165,3 +4164,19 @@ a>code {
     background-color: #1D5B90 !important;
     color: white !important;
 }
+
+.nav-link.tipos{
+    background-color: white !important;
+    color: #1D5B90 !important;
+}
+
+.nav-link.tipos:hover{
+    color: #1D5B90;
+    border-bottom: 1px solid #1D5B90;
+}
+
+.nav-link.tipos.active{
+    background-color: #1D5B90 !important;
+    color: white !important;
+}
+
