@@ -28,7 +28,7 @@ class UpdateTestemunhosRequest extends FormRequest
   "nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
         "sobrenome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
         "email" => 'required|email',
-        "testemunho"=>'required|min:3|max:150|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "testemunho"=>'required|min:3|max:150|regex:/^[A-ZÀ-úa-z\s\-\!\.\?]+$/',
         ];
     }
 }
