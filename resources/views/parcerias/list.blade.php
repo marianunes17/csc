@@ -37,7 +37,7 @@
                                 <img src="{{Storage::disk('public')->url('parceria_images/').$parceria->imagem}}"
                                     class="w-50" alt="parcerias">
                                 @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="parcerias">
+                                <img src="{{asset('img/no-image.png')}}" class="img-parcerias" alt="parcerias">
                                 @endif
                             </td>
 
