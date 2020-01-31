@@ -48,7 +48,7 @@
                                     </a>
                                 </div>
                                 <h3>{{$direcao->titulo}}</h3>
-                                <p class="role">{{$direcao->cargo}}</p>
+                                <p class="role font-weight-bold ">{{$direcao->cargo}}</p>
                             </div>
                         </div>
                         @endforeach

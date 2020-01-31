@@ -24,8 +24,8 @@ class UpdateEquipaDirecaoRequest extends FormRequest
     public function rules()
     {
         return [
-        "titulo" => 'required|min:3|max:30|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
-        "cargo" => 'required|min:3|max:30|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
+        "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
+        "cargo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-\ª\º\.]+$/',
         "imagem"=>'required',
         ];
     }

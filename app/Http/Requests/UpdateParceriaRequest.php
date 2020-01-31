@@ -23,10 +23,10 @@ class UpdateParceriaRequest extends FormRequest
      */
     public function rules()
     {
-  
+
         return [
 
-        "titulo" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
+        "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s]+$/',
         "descricao" => 'required',
         "imagem"=>'required',
         ];
