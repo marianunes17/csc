@@ -20,7 +20,6 @@
         <div id="collapseDocumentos" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class=" py-2 collapse-inner rounded">
                 <h6 class="collapse-header pl-3">Documentos:</h6>
-<<<<<<< HEAD
                 <a class="dropdown-item" href="{{route('documentos.create')}}">Adicionar
                     evento</a>
                 <a class="dropdown-item" href="{{route('documentos.index')}}">Lista
@@ -34,21 +33,6 @@
                 <a class="dropdown-item" href="{{route('tipos.index')}}">Lista
                     de
                     Anos</a>
-=======
-                <a class="dropdown-item" href="{{route('documentos.index')}}">Lista
-                    de Documentos</a>
-                <a class="dropdown-item" href="{{route('documentos.create')}}">Adicionar
-                    Documento</a>
-
-                <div class="dropdown-divider"></div>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header pl-3">Tipos de Documentos</h6>
-                <a class="dropdown-item" href="{{route('tipos.index')}}">Lista
-                    de
-                    Tipos</a>
-                <a class="dropdown-item" href="{{route('tipos.create')}}">Adicionar
-                    novos Tipos</a>
->>>>>>> 8799e919fc5e89b1723709a7441eb286c6c90117
             </div>
         </div>
     </li>
@@ -61,8 +45,9 @@
             <span>Utilizadores</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('users.create')}}">Adicionar Utilizador</a>
              <a class="dropdown-item" href="{{route('users.index')}}">Lista de Utilizadores</a>
-            <a class="dropdown-item" href="{{route('users.create')}}">Adicionar Utilizador</a>
+
 
         </div>
     </li>
@@ -74,10 +59,11 @@
             <span>Equipa</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('equipas.create')}}">Adicionar
+                Equipa</a>
              <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
                 de Equipa</a>
-            <a class="dropdown-item" href="{{route('equipas.create')}}">Adicionar
-                Equipa</a>
+
 
         </div>
     </li>
@@ -89,10 +75,11 @@
             <span> Direção</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('equipasdirecao.create')}}">Adicionar
+                 Direção</a>
             <a class="dropdown-item" href="{{route('equipasdirecao.index')}}">Lista
                 de Direção</a>
-            <a class="dropdown-item" href="{{route('equipasdirecao.create')}}">Adicionar
-                 Direção</a>
+
 
         </div>
     </li>
@@ -104,10 +91,11 @@
             <span>Parcerias</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('parcerias.create')}}">Adicionar
+                Parcerias</a>
             <a class="dropdown-item" href="{{route('parcerias.index')}}">Lista
                 de Parcerias</a>
-            <a class="dropdown-item" href="{{route('parcerias.create')}}">Adicionar
-                Parcerias</a>
+
 
         </div>
     </li>

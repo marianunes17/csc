@@ -89,6 +89,15 @@ class EquipaController extends Controller
     {
         $fields = $request->validated();
         $equipa->fill($fields);
+
+        if ($request->hasFile('imagem')) {
+            $image = $request->file('imagem');
+            $equipaImg = $equipa->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('public')->putFileAs('equipa_images', $image, $equipaImg);
+            $equipa->imagem = $equipaImg;
+        }
+
+
         $equipa->save();
         return redirect()->route('equipas.index')->with(
             'success',
