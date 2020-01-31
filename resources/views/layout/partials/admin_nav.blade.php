@@ -27,12 +27,17 @@
                 <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">Definições</a>
-                <!-- <a class="dropdown-item" href="#">Activity Log</a>-->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
             </div>
         </li>
     </ul>
+
+    <div class="modal-footer">
+        <form action="{{route('logout')}}" method="post" class="inline">
+        @csrf
+        <button class="btn btn-link" type="submit"><i class="fas fa-sign-out-alt"></i></button>
+        </form>
+    </div>
 
 </nav>
