@@ -65,7 +65,7 @@
                                 @endif
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 pl-5">
                                 {{$evento->descricao}}
                             </div>
                         </div>
