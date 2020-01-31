@@ -28,7 +28,6 @@ Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("t
 
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
-
     Route::get('/users/{user}/send_reactivate_mail',
     "UserController@send_reactivate_email")->name('users.sendActivationEmail');
 
@@ -52,7 +51,3 @@ Route::redirect('/admin/categoria', '/admin/categorias');
 
 
 Auth::routes(['register' => false, 'verify' => true]);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
