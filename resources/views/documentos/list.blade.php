@@ -41,7 +41,7 @@
                                 <a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
                                     class="img-documentos" target="_blank">Ver ficheiro</a>
                                 @else
-                                <iframe src="{{asset('img/no-image.png')}}" class="img-documentos" alt="documentos image"> </iframe>
+                                <img src="{{asset('img/no-image.png')}}" class="img-documentos" alt="documentos image"> </img>
                                 @endif
                             </td>
 

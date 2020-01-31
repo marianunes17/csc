@@ -17,7 +17,7 @@
 
 
             @if ($tipo->tipo_id)
-            <div> <strong>Tipo pai:</strong> {{$tipo->tipoParent->nome}} </div>
+            <div> <strong>Tipo pai:</strong> {{$tipo->tipo_id->nome}} </div>
             @endif
 		</div>
 	</div>
