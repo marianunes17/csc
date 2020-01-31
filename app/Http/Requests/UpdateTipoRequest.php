@@ -24,14 +24,14 @@ class UpdateTipoRequest extends FormRequest
     public function rules()
     {
         return [
-        "nome" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
+        "nome" => 'required|min:3|max:150|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
         "descricao" => 'required',
         'tipo' => 'nullable|exists:tipos,id'
         ];
     }
 
     public function messages() {
-        return ['name.regex' => 'O nome deve conter apenas letras e espaços'];
+        return ['name.regex' => 'O nome deve conter apenas letras, espaços e números'];
 
     }
 }

@@ -24,7 +24,7 @@ class UpdateCategoriaRequest extends FormRequest
     public function rules()
     {
         return [
-        "nome" => 'required|min:3|max:20|regex:/^[A-ZÀ-úa-z\s]+$/',
+        "nome" => 'required|min:3|max:150|regex:/^[A-ZÀ-úa-z\s]+$/',
         "descricao" => 'required',
         'categoria' => 'nullable|exists:categorias,id'
         ];

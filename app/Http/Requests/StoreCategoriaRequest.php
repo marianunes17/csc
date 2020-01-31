@@ -22,7 +22,7 @@ class StoreCategoriaRequest extends FormRequest
      * @return array
      */
     public function rules(){
-        return [ "nome" => 'required|min:3|max:20|unique:categorias,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
+        return [ "nome" => 'required|min:3|max:150|unique:categorias,nome|regex:/^~[A-ZÀ-úa-z0-9\s]+$/',
             "descricao" => 'required',
             'categoria' => 'nullable|exists:categorias,id'
         ];
@@ -30,6 +30,6 @@ class StoreCategoriaRequest extends FormRequest
 /**regex:/^[A-ZÀ-úa-z0-9\s]+$/' - 0-9 - Aceita numeros */
 
     public function messages(){
-        return ['name.regex' => 'Name should contain only letters and spaces'];
+        return ['name.regex' => 'O nome deve conter apenas letras e espaços'];
     }
 }

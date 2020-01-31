@@ -24,7 +24,7 @@ class StoreDocumentosRequest extends FormRequest
     public function rules()
     {
         return [
-            "nome" => 'required|min:3|max:20|unique:documentos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "nome" => 'required|min:3|max:150|unique:documentos,nome|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
             "descricao" => 'required',
             "tipo"=>'required',
             "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"'
