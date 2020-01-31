@@ -20,6 +20,21 @@
         <div id="collapseDocumentos" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class=" py-2 collapse-inner rounded">
                 <h6 class="collapse-header pl-3">Documentos:</h6>
+<<<<<<< HEAD
+                <a class="dropdown-item" href="{{route('documentos.create')}}">Adicionar
+                    evento</a>
+                <a class="dropdown-item" href="{{route('documentos.index')}}">Lista
+                    de documentos</a>
+
+                <div class="dropdown-divider"></div>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header pl-3">Anos dos documentos</h6>
+                <a class="dropdown-item" href="{{route('tipos.create')}}">Adicionar
+                    novos Anos</a>
+                <a class="dropdown-item" href="{{route('tipos.index')}}">Lista
+                    de
+                    Anos</a>
+=======
                 <a class="dropdown-item" href="{{route('documentos.index')}}">Lista
                     de Documentos</a>
                 <a class="dropdown-item" href="{{route('documentos.create')}}">Adicionar
@@ -33,6 +48,7 @@
                     Tipos</a>
                 <a class="dropdown-item" href="{{route('tipos.create')}}">Adicionar
                     novos Tipos</a>
+>>>>>>> 8799e919fc5e89b1723709a7441eb286c6c90117
             </div>
         </div>
     </li>
@@ -107,19 +123,21 @@
         <div id="collapseEventos" class="dropdown-menu" aria-labelledby="pagesDropdown">
             <div class="py-2 collapse-inner rounded">
                 <h6 class="collapse-header pl-3">Eventos:</h6>
-                <a class="dropdown-item" href="{{route('eventos.index')}}">Lista
-                    de eventos</a>
                 <a class="dropdown-item" href="{{route('eventos.create')}}">Adicionar
                     evento</a>
+                <a class="dropdown-item" href="{{route('eventos.index')}}">Lista
+                    de eventos</a>
+
 
                 <div class="dropdown-divider"></div>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header pl-3">Categorias dos eventos</h6>
+                <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
+                    Categoria</a>
                 <a class="dropdown-item" href="{{route('categorias.index')}}">Lista
                     de
                     Categorias</a>
-                <a class="dropdown-item" href="{{route('categorias.create')}}">Adicionar
-                    Categoria</a>
+
             </div>
         </div>
     </li>
