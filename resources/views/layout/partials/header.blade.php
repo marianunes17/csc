@@ -12,9 +12,6 @@
                             <i class="fa fa-sign-in"></i>
                             <span class="d-none d-md-inline-block">Entrar</span>
                         </a>
-
-                        <!--<a href="{{route('csc.registar')}}" class="signup-btn"><i class="fa fa-user"></i>
-                            <span class="d-none d-md-inline-block">Registar</span></a>-->
                     </div>
 
 
@@ -43,7 +40,6 @@
     class="modal fade">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
-
             <div class="modal-header">
                 <h4 id="login-modalLabel" class="modal-title"> Entrar</h4>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close">
@@ -52,7 +48,7 @@
             </div>
 
             <div class="modal-body">
-                <form action="customer-orders.html" method="get">
+                <form action="#" method="get">
                     <div class="form-group">
                         <input id="email_modal" type="text" placeholder="Email" class="form-control">
                     </div>
@@ -63,9 +59,6 @@
                         <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
                     </p>
                 </form>
-                <!-- <p class="text-center text-muted">Ainda não se registou?</p>
-                <p class="text-center text-muted"><a href="{{route('csc.registar')}}"><strong>Registe-se Agora</strong></a>! É fácil e demora apenas 1 minuto.</p>
-               -->
             </div>
         </div>
     </div>
