@@ -7,6 +7,7 @@ use App\User;
 use App\Evento;
 use App\Testemunho;
 use App\Parceria;
+use App\Documento;
 class DashboardController extends Controller
 {
     /**
@@ -52,7 +53,8 @@ class DashboardController extends Controller
         $total_events=Evento::count();
         $total_testimonials=Testemunho::count();
         $total_partnerships=Parceria::count();
-        return view('dashboard.show',compact('total_users','total_testimonials','$total_s','total_events', 'total_partnerships'));
+        $documentos=Documento::all();
+        return view('dashboard.show',compact('documentos','total_users','total_testimonials','$total_s','total_events', 'total_partnerships'));
     }
 
     /**

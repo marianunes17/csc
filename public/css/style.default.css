@@ -4159,12 +4159,9 @@ a>code {
 .nav-link.categorias:hover{
     color: #1D5B90;
     border-bottom: 1px solid #1D5B90;
-    border-bottom-left-radius: 7px;
 }
 
 .nav-link.categorias.active{
     background-color: #1D5B90 !important;
     color: white !important;
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
 }

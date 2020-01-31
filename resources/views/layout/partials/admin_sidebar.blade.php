@@ -4,7 +4,7 @@
 
         <a class="nav-link m-auto" href="{{route('dashboard')}}">
 
-            <i class="fas fa-fw fa-tachometer-alt pr-4"></i>
+            <i class="fas fa-fw fa-tachometer-alt "></i>
             <span>Dashboard</span>
         </a>
     </li>
@@ -13,7 +13,7 @@
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-file-invoice fa-fw pr-4"></i>
+            <i class="fas fa-file-download fa-fw"></i>
             <span>Documentos</span>
         </a>
 
@@ -41,54 +41,58 @@
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-users fa-fw pr-4"></i>
+            <i class="fas fa-users fa-fw"></i>
             <span>Utilizadores</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('users.index')}}">Lista de Utilizadores</a>
             <a class="dropdown-item" href="{{route('users.create')}}">Adicionar Utilizador</a>
-            <a class="dropdown-item" href="{{route('users.index')}}">Lista de Utilizadores</a>
+
         </div>
     </li>
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-people-carry fa-fw pr-4"></i>
+            <i class="fas fa-people-carry fa-fw"></i>
             <span>Equipa</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
+                de Equipa</a>
             <a class="dropdown-item" href="{{route('equipas.create')}}">Adicionar
                 Equipa</a>
-            <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
-                de Equipa</a>
+
         </div>
     </li>
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user-tie fa-fw pr-4"></i>
+            <i class="fas fa-user-tie fa-fw"></i>
             <span> Direção</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="{{route('equipasdirecao.create')}}">Adicionar
-                 Direção</a>
             <a class="dropdown-item" href="{{route('equipasdirecao.index')}}">Lista
                 de Direção</a>
+            <a class="dropdown-item" href="{{route('equipasdirecao.create')}}">Adicionar
+                 Direção</a>
+
         </div>
     </li>
     <li class="nav-item dropdown">
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-handshake fa-fw pr-4"></i>
+            <i class="fas fa-handshake fa-fw"></i>
             <span>Parcerias</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="{{route('parcerias.create')}}">Adicionar
-                Parcerias</a>
             <a class="dropdown-item" href="{{route('parcerias.index')}}">Lista
                 de Parcerias</a>
+            <a class="dropdown-item" href="{{route('parcerias.create')}}">Adicionar
+                Parcerias</a>
+
         </div>
     </li>
 
@@ -96,7 +100,7 @@
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-file-invoice fa-fw pr-4"></i>
+            <i class="fas fa-calendar-alt fa-fw"></i>
             <span>Eventos</span>
         </a>
 
@@ -125,7 +129,7 @@
         <hr class="menu-dividir">
         <a class="nav-link dropdown-toggle m-auto" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-file-invoice fa-fw pr-4"></i>
+            <i class="fas fa-file-invoice fa-fw"></i>
             <span>Formulários</span>
         </a>
         <div id="collapseForm" class="dropdown-menu" aria-labelledby="pagesDropdown">

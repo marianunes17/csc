@@ -21,8 +21,10 @@
                         @foreach($tipos as $i => $tipo1)
                         @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('tipo_pai')==$tipo1->id)
                         || ($i==0 && request()->query('tip_id')==""))
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
-                                class="nav-link active tipos">{{$tipo1->nome}}</a></li>
+                        <li class="nav-item" style="background-color: #1D5B90 !important;">
+                            <a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
+                                class="nav-link active tipos">{{$tipo1->nome}}</a>
+                        </li>
                         @if(count($tipos_sub))
                         <ul>
                             @foreach($tipos_sub as $tip)
@@ -57,15 +59,17 @@
                 <div class="card-body">
                     <p class="card-text">
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-9">
                                 @if ($documento->file)
-                                <object  width="400" height="400" data="{{Storage::disk('public')->url('documento_files/').$documento->file}}" type="application/pdf">
+                                <object width="400" height="400"
+                                    data="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
+                                    type="application/pdf">
                                     <p>Seu navegador não tem um plugin pra PDF</p>
                                 </object>
                                 @endif
                             </div>
 
-                            <div class="col-lg-9">
+                            <div class="col-lg-3">
                                 {{$documento->descricao}}
                             </div>
                         </div>

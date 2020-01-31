@@ -49,9 +49,6 @@
                             <td>{{$documento->descricao}}</td>
                             <td>{{$documento->tipo->nome}}</td>
                             <td>{{$documento->data}}</td>
-
-
-                            </td>
                             <td nowrap>
                                 <a href="{{route('documentos.show',$documento)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline">
