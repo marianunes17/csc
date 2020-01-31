@@ -27,7 +27,7 @@
                                         class="img-fluid rounded-circle">
                                 </div>
                                 <h3>{{$team->titulo}}</h3>
-                                <p class="role">{{$team->cargo}}</p>
+                                <p class="role font-weight-bold my-2">{{$team->cargo}}</p>
                                 <div class="text">
                                     <p>{{$team->descricao}}</p>
                                 </div>
