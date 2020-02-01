@@ -8,7 +8,10 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar: <b> {{$tipo->nome}} </b>
+            Editar: <b> {{$tipo->nome}} </b>
+
+            <a href="{{route('tipos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
         </div>
         <div class="card-body">
 
