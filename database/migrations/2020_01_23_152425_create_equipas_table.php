@@ -18,7 +18,7 @@ class CreateEquipasTable extends Migration
             $table->string('titulo', 100);
             $table->string('cargo', 50);
             $table->text('descricao');
-            $table->string('imagem');
+            $table->string('imagem')->nullable();
             $table->timestamps();
         });
     }

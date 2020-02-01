@@ -36,17 +36,23 @@
                     <tbody>
                         @foreach($eventos as $evento)
                         <tr>
-                            <td>
+                            <td class="w-25">
                                 @if ($evento->imagem)
-                                <a href="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
-                                    class="w-50" alt="img eventos">
+                                <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
+                                    class="w-100 h-auto" alt="img eventos">
                                 @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="img eventos">
+                                <img src="{{asset('img/no-image.png')}}" class="img-eventos w-100 h-auto" alt="img eventos">
                                 @endif
                             </td>
 
                             <td>{{$evento->nome}}</td>
-                            <td>{{$evento->descricao}}</td>
+                            <td>
+                                {{ $evento->VerMais }}
+
+                                <a href="{{route('eventos.show',$evento)}}"> Ler mais </a>
+                            </td>
+
+
                             <td>{{$evento->categoria->nome}}</td>
                             <td>{{$evento->data}}</td>
 

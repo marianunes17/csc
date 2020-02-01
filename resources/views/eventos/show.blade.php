@@ -17,10 +17,10 @@
 
 			<div>
                 @if ($evento->imagem)
-                    <img alt="eventos image" src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
-                    class="w-25 h-auto d-block">
+                    <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
+                    class="w-50 h-auto d-block" alt="eventos image" >
                 @else
-                    <img src="{{asset('img/no-image.png')}}" class="w-25 h-auto d-block img-eventos" alt="eventos image">
+                    <img src="{{asset('img/no-image.png')}}" class="w-50 h-auto d-block img-eventos" alt="eventos image">
                  @endif
 			</div>
 <br>

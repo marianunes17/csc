@@ -13,7 +13,7 @@
 <div class="form-group">
     <label for="inputFile">Documento</label>
     <input type="file" class="form-control-file" name="file" id="inputFile"
-        aria-describedby="fileHelp" value="{{old('file',$documento->file)}}" />
+        aria-describedby="fileHelp"/>
     <small id="fileHelp" class="form-text text-muted">
         O tamanho da file não deve exceder 2 MB </small>
 </div>

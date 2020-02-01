@@ -16,7 +16,7 @@ class CategoriaController extends Controller
      */
     public function index() /*Metodo chamado para apresentar todos os registos */
     {
-        $categorias=Categoria::all();
+        $categorias = Categoria::all()->sortBy('nome');
         return view('categorias.list', compact('categorias')); /*Chamar a vista categorias.list,
         compact da variavel, que cria um array com a variavel com o mesmo nome e faz o mesmo q a linha anterior*/
     }

@@ -14,4 +14,9 @@ class Evento extends Model
     public function categoria(){ /*Relacionamento com a tabela categoria*/
         return $this->belongsTo("App\Categoria","categoria_id");
     }
+
+    public function getVerMaisAttribute(){ /*Ler mais*/
+        return substr($this->descricao,0,random_int(30,150)) . '...';
+    }
+
 }

@@ -31,6 +31,7 @@
     */
     public function create()
     {
+    $tipo = Tipoo::all()->sortBy('nome');
     $tipo= new Tipo;
     $tipos=Tipo::all();
     return view('tipos.add', compact("tipo" ,"tipos" ));

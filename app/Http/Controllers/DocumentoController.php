@@ -16,15 +16,10 @@ class DocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function documentos()
-    {
-     $documentos=Documento::orderBy("date","desc");
-     return view('documentos',compact('documentos'));
-    }
 
     public function index()
     {
-        $documentos = Documento::all();
+        $documentos = Documento::all()->sortByDESC('created_at');
         return view('documentos.list', compact('documentos'));
     }
 
@@ -105,6 +100,16 @@ class DocumentoController extends Controller
         $fields = $request->validated();
         $documento->fill($fields);
         $documento->tipo_id = $fields['tipo'];
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $documentoFile = $documento->id . '_' . time() . '.' . $file->getClientOriginalExtension();
+            Storage::disk('public')->delete('documento_files/' . $documento->file);
+            }
+            Storage::disk('public')->putFileAs('documento_files', $file, $documentoFile);
+            $documento->file = $documentoFile;
+        }
+
         $documento->save();
         return redirect()->route('documentos.index')->with(
             'success',

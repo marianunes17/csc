@@ -23,7 +23,7 @@ class EventosController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::all();
+        $eventos = evento::all()->sortByDESC('created_at');
         return view('eventos.list', compact('eventos'));
     }
 
@@ -93,7 +93,7 @@ class EventosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\eventos  $eventos
+     * @param  \App\Eventos  $eventos
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateEventosRequest $request, Evento $evento)
@@ -101,14 +101,14 @@ class EventosController extends Controller
         $fields = $request->validated();
         $evento->fill($fields);
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
+        if ($request->hasFile('imagem')) {
+            $image = $request->file('imagem');
             $eventoImg = $evento->id . '_' . time() . '.' . $image->getClientOriginalExtension();
-            if (!empty($evento->image)) {
-            Storage::disk('public')->delete('eventos_images/' . $evento->image);
+            if (!empty($evento->imagem)) {
+            Storage::disk('public')->delete('eventos_images/' . $evento->imagem);
             }
-            Storage::disk('public')->putFileAs('eventos_images', $image, $eventoImg);
-            $evento->image = $eventoImg;
+            Storage::disk('public')->putFileAs('eventos_images/', $image, $eventoImg);
+            $evento->imagem = $eventoImg;
             }
 
         $evento->categoria_id=$fields['categoria'];
