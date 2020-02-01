@@ -18,7 +18,7 @@
 
 			<div>
 				<a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
-                    class="img-documentos" target="_blank">Ver ficheiro</a>
+                    class="img-documentos" target="_blank" alt="img documentos">Ver ficheiro</a>
 			</div>
 <br>
 			<div><strong>Título:</strong> {{$documento->nome}} </div>

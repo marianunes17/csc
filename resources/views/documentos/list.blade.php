@@ -18,7 +18,7 @@
                 <i class="fas fa-eye"></i>
             </a>
         </div>
-        
+
         <div class="card-body">
             @if (count($documentos))
             <div class="table-responsive">
@@ -38,12 +38,8 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                @if ($documento->file)
                                 <a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
-                                    class="img-documentos" target="_blank">Ver ficheiro</a>
-                                @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-documentos" alt="documentos image"> </img>
-                                @endif
+                                class="img-documentos" target="_blank" alt="img documentos">Ver ficheiro</a>
                             </td>
 
                             <td>{{$documento->nome}}</td>

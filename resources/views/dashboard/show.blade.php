@@ -96,13 +96,10 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                @if ($documento->file)
+                                ($documento->file)
                                 <a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
-                                    class="img-documentos" target="_blank">Ver ficheiro</a>
-                                @else
-                                <iframe src="{{asset('img/no-image.png')}}" class="img-documentos"
-                                    alt="documentos image"> </iframe>
-                                @endif
+                                    class="img-documentos" target="_blank" alt="img documentos">Ver ficheiro</a>
+
                             </td>
 
                             <td>{{$documento->nome}}</td>

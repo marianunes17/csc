@@ -20,7 +20,7 @@
                     <img alt="eventos image" src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
                     class="w-25 h-auto d-block">
                 @else
-                    <img src="{{asset('img/no-image.png')}}" class="w-25 h-auto d-block img-eventos" alt="eventos image"> </img>
+                    <img src="{{asset('img/no-image.png')}}" class="w-25 h-auto d-block img-eventos" alt="eventos image">
                  @endif
 			</div>
 <br>

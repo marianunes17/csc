@@ -58,7 +58,6 @@
                 <div class="card-body">
                     <p class="card-text">
                         <div class="row">
-                            <div class="col-lg-6">
                                 @if ($documento->file)
                                 <object width="400" height="400"
                                     data="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
@@ -66,11 +65,8 @@
                                     <p>Seu navegador não tem um plugin pra PDF</p>
                                 </object>
                                 @endif
-                            </div>
-
-                            <div class="col-lg-6 pl-5">
+<br>
                                 {{$documento->descricao}}
-                            </div>
                         </div>
                     </p>
 

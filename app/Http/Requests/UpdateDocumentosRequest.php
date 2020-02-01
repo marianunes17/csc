@@ -27,6 +27,7 @@ class UpdateDocumentosRequest extends FormRequest
             "nome" => 'required|min:3|max:150|unique:documentos,nome,' .
                 $this->documento->id . '|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
             "descricao" => 'required',
+            "file" => 'required',
             "tipo" => 'required',
 
         ];
