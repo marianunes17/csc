@@ -12,7 +12,7 @@ class Categoria extends Model
         return $this->hasMany("App\Evento","categoria_id");
     }
 
-    public function categoriaParent(){ /*Relacionamento com a tabela categoria*/
+    public function categoria_id(){ /*Relacionamento com a tabela categoria*/
         return $this->belongsTo("App\Categoria","categoria_id");
     }
     /*Metodo para adicionar a todos os posts*/

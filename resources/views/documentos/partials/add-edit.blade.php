@@ -11,11 +11,11 @@
 </div>
 
 <div class="form-group">
-    <label for="inputImagem">Imagem</label>
-    <input type="file" class="form-control-file" name="file" id="inputImagem"
-        aria-describedby="fileHelp" />
+    <label for="inputFile">Documento</label>
+    <input type="file" class="form-control-file" name="file" id="inputFile"
+        aria-describedby="fileHelp" value="{{old('file',$documento->file)}}" />
     <small id="fileHelp" class="form-text text-muted">
-        O tamanho da imagem não deve exceder 2 MB </small>
+        O tamanho da file não deve exceder 2 MB </small>
 </div>
 
 <div class="form-group">
@@ -27,9 +27,8 @@
     </select>
 </div>
 
-
 <div class="form-group">
     <label for="inputDate">Data</label>
     <input type="date" class="form-control" name="data" id="inputDate"
-        value="{{old('data',$documento->data??date('Y-m-d'))}}"/>
+        value="{{old('date',$documento->date??date('Y-m-d'))}}"/>
 </div>

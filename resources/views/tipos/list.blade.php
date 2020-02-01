@@ -24,7 +24,6 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Descrição</th>
                             <th>Documento Pai</th>
                             <th>Ações</th>
                         </tr>
@@ -33,12 +32,12 @@
                         @foreach($tipos as $tipo)
                         <tr>
                             <td>{{$tipo->nome}}</td>
-                            <td>{{$tipo->descricao}}</td>
                             <td>
                                 @if ($tipo->tipo_id)
                                 {{$tipo->tipo_id}}
                                 @endif
                             </td>
+
                             <td nowrap>
                                 <a class="btn btn-sm btn-link text-decoration-none d-inline" href="{{route('tipos.show',$tipo)}}">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>

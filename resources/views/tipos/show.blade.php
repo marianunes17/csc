@@ -16,11 +16,9 @@
         <div class="card-body">
 
 			<div> <strong>Nome:</strong> {{$tipo->nome}} </div>
-            <div> <strong>Descrição:</strong> {{$tipo->descricao}} </div>
-
 
             @if ($tipo->tipo_id)
-            <div> <strong>Documento pai:</strong> {{$tipo->tipo_id->nome}} </div>
+            <div> <strong>Associado pai:</strong> {{$tipo->nome}}</div>
             @endif
 		</div>
 	</div>

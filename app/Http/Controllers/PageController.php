@@ -50,18 +50,18 @@ class PageController extends Controller
     public function documentos(Request $request){
         $tipos=Tipo::where('tipo_id', null)->get();
 
-        if ($request->has('tipo_id')){
-            $tipo_id=$request->query('tipo_id');
-            $tipos_s=Tipo::where('tipo_id', $tipo_id)->orWhere('id',$tipo_id)->pluck('id');
+        if ($request->has('tip_id')){
+            $tip_id=$request->query('tip_id');
+            $tipos_s=Tipo::where('tipo_id', $tip_id)->orWhere('id',$tip_id)->pluck('id');
             $documentos=Documento::whereIn('tipo_id', $tipos_s)->get();
         }else{
-            $tipo_id=$tipos[0]->id;
-            $documentos=Documento::where('tipo_id',$tipo_id)->get();
+            $tip_id=$tipos[0]->id;
+            $documentos=Documento::where('tipo_id',$tip_id)->get();
         }
-        if ($request->has('tipo_pai')) {
-            $tipo_id=$request->has('tipo_pai');
+        if ($request->has('tip_pai')) {
+            $tipo_id=$request->has('tip_pai');
         }
-        $tipos_sub=Tipo::where('tipo_id', $tipo_id)->get();
+        $tipos_sub=Tipo::where('tipo_id', $tip_id)->get();
 
         return view('documentos', compact('tipos','documentos','tipos_sub'))->with('menu', 'Documentos');
 

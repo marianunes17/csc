@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tipo extends Model
 {
-    protected $fillable = [ 'nome', 'descricao'];
+    protected $fillable = [ 'nome'];
 
     public function Documentos(){
         return $this->hasMany("App\Documento","tipo_id");

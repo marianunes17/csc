@@ -6,11 +6,6 @@
 </div>
 
 <div class="form-group">
-    <label for="inputDescricao">Descrição</label>
-    <textarea class="form-control" name="descricao" id="inputDescricao">{{old('descricao',$tipo->descricao)}}</textarea>
-</div>
-
-<div class="form-group">
     <label for="inputTipo">Tipo</label>
     <select name="tipo" id="inputTipo" class="form-control">
         <option value="" selected>Tipo pai</option>

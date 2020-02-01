@@ -25,7 +25,6 @@ class UpdateTipoRequest extends FormRequest
     {
         return [
         "nome" => 'required|min:3|max:150|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
-        "descricao" => 'required',
         'tipo' => 'nullable|exists:tipos,id'
         ];
     }

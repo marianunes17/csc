@@ -16,6 +16,12 @@ class DocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function documentos()
+    {
+     $documentos=Documento::orderBy("date","desc");
+     return view('documentos',compact('documentos'));
+    }
+
     public function index()
     {
         $documentos = Documento::all();
@@ -47,6 +53,7 @@ class DocumentoController extends Controller
         $documento->fill($fields);
         $documento->file="";
         $documento->tipo_id = $fields["tipo"];
+        $documento->data=date('Y-m-d H:i:s');
         $documento->save();
 
         if ($request->hasFile('file')) {

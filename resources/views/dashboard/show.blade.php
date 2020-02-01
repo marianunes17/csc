@@ -96,7 +96,6 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                ($documento->file)
                                 <a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
                                     class="img-documentos" target="_blank" alt="img documentos">Ver ficheiro</a>
 
