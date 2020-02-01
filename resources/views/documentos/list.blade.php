@@ -18,6 +18,7 @@
                 <i class="fas fa-eye"></i>
             </a>
         </div>
+        
         <div class="card-body">
             @if (count($documentos))
             <div class="table-responsive">

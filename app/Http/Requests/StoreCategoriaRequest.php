@@ -22,7 +22,7 @@ class StoreCategoriaRequest extends FormRequest
      * @return array
      */
     public function rules(){
-        return [ "nome" => 'required|min:3|max:150|unique:categorias,nome|regex:/^~[A-ZÀ-úa-z0-9\s]+$/',
+        return [ "nome" => 'required|min:3|max:150|unique:categorias,nome|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
             "descricao" => 'required',
             'categoria' => 'nullable|exists:categorias,id'
         ];

@@ -8,7 +8,10 @@
 
     <div class="card shadow mb-4">
        <h5 class="card-header py-3">
-           Equipa Direção
+        <b> {{$equipa->titulo}} </b>
+
+        <a href="{{route('equipasdirecao.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
        </h5>
        <div class="card-body">
 

@@ -8,8 +8,12 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar Categoria
+            Editar Categoria: <b> {{$categoria->nome}} </b>
+
+            <a href="{{route('categorias.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
         </div>
+
         <div class="card-body">
 
 			<form method="POST" action="{{route('categorias.update',$categoria)}}" class="form-group inline">

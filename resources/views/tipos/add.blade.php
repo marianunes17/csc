@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section("title", "Adicionar Tipo")
+@section("title", "Adicionar Ano")
 
 @section('content')
 
@@ -8,7 +8,7 @@
 
 	<div class="card shadow mb-4">
 		<h5 class="card-header py-3">
-			Adicionar Tipo
+			Adicionar Ano
         </h5>
 		<div class="card-body">
 

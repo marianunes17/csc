@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section("title", "Editar Tipo")
+@section("title", "Editar Ano")
 
 @section('content')
 
@@ -8,7 +8,7 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar Tipo
+			Editar: <b> {{$tipo->nome}} </b>
         </div>
         <div class="card-body">
 

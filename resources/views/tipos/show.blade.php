@@ -1,14 +1,14 @@
 
 @extends('layout.admin')
 
-@section("title", "Tipos")
+@section("title", "Anos")
 
 @section('content')
 <div class="container-fluid">
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Informação Tipo
+			<b> {{$tipo->nome}} </b>
         </div>
         <div class="card-body">
 
@@ -17,7 +17,7 @@
 
 
             @if ($tipo->tipo_id)
-            <div> <strong>Tipo pai:</strong> {{$tipo->tipo_id->nome}} </div>
+            <div> <strong>Documento pai:</strong> {{$tipo->tipo_id->nome}} </div>
             @endif
 		</div>
 	</div>

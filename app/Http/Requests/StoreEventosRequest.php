@@ -22,7 +22,7 @@ class StoreEventosRequest extends FormRequest{
     public function rules() {
         return [
 
-            "nome" => 'required|min:3|max:150|unique:eventos,nome|regex:/^~[A-ZÀ-úa-z\s]+$/',
+            "nome" => 'required|min:3|max:150|unique:eventos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
             "categoria"=>'required',
             "imagem"=>'nullable',

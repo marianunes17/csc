@@ -6,10 +6,14 @@
 @section('content')
 <div class="container-fluid">
 
-     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-			Documento
-        </div>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        Documento: <b> {{$documento->nome}} </b>
+
+        <a href="{{route('documentos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+        </a>
+    </div>
+
         <div class="card-body">
 
 			<div>
