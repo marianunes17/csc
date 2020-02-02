@@ -16,7 +16,7 @@
                 <i class="fas fa-plus"></i> Adicionar Utilizador
             </a>
            @else
-                <span class="btn btn-secondary disabled">
+                <span class="btn btn-secondary disabled" style=" opacity: 0;">
                 </span>
             @endcan
         </div>
@@ -26,7 +26,7 @@
                 <div class="col-md-2" style="border:1px solid #dee2e6;">
                     <form method="GET" action="{{route('users.index')}}" class="form-group">
                         <div class="form-group">
-                            <label for="inputName">Name</label>
+                            <label for="inputName">Nome</label>
                             <input type="text" class="form-control" name="name" id="inputName" value="{{request()->get('name')}}" />
                         </div>
                         <div class="form-group">
@@ -34,11 +34,11 @@
                             <input type="text" class="form-control" name="email" id="inputEmail"
                                 placeholder="Email address" value="{{request()->get('email')}}" />
                         </div>
-                        <label for="inputRole">Role</label>
+                        <label for="inputRole">Tipo de Utilizador</label>
                         <select name="role" id="inputRole" class="form-control">
                             <option value="">All</option>
-                            <option {{(request()->get('role')=='A')?"selected":""}} value="A">Admin</option>
-                            <option {{(request()->get('role')=='N')?"selected":""}} value="N">Normal</option>
+                            <option {{(request()->get('role')=='Administrador')?"selected":""}} value="Administrador">Admin</option>
+                            <option {{(request()->get('role')=='Normal')?"selected":""}} value="Normal">Normal</option>
                         </select>
 
                         <br>
