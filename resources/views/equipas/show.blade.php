@@ -16,7 +16,7 @@
        <div class="card-body">
 
            <div>
-               <img alt="Post image" src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}">
+               <img alt="equipa image" src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}">
            </div>
 
            <div><strong>Nome:</strong> {{$equipa->titulo}} </div>

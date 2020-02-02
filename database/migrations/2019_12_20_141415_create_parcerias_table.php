@@ -17,7 +17,7 @@ class CreateParceriasTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo', 100);
             $table->text('descricao');
-            $table->string('imagem');
+            $table->string('imagem')->nullable();
             $table->timestamps();
         });
     }

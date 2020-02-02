@@ -94,6 +94,9 @@ class ParceriaController extends Controller
         if ($request->hasFile('imagem')) {
             $image = $request->file('imagem');
             $parceriaImg = $parceria->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            if (!empty($parceria->imagem)) {
+                Storage::disk('public')->delete('parcerias_images/' . $parceria->imagem);
+                }
             Storage::disk('public')->putFileAs('parceria_images', $image, $parceriaImg);
             $parceria->imagem = $parceriaImg;
         }

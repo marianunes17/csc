@@ -69,7 +69,7 @@ class EventosController extends Controller
     /**
      * Display the specified resource.
 
-     * @param  \App\eventos  $eventos
+     * @param  \App\Eventos  $eventos
      * @return \Illuminate\Http\Response
      */
     public function show(Evento $evento)
@@ -100,6 +100,7 @@ class EventosController extends Controller
     {
         $fields = $request->validated();
         $evento->fill($fields);
+        $evento->categoria_id=$fields['categoria'];
 
         if ($request->hasFile('imagem')) {
             $image = $request->file('imagem');
@@ -111,7 +112,6 @@ class EventosController extends Controller
             $evento->imagem = $eventoImg;
             }
 
-        $evento->categoria_id=$fields['categoria'];
         $evento->save();
         return redirect()->route('eventos.index')->with(
             'success',

@@ -108,7 +108,6 @@ class DocumentoController extends Controller
             }
             Storage::disk('public')->putFileAs('documento_files', $file, $documentoFile);
             $documento->file = $documentoFile;
-        }
 
         $documento->save();
         return redirect()->route('documentos.index')->with(
