@@ -66,7 +66,7 @@
                     alt="img eventos" class="w-25 h-auto mx-auto d-block img-fluid z-depth-1">
                     @endif
 
-                    <p class="card-text"> {{$evento->descricao}} </p>
+                    <p class="card-text mt-3"> {{$evento->descricao}} </p>
                 </div>
 
                 <div class="card-footer card-footer-event text-muted
