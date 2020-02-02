@@ -19,7 +19,7 @@ class CreateDocumentosTable extends Migration
             $table->string('nome', 100);
             $table->dateTime('data');
             $table->text('descricao');
-            $table->text('file')->nullable();
+            $table->text('file');
             $table->unsignedBigInteger('tipo_id');
             $table->timestamps();
             $table->foreign('tipo_id')->references('id')->on('tipos');

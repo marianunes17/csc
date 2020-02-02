@@ -17,7 +17,7 @@ class CreateTeamdirectTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo', 100);
             $table->string('cargo', 50);
-            $table->string('imagem')->nullable();;
+            $table->string('imagem');
             $table->timestamps();
         });
     }
