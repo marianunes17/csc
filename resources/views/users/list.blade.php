@@ -107,7 +107,7 @@
                         </table>
                     </div>
                     @else
-                    <h6>Não existem utilizadores registados</h6>
+                    <h6>Não existem utilizadores registados </h6>
                     @endif
                 </div>
             </div>
