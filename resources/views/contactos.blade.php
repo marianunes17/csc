@@ -42,7 +42,7 @@
                     <h3 class="h4">E-mail</h3>
                     <p>Não hesite em contactar via email caso tenha alguma questão.</p>
                     <ul class="list-unstyled text-sm">
-                        <li><strong><a href="mailto:">cacddjm@gmail.com</a></strong></li>
+                        <li><strong><a href="mailto:cscarnide@gmail.com">cscarnide@gmail.com</a></strong></li>
                     </ul>
                 </div>
             </div>

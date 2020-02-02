@@ -6,9 +6,12 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-       <div class="card-header py-3">
-           Editar Membro Equipa
-       </div>
+       <h5 class="card-header py-3">
+           Editar Membro Equipa: <b> {{$equipa->titulo}} </b>
+
+           <a href="{{route('equipas.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
+       </h5>
        <div class="card-body">
 
        <form method="POST" action="{{route('equipas.update',$equipa)}}" class="form-group" enctype="multipart/form-data">

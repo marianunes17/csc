@@ -22,9 +22,9 @@ class StoreEventosRequest extends FormRequest{
     public function rules() {
         return [
 
-            "nome" => 'required|min:3|max:20|unique:eventos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "nome" => 'required|min:3|max:150|unique:eventos,nome|regex:/^[A-ZÀ-úa-z\s]+$/',
             "descricao" => 'required',
-            "category"=>'required',
+            "categoria"=>'required',
             "imagem"=>'nullable',
             "data"=>'required|date|after_or_equal:today|date_format:"Y-m-d"'
 
@@ -32,6 +32,6 @@ class StoreEventosRequest extends FormRequest{
     }
 
     public function messages() {
-        return ['nome.regex' => 'Name should contain only letters and spaces'];
+        return ['name.regex' => 'O nome deve conter apenas letras e espaços'];
     }
 }

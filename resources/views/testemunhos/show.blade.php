@@ -8,7 +8,10 @@
 
     <div class="card shadow mb-4">
        <div class="card-header py-3">
-           Visualizar Testemunho
+           Testemunho de: <b> {{$testemunho->nome}} </b>
+
+           <a href="{{route('testemunhos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
        </div>
        <div class="card-body">
 
@@ -17,8 +20,6 @@
            <div><strong>Email:</strong> {{$testemunho->email}} </div>
            <div><strong>Testemunho:</strong> {{$testemunho->testemunho}} </div>
            <div><strong>Data:</strong> {{$testemunho->data}} </div>
-           <br>
-           <a href="{{route('testemunhos.index')}}" class="btn btn-info">Voltar</a>
        </div>
    </div>
 </div>

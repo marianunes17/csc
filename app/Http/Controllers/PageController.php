@@ -9,13 +9,14 @@ namespace App\Http\Controllers;
 
 use App\Evento;
 use App\Testemunho;
-use App\Category;
+use App\Categoria;
 use App\Equipa;
 use App\Tipo;
 use Illuminate\Http\Request;
 use App\Parceria;
-use App\Documentos;
+use App\Documento;
 use App\Tipos;
+use App\EquipaDirecao;
 
 
 class PageController extends Controller
@@ -35,8 +36,10 @@ class PageController extends Controller
     }
 
     public function equipa(){
+        $equipadirecao=EquipaDirecao::all();
+        $equipas=Equipa::all();
         $testemunhos=Testemunho::where('publicado',true)->orderBy('data','desc')->take(4)->get();
-        return view('equipa', compact('testemunhos'))->with('menu', 'Equipa');
+        return view('equipa', compact('testemunhos','equipas','equipadirecao'))->with('menu', 'Equipa');
     }
 
     public function parcerias(){
@@ -47,18 +50,18 @@ class PageController extends Controller
     public function documentos(Request $request){
         $tipos=Tipo::where('tipo_id', null)->get();
 
-        if ($request->has('tipo_id')){
-            $tipo_id=$request->query('tipo_id');
-            $tipos_s=Tipo::where('tipo_id', $tipo_id)->orWhere('id',$tipo_id)->pluck('id');
+        if ($request->has('tip_id')){
+            $tip_id=$request->query('tip_id');
+            $tipos_s=Tipo::where('tipo_id', $tip_id)->orWhere('id',$tip_id)->pluck('id');
             $documentos=Documento::whereIn('tipo_id', $tipos_s)->get();
         }else{
-            $tipo_id=$tipos[0]->id;
-            $documentos=Documento::where('tipo_id',$tipo_id)->get();
+            $tip_id=$tipos[0]->id;
+            $documentos=Documento::where('tipo_id',$tip_id)->get();
         }
-        if ($request->has('pai')) {
-            $tipo_id=$request->has('pai');
+        if ($request->has('tip_pai')) {
+            $tipo_id=$request->has('tip_pai');
         }
-        $tipos_sub=Tipo::where('tipo_id', $tipo_id)->get();
+        $tipos_sub=Tipo::where('tipo_id', $tip_id)->get();
 
         return view('documentos', compact('tipos','documentos','tipos_sub'))->with('menu', 'Documentos');
 
@@ -69,22 +72,22 @@ class PageController extends Controller
     }
 
     public function eventos(Request $request){
-        $categories=Category::where('category_id', null)->get();
+        $categorias=Categoria::where('categoria_id', null)->get();
 
         if ($request->has('cat_id')){
             $cat_id=$request->query('cat_id');
-            $categories_s=Category::where('category_id', $cat_id)->orWhere('id',$cat_id)->pluck('id');
-            $eventos=Evento::whereIn('category_id', $categories_s)->get();
+            $categorias_s=Categoria::where('categoria_id', $cat_id)->orWhere('id',$cat_id)->pluck('id');
+            $eventos=Evento::whereIn('categoria_id', $categorias_s)->get();
         }else{
-            $cat_id=$categories[0]->id;
-            $eventos=Evento::where('category_id',$cat_id)->get();
+            $cat_id=$categorias[0]->id;
+            $eventos=Evento::where('categoria_id',$cat_id)->get();
         }
-        if ($request->has('pai')) {
-            $cat_id=$request->has('pai');
+        if ($request->has('cat_pai')) {
+            $cat_id=$request->has('cat_pai');
         }
-        $categories_sub=Category::where('category_id', $cat_id)->get();
+        $categorias_sub=Categoria::where('categoria_id', $cat_id)->get();
 
-        return view('eventos', compact('categories','eventos','categories_sub'))->with('menu', 'Eventos');
+        return view('eventos', compact('categorias','eventos','categorias_sub'))->with('menu', 'Eventos');
 
     }
 
@@ -92,9 +95,9 @@ class PageController extends Controller
         return view('contactos')->with('menu', 'Contactos');
     }
 
-    public function registar(){
+    /*public function registar(){
         return view('registar')->with('menu', 'Registar');
-    }
+    }*/
 
     public function landingpage(){
         return view('landingpage')->with('menu', 'landingpage');

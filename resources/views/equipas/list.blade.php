@@ -36,7 +36,7 @@
                             <td>
                                 @if ($equipa->imagem)
                                 <img src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}"
-                                    class="w-50" alt="equipa">
+                                    class="w-25" alt="equipa">
                                 @else
                                 <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="equipa">
                                 @endif

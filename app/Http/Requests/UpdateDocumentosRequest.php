@@ -24,9 +24,10 @@ class UpdateDocumentosRequest extends FormRequest
      public function rules()
     {
         return [
-            "nome" => 'required|min:3|max:20|unique:documentos,nome,' .
-                $this->tipo->id . '|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "descricao" => 'required',
+            "nome" => 'required|min:3|max:150|unique:documentos,nome,' .
+                $this->documento->id . '|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
+            "descricao" => 'nullable',
+            "file" => 'required',
             "tipo" => 'required',
 
         ];
@@ -34,6 +35,6 @@ class UpdateDocumentosRequest extends FormRequest
 
     public function messages()
     {
-        return ['nome.regex' => 'Name should contain only letters and spaces'];
-    }a
+        return ['name.regex' => 'Name should contain only letters and spaces'];
+    }
 }

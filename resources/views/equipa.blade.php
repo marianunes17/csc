@@ -17,15 +17,17 @@
                     <p class="lead">Contamos com uma equipa de profissionais qualificada que garante o nosso bom
                         desempenho nas áreas em que atuamos. Juntos superamos os desafios e entregamos resultados.
                         Junte-se a nós e faça parte de algo especial.</p>
-                    <div class="row text-center">
-                        @foreach ($equipa as $team)
-                        <div class="col-md-4 col-sm-12">
+                    <div class="row text-center justify-content-center">
+                        @foreach ($equipas as $team)
+                        <div class="col-lg-2 col-sm-12 ">
                             <div data-animate="fadeInUp" class="team-member">
-                                <div class="image"><a href="team-member.html">
-                                    <img src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">{{$team->titulo}}</a></h3>
-                                <p class="role">{{$team->cargo}}</p>
+                                <div class="image">
+
+                                    <img src="{{Storage::disk('public')->url('equipa_images/').$team->imagem}}" alt=""
+                                        class="img-fluid rounded-circle">
+                                </div>
+                                <h3>{{$team->titulo}}</h3>
+                                <p class="role font-weight-bold my-2">{{$team->cargo}}</p>
                                 <div class="text">
                                     <p>{{$team->descricao}}</p>
                                 </div>
@@ -33,40 +35,23 @@
                         </div>
                         @endforeach
                     </div>
-                    <div class="row text-center mt-5">
-                        <div class="col"></div>
+                    <div class="heading text-center my-5">
+                        <h2>Direção!</h2>
+                    </div>
+                    <div class="row text-center mt-5 justify-content-center">
+                        @foreach ($equipadirecao as $direcao)
                         <div class="col-md-2 col-sm-3">
                             <div data-animate="fadeInUp" class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-1.jpg" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">João Gomes</a></h3>
-                                <p class="role">Fundador</p>
+                                <div class="image">
+                                    <a href="team-member.html">
+                                        <img src="{{Storage::disk('public')->url('equipa_direcao_images/').$direcao->imagem}}" alt="" class="img-fluid rounded-circle">
+                                    </a>
+                                </div>
+                                <h3>{{$direcao->titulo}}</h3>
+                                <p class="role font-weight-bold ">{{$direcao->cargo}}</p>
                             </div>
                         </div>
-                        <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
-                            <div class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-2.jpg" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">David Lopes</a></h3>
-                                <p class="role">CTO</p>
-                            </div>
-                        </div>
-                        <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
-                            <div class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-3.png" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Patrícia Lopes</a></h3>
-                                <p class="role">Tesoureira</p>
-                            </div>
-                        </div>
-                        <div data-animate="fadeInUp" class="col-md-2 col-sm-3">
-                            <div class="team-member">
-                                <div class="image"><a href="team-member.html"><img src="img/person-4.jpg" alt=""
-                                            class="img-fluid rounded-circle"></a></div>
-                                <h3><a href="team-member.html">Ricardo Dinis</a></h3>
-                                <p class="role">Marketeer</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

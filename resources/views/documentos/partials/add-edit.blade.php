@@ -10,19 +10,25 @@
         id="inputDescricao">{{old('descricao',$documento->descricao)}}</textarea>
 </div>
 
+<div class="form-group">
+    <label for="inputFile">Documento</label>
+    <input type="file" class="form-control-file" name="file" id="inputFile"
+        aria-describedby="fileHelp"/>
+    <small id="fileHelp" class="form-text text-muted">
+        O tamanho da file não deve exceder 2 MB </small>
+</div>
 
 <div class="form-group">
     <label for="inputTipo">Tipo</label>
     <select name="tipo" id="inputTipo" class="form-control">
         @foreach ($tipos as $tipo)
-        <option {{ old('$tipo', $documento->tipo_id) == $tipo->id ? "selected":""}} value="{{$tipo->id}}" >{{$tipo->name}}</option>
+        <option {{ old('$tipo', $documento->tipo_id) == $tipo->id ? "selected":""}} value="{{$tipo->id}}" >{{$tipo->nome}}</option>
         @endforeach
     </select>
 </div>
 
-
 <div class="form-group">
     <label for="inputDate">Data</label>
     <input type="date" class="form-control" name="data" id="inputDate"
-        value="{{old('data',$documento->data??date('Y-m-d'))}}"/>
+        value="{{old('date',$documento->date??date('Y-m-d'))}}"/>
 </div>

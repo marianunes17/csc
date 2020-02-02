@@ -1,23 +1,24 @@
 
 @extends('layout.admin')
 
-@section("title", "Tipos")
+@section("title", "Anos")
 
 @section('content')
 <div class="container-fluid">
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Informação Tipo
+            <b> {{$tipo->nome}} </b>
+
+            <a href="{{route('tipos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
         </div>
         <div class="card-body">
 
-			<div> <strong>Nome:</strong> {{$tipo->name}} </div>
-            <div> <strong>Descrição:</strong> {{$tipo->description}} </div>
-
+			<div> <strong>Nome:</strong> {{$tipo->nome}} </div>
 
             @if ($tipo->tipo_id)
-            <div> <strong>Tipo pai:</strong> {{$tipo->tipoParent->name}} </div>
+            <div> <strong>Associado pai:</strong> {{$tipo->nome}}</div>
             @endif
 		</div>
 	</div>

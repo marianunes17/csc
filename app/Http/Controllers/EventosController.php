@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Evento;
-use App\Category;
+use App\Categoria;
 
 /**Passa a categoria para quando se postar um eventos se escolher apenas uma categoria */
 
@@ -23,7 +23,7 @@ class EventosController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::all();
+        $eventos = evento::all()->sortByDESC('created_at');
         return view('eventos.list', compact('eventos'));
     }
 
@@ -35,9 +35,9 @@ class EventosController extends Controller
      */
     public function create()
     {
-        $categories = Category::orderBy("name")->get();
+        $categorias = Categoria::orderBy("nome")->get();
         $evento = new Evento;
-        return view('eventos.add', compact("categories", "evento"));
+        return view('eventos.add', compact("categorias", "evento"));
     }
 
     /**
@@ -51,7 +51,8 @@ class EventosController extends Controller
         $fields = $request->validated();
         $evento = new Evento;
         $evento->fill($fields);
-        $evento->category_id = $fields["category"];
+        $evento->categoria_id = $fields["categoria"];
+        $evento->data=date('Y-m-d H:i:s');
         $evento->save();
 
         if ($request->hasFile('imagem')) {
@@ -68,7 +69,7 @@ class EventosController extends Controller
     /**
      * Display the specified resource.
 
-     * @param  \App\eventos  $eventos
+     * @param  \App\Eventos  $eventos
      * @return \Illuminate\Http\Response
      */
     public function show(Evento $evento)
@@ -84,21 +85,33 @@ class EventosController extends Controller
      */
     public function edit(Evento $evento)
     {
-        $categories = Category::orderBy("name")->get();
-        return view('eventos.edit', compact('categories', 'evento'));
+        $categorias = Categoria::orderBy("nome")->get();
+        return view('eventos.edit', compact('categorias', 'evento'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\eventos  $eventos
+     * @param  \App\Eventos  $eventos
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateEventosRequest $request, Evento $evento)
     {
         $fields = $request->validated();
         $evento->fill($fields);
+        $evento->categoria_id=$fields['categoria'];
+
+        if ($request->hasFile('imagem')) {
+            $image = $request->file('imagem');
+            $eventoImg = $evento->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            if (!empty($evento->imagem)) {
+            Storage::disk('public')->delete('eventos_images/' . $evento->imagem);
+            }
+            Storage::disk('public')->putFileAs('eventos_images/', $image, $eventoImg);
+            $evento->imagem = $eventoImg;
+            }
+
         $evento->save();
         return redirect()->route('eventos.index')->with(
             'success',

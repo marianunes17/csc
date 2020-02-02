@@ -28,6 +28,6 @@ class UpdateContactosRequest extends FormRequest
         "nome" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
         "email" => 'required|email',
         "assunto" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',   
-        "mensagem"=>'required|min:3|max:500|regex:/^[A-ZÀ-úa-z\s\-]+$/',
+        "mensagem"=>'required|min:3|max:500|regex:/^[A-ZÀ-úa-z\s\-\!\.\?]+$/',
     }
 }

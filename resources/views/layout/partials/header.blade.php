@@ -12,9 +12,6 @@
                             <i class="fa fa-sign-in"></i>
                             <span class="d-none d-md-inline-block">Entrar</span>
                         </a>
-
-                        <a href="{{route('csc.registar')}}" class="signup-btn"><i class="fa fa-user"></i>
-                            <span class="d-none d-md-inline-block">Registar</span></a>
                     </div>
 
 
@@ -22,10 +19,15 @@
                         <li class="list-inline-item"><a
                                 href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/"
                                 target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <!-- <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+
                         <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i
                                     class="fa fa-envelope"></i></a></li>
+
+                        <li class="list-inline-item">
+                            <a href="tel:236946189">
+                                <i class="fa fa-phone"></i>
+                            </a><a href="tel:236946189" class="ml-2 d-inline text-white" style="color: #eee; font-size: 0.75rem; background: transparent;">236 946 189</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +40,6 @@
     class="modal fade">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
-
             <div class="modal-header">
                 <h4 id="login-modalLabel" class="modal-title"> Entrar</h4>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close">
@@ -47,7 +48,7 @@
             </div>
 
             <div class="modal-body">
-                <form action="customer-orders.html" method="get">
+                <form action="#" method="get">
                     <div class="form-group">
                         <input id="email_modal" type="text" placeholder="Email" class="form-control">
                     </div>
@@ -58,17 +59,17 @@
                         <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Entrar</button>
                     </p>
                 </form>
-                <p class="text-center text-muted">Ainda não se registou?</p>
-                <p class="text-center text-muted"><a href="{{route('csc.registar')}}"><strong>Registe-se Agora</strong></a>! É fácil e demora apenas 1 minuto.</p>
             </div>
         </div>
     </div>
 </div>
 <header class="nav-holder make-sticky">
     <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-        <div class="container"><a href="{{route('csc.index')}}" class="navbar-brand home">
-                <img src="img/logos/logo-simbolo2.png" alt="Centro Social de
-                    Carnide logo" class="d-none d-md-inline-block logo"> <span class="site-description">Centro Social
+        <div class="container">
+            <a href="{{route('csc.index')}}" class="navbar-brand home">
+                <img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro Social de
+                    Carnide logo" class="d-none d-md-inline-block logo">
+                <span class="site-description">Centro Social
                     de
                     Carnide</span>
             </a>

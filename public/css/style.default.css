@@ -79,6 +79,7 @@ p.lead {
 
 .logo {
   max-width: 150px;
+  display: inline-block !important;
 }
 
 .social a:hover{
@@ -3999,7 +4000,6 @@ a>code {
 .card {
   background-color: #fff;
   border: 1px solid #1D5B90 !important;
-  border-radius: 10px;
 }
 
 .card>.list-group:first-child .list-group-item:first-child {
@@ -4091,7 +4091,7 @@ a>code {
   margin-bottom: 15px;
 }
 
-@media (max-width:1200px) and (min-width:990px){
+@media (max-width:1199px) and (min-width:990px){
     .navbar-brand{
         margin-right: 0 !important;
     }
@@ -4104,7 +4104,7 @@ a>code {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .card-deck {
     margin-right: -15px;
     margin-left: -15px;
@@ -4114,6 +4114,32 @@ a>code {
     margin-right: 15px;
     margin-left: 15px;
   }
+  .logo{
+      max-width: 100px;
+      position: relative;
+      left:-10px;
+  }
+  .site-description{
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 405px) {
+    .site-description{
+        font-size: 14px;
+    }
+    .logo{
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 340px) {
+    .site-description{
+        font-size: 12px;
+    }
+    .logo{
+        max-width: 70px;
+    }
 }
 
 .btn-outline-primary{
@@ -4132,12 +4158,25 @@ a>code {
 .nav-link.categorias:hover{
     color: #1D5B90;
     border-bottom: 1px solid #1D5B90;
-    border-bottom-left-radius: 7px;
 }
 
 .nav-link.categorias.active{
     background-color: #1D5B90 !important;
     color: white !important;
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
 }
+
+.nav-link.tipos{
+    background-color: white !important;
+    color: #1D5B90 !important;
+}
+
+.nav-link.tipos:hover{
+    color: #1D5B90;
+    border-bottom: 1px solid #1D5B90;
+}
+
+.nav-link.tipos.active{
+    background-color: #1D5B90 !important;
+    color: white !important;
+}
+

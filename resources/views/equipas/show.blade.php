@@ -7,13 +7,16 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-       <div class="card-header py-3">
-           Equipa
-       </div>
+       <h5 class="card-header py-3">
+           <b> {{$equipa->titulo}} </b>
+
+           <a href="{{route('equipas.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
+       </h5>
        <div class="card-body">
 
            <div>
-               <img alt="Post image" src="xxx">
+               <img alt="equipa image" src="{{Storage::disk('public')->url('equipa_images/').$equipa->imagem}}">
            </div>
 
            <div><strong>Nome:</strong> {{$equipa->titulo}} </div>

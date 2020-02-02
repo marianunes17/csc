@@ -14,7 +14,7 @@
             </a>
 
             <a href="{{route('csc.eventos')}}" class="btn btn-outline-primary float-right" target="_blank">
-                Pré-Visualizar
+                Visualizar
                 <i class="fas fa-eye"></i>
             </a>
         </div>
@@ -36,18 +36,24 @@
                     <tbody>
                         @foreach($eventos as $evento)
                         <tr>
-                            <td>
+                            <td class="w-25">
                                 @if ($evento->imagem)
                                 <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
-                                    class="img-eventos" alt="eventos image">
+                                    class="w-100 h-auto" alt="img eventos">
                                 @else
-                                <img src="{{asset('img/no-image.png')}}" class="img-eventos" alt="eventos image">
+                                <img src="{{asset('img/no-image.png')}}" class="img-eventos w-100 h-auto" alt="img eventos">
                                 @endif
                             </td>
 
                             <td>{{$evento->nome}}</td>
-                            <td>{{$evento->descricao}}</td>
-                            <td>{{$evento->category->name}}</td>
+                            <td>
+                                {{ $evento->VerMais }}
+
+                                <a href="{{route('eventos.show',$evento)}}"> Ler mais </a>
+                            </td>
+
+
+                            <td>{{$evento->categoria->nome}}</td>
                             <td>{{$evento->data}}</td>
 
 
@@ -80,7 +86,6 @@
             <h6>Não existem eventos registados</h6>
             @endif
         </div>
-        …
     </div>
 </div>
 @endsection

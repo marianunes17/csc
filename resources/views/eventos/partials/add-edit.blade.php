@@ -13,17 +13,16 @@
 <div class="form-group">
     <label for="inputImagem">Imagem</label>
     <input type="file" class="form-control-file" name="imagem" id="inputImagem"
-        aria-describedby="fileHelp" />
+        aria-describedby="fileHelp"/>
     <small id="fileHelp" class="form-text text-muted">
-        Please upload a valid file imagem. Size of imagem should not be more than
-        2MB </small>
+        O tamanho da imagem não deve exceder 2 MB </small>
 </div>
 
 <div class="form-group">
-    <label for="inputCategory">Categoria</label>
-    <select name="category" id="inputCategory" class="form-control">
-        @foreach ($categories as $category)
-        <option {{ old('$category', $evento->category_id) == $category->id ? "selected":""}} value="{{$category->id}}" >{{$category->name}}</option>
+    <label for="inputCategoria">Categoria</label>
+    <select name="categoria" id="inputCategoria" class="form-control">
+        @foreach ($categorias as $categoria)
+        <option {{ old('$categoria', $evento->categoria_id) == $categoria->id ? "selected":""}} value="{{$categoria->id}}" >{{$categoria->nome}}</option>
         @endforeach
     </select>
 </div>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Documento extends Model
 {
     protected $fillable = [
-    'nome', 'descricao', 'data', 'tipo_id'
+    'nome', 'descricao','file', 'data', 'tipo_id'
     ];
     /*É sempre obrigatorio indicar os campos que estão a ser preenchidos*/
 

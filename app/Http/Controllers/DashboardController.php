@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Evento;
 use App\Testemunho;
+use App\Parceria;
+use App\Documento;
 class DashboardController extends Controller
 {
     /**
@@ -50,7 +52,9 @@ class DashboardController extends Controller
         $total_users=User::count();
         $total_events=Evento::count();
         $total_testimonials=Testemunho::count();
-        return view('dashboard.show',compact('total_users','total_testimonials','total_events'));
+        $total_partnerships=Parceria::count();
+        $documentos=Documento::all();
+        return view('dashboard.show',compact('documentos','total_users','total_testimonials','$total_s','total_events', 'total_partnerships'));
     }
 
     /**

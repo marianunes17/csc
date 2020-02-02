@@ -6,9 +6,12 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-       <div class="card-header py-3">
-           Editar Parcerias
-       </div>
+       <h5 class="card-header py-3">
+           Editar Parceria: <b> {{$parceria->titulo}} </b>
+
+           <a href="{{route('parcerias.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
+       </h5>
        <div class="card-body">
 
        <form method="POST" action="{{route('parcerias.update',$parceria)}}" class="form-group" enctype="multipart/form-data">

@@ -27,7 +27,7 @@ class StoreParceriaRequest extends FormRequest
 
         "titulo" => 'required|min:3|max:50|regex:/^[A-ZÀ-úa-z\s\-]+$/',
         "descricao" => 'required',
-        "imagem"=>'required',
+        "imagem"=>'required | nullable',
         ];
     }
 }

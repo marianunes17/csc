@@ -90,6 +90,17 @@ class ParceriaController extends Controller
     {
         $fields = $request->validated();
         $parceria->fill($fields);
+
+        if ($request->hasFile('imagem')) {
+            $image = $request->file('imagem');
+            $parceriaImg = $parceria->id . '_' . time() . '.' . $image->getClientOriginalExtension();
+            if (!empty($parceria->imagem)) {
+                Storage::disk('public')->delete('parceria_images/' . $parceria->imagem);
+                }
+            Storage::disk('public')->putFileAs('parceria_images', $image, $parceriaImg);
+            $parceria->imagem = $parceriaImg;
+        }
+
         $parceria->save();
         return redirect()->route('parcerias.index')->with(
             'success',

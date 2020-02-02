@@ -7,9 +7,12 @@
 <div class="container-fluid">
 
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        <h5 class="card-header py-3">
             Adicionar Documento
-        </div>
+
+            <a href="{{route('documentos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            </a>
+        </h5>
         <div class="card-body">
 
             <form method="POST" action="{{route('documentos.store')}}"

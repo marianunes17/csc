@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <meta name="description" content=" Bem Vindo ao Centro Social de Carnide! Somos uma
     instituição sem fins lucrativos que temos como objetivo apoiar idosos, crianças e os
     seus familiares.">
@@ -16,8 +16,8 @@
 
     <meta name="author" content="Artur Cardoso, Carolina Dias, Duarte Ferreira, João Rosa e Maria Nunes">
 
-
-    <title>CSC | @yield('title') </title>
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
+    <title>CSC | Admin | @yield('title') </title>
 
 
     <!-- Custom fonts for this template-->
@@ -73,15 +73,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tem a certeza que quer sair?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tem a certeza que deseja terminar sessão?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Clique em "Sair" se tiver a certeza.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="login.html">Sair</a>
+                    <a class="btn btn-primary" href="{{route('dashboard')}}">Sair</a>
                 </div>
             </div>
         </div>

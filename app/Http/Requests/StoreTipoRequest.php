@@ -22,14 +22,13 @@ class StoreTipoRequest extends FormRequest
      * @return array
      */
     public function rules(){
-        return [ "name" => 'required|min:3|max:20|unique:tipos,name|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "description" => 'required',
-            'tipo' => 'nullable|exists:tipos,id'
+        return [ "nome" => 'required|min:3|max:150|unique:tipos,nome|regex:/^[A-ZÀ-úa-z0-9\s]+$/',
+                'tipo' => 'nullable|exists:tipos,id'
         ];
     }
 /**regex:/^[A-ZÀ-úa-z0-9\s]+$/' - 0-9 - Aceita numeros */
 
     public function messages(){
-        return ['name.regex' => 'Name should contain only letters and spaces'];
+        return ['name.regex' => 'O nome deve conter apenas letras, espaços e números'];
     }
 }

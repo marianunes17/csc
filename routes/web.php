@@ -23,38 +23,31 @@ Route::get('/contactos', 'PageController@contactos')->name("csc.contactos");
 
 Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage");
 
-Route::get('/registar', 'PageController@registar')->name("csc.registar");
-
 
 Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
 
-/*
-Route::group(['middleware' => ['auth', 'verified']], function () {
 
+Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/users/{user}/send_reactivate_mail',
     "UserController@send_reactivate_email")->name('users.sendActivationEmail');
-*/
-    Route::get('/admin','DashboardController@show')->name("dashboard");
 
+Route::get('/admin','DashboardController@show')->name("dashboard");
 
 Route::resource('/admin/documentos', 'DocumentoController');
 Route::resource('/admin/users', 'UserController');
 Route::resource('/admin/equipas', 'EquipaController');
+Route::resource('/admin/equipasdirecao', 'EquipaDirecaoController');
 Route::resource('/admin/parcerias', 'ParceriaController');
 Route::resource('/admin/tipos', 'TipoController');
-Route::resource('/admin/categories', 'CategoryController');
+Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/eventos', 'EventosController');
-Route::resource('/admin/categories', 'CategoryController');
+Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/testemunhos', 'TestemunhosController');
 Route::resource('/admin/contactos', 'ContactosController');
 
 
-Route::redirect('/admin/categoria', '/admin/categories');
-Route::redirect('/admin/categorias', '/admin/categories');
-Route::redirect('/admin/category', '/admin/categories');
-
-/*
+Route::redirect('/admin/categoria', '/admin/categorias');
 });
-*/
+
 
 Auth::routes(['register' => false, 'verify' => true]);

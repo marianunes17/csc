@@ -16,9 +16,10 @@ class DocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $documentos = Documento::all();
+        $documentos = Documento::all()->sortByDESC('created_at');
         return view('documentos.list', compact('documentos'));
     }
 
@@ -29,7 +30,7 @@ class DocumentoController extends Controller
      */
     public function create()
     {
-        $tipos = Tipo::orderBy("name")->get();
+        $tipos = Tipo::orderBy("nome")->get();
         $documento = new Documento;
         return view('documentos.add', compact("tipos", "documento"));
     }
@@ -37,7 +38,7 @@ class DocumentoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreDocumentosRequest $request)
@@ -45,17 +46,28 @@ class DocumentoController extends Controller
         $fields = $request->validated();
         $documento = new Documento;
         $documento->fill($fields);
+        $documento->file="";
         $documento->tipo_id = $fields["tipo"];
+        $documento->data=date('Y-m-d H:i:s');
         $documento->save();
 
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $documentoFile = $documento->id . '_' . time() . '.' . $file->getClientOriginalExtension();
+            Storage::disk('public')->putFileAs('documento_files', $file, $documentoFile);
+            $documento->file = $documentoFile;
+            $documento->save();
+        }
 
-        return redirect()->route('documentos.index')->with('success', 'O documento foi criado com sucesso');
+
+        return redirect()->route('documentos.index')->with('success', 'O documento
+    foi criado com sucesso');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Documento  $documento
+     * @param \App\Documento $documento
      * @return \Illuminate\Http\Response
      */
     public function show(Documento $documento)
@@ -66,26 +78,37 @@ class DocumentoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Documento  $documento
+     * @param \App\Documento $documento
      * @return \Illuminate\Http\Response
      */
     public function edit(Documento $documento)
     {
-        $tipos = Tipo::orderBy("name")->get();
+        $tipos = Tipo::orderBy("nome")->get();
         return view('documentos.edit', compact('tipos', 'documento'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Documento  $documento
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Documento $documento
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDocumentosRequest $request, Documento $documento)
+    public function update(UpdateDocumentosRequest $request, Documento
+    $documento)
     {
         $fields = $request->validated();
         $documento->fill($fields);
+        $documento->tipo_id = $fields['tipo'];
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $documentoFile = $documento->id . '_' . time() . '.' . $file->getClientOriginalExtension();
+            Storage::disk('public')->delete('documento_files/' . $documento->file);
+            }
+            Storage::disk('public')->putFileAs('documento_files', $file, $documentoFile);
+            $documento->file = $documentoFile;
+
         $documento->save();
         return redirect()->route('documentos.index')->with(
             'success',
@@ -96,12 +119,13 @@ class DocumentoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Documento  $documento
+     * @param \App\Documento $documento
      * @return \Illuminate\Http\Response
      */
     public function destroy(Documento $documento)
     {
         $documento->delete();
-        return redirect()->route('documentos.index')->with('success', 'O documento foi apagado com sucesso');
+        return redirect()->route('documentos.index')->with('success', 'O documento
+    foi apagado com sucesso');
     }
 }

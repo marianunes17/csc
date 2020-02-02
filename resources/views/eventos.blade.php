@@ -17,24 +17,34 @@
 
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
-                        @foreach($categories as $i => $categoria)
-                        @if ( (request()->query('cat_id')==$categoria->id) || (request()->query('pai')==$categoria->id) || ($i==0 && request()->query('cat_id')==""))
-                            <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}" class="nav-link active categorias">{{$categoria->name}}</a></li>
-                            @if(count($categories_sub))
-                            <ul>
-                                @foreach($categories_sub as $cat)
-                                <li>
-                                    <a href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&pai={{$categoria->id}}" class="nav-link categorias">
-                                    {{$cat->name}}
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-                            @endif
+                        @foreach($categorias as $i => $categoria)
+                        @if ( (request()->query('cat_id')==$categoria->id) ||
+                        (request()->query('cat_pai')==$categoria->id)
+                        || ($i==0 && request()->query('cat_id')==""))
+                        <li class="nav-item">
+                            <a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
+                                class="nav-link active categorias">{{$categoria->nome}}</a>
+                            </li>
+                        @if(count($categorias_sub))
+                        <ul>
+                            @foreach($categorias_sub as $cat)
+                            <li>
+                                <a
+                                    href="{{route('csc.eventos')}}?evento_id={{$cat->id}}&categoria_id={{$categoria->id}}"
+                                    class="nav-link categorias">
+                                    {{$cat->nome}}
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                        @endif
                         @else
-                        <li class="nav-item"><a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}" class="nav-link
-                            @if (request()->query('pai')==$categoria->id) active @endif
-                            categorias">{{$categoria->name}}</a></li>
+                        <li class="nav-item"><a
+                                href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
+                                class="nav-link
+                                @if (request()->query('cat_pai')==$categoria->id)
+                                active @endif
+                                categorias">{{$categoria->nome}}</a></li>
                         @endif
                         @endforeach
                     </ul>
@@ -43,43 +53,33 @@
         </div>
 
         <div class="col-lg-9">
-@foreach($eventos as $evento)
+            @foreach($eventos as $evento)
             <div class="card">
 
-                <div class="card-header text-center">
+                <h4 class="card-header text-center text-uppercase py-4">
                     {{$evento->nome}}
-                </div>
+                </h4>
 
                 <div class="card-body">
-                    <p class="card-text">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                @if ($evento->imagem)
-                                    <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}" alt="flyer de natal"
-                                        class="img-fluid z-depth-1">
-                                @endif
-                            </div>
+                    @if ($evento->imagem)
+                    <img src="{{Storage::disk('public')->url('eventos_images/').$evento->imagem}}"
+                    alt="img eventos" class="w-25 h-auto mx-auto d-block img-fluid z-depth-1">
+                    @endif
 
-                            <div class="col-lg-9">
-                                {{$evento->descricao}}
-                            </div>
-                        </div>
-                    </p>
-
-                    <p class="card-text"> Venha ter connosco! </p>
-
+                    <p class="card-text mt-3"> {{$evento->descricao}} </p>
                 </div>
-                <div class="card-footer card-footer-event text-muted d-inline-block">
-                <span class="float-left"> {{$evento->data}} </span>
-                    <span class="float-right">{{$evento->category->name}}</span>
+
+                <div class="card-footer card-footer-event text-muted
+                    d-inline-block">
+                    <span class="float-left"> {{$evento->data}} </span>
+                    <span class="float-right">{{$evento->categoria->nome}}</span>
                 </div>
 
             </div>
-  @endforeach
+            <br>
+            @endforeach
         </div>
-
     </div>
-
 </div>
 
 @endsection

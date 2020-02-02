@@ -18,6 +18,7 @@
                 <i class="fas fa-eye"></i>
             </a>
         </div>
+
         <div class="card-body">
             @if (count($documentos))
             <div class="table-responsive">
@@ -37,21 +38,14 @@
                         @foreach($documentos as $documento)
                         <tr>
                             <td>
-                                @if ($documento->imagem)
-                                <object data="meuarquivo.pdf" type="application/pdf">
-                                    <p>Seu navegador não tem um plugin pra PDF</p>
-                                </object>
-
-                                @endif
+                                <a href="{{Storage::disk('public')->url('documento_files/').$documento->file}}"
+                                class="img-documentos" target="_blank" alt="img documentos">Ver ficheiro</a>
                             </td>
 
                             <td>{{$documento->nome}}</td>
                             <td>{{$documento->descricao}}</td>
-                            <td>{{$documento->tipo->name}}</td>
+                            <td>{{$documento->tipo->nome}}</td>
                             <td>{{$documento->data}}</td>
-
-
-                            </td>
                             <td nowrap>
                                 <a href="{{route('documentos.show',$documento)}}"
                                     class="btn btn-sm btn-link text-decoration-none d-inline">
@@ -80,7 +74,6 @@
             <h6>Não existem documento registados</h6>
             @endif
         </div>
-        …
     </div>
 </div>
 @endsection
