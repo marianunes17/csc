@@ -17,7 +17,7 @@
     */
     public function index()
     {
-    $tipos=Tipo::all();
+        $tipos = Tipo::all()->sortByDESC('created_at');
     return view('tipos.list', compact('tipos')); /*Chamar a vista
     categorias.list,
     compact da variavel, que cria um array com a variavel com o mesmo nome e faz
@@ -31,9 +31,8 @@
     */
     public function create()
     {
-    $tipo = Tipoo::all()->sortBy('nome');
     $tipo= new Tipo;
-    $tipos=Tipo::all();
+    $tipos=Tipo::all()->sortBy('nome');
     return view('tipos.add', compact("tipo" ,"tipos" ));
     }
 

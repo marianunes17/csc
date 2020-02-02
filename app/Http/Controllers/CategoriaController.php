@@ -29,7 +29,7 @@ class CategoriaController extends Controller
     public function create()
     {
         $categoria= new Categoria;
-        $categorias=Categoria::all();
+        $categorias=Categoria::all()->sortBy('nome');
         return view('categorias.add', compact("categoria","categorias"));
     }
 

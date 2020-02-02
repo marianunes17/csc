@@ -30,7 +30,7 @@
                             @foreach($categorias_sub as $cat)
                             <li>
                                 <a
-                                    href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&cat_pai={{$categoria->id}}"
+                                    href="{{route('csc.eventos')}}?evento_id={{$cat->id}}&categoria_id={{$categoria->id}}"
                                     class="nav-link categorias">
                                     {{$cat->nome}}
                                 </a>

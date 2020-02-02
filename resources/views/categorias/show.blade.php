@@ -23,6 +23,7 @@
             @if ($categoria->categoria_id)
             <div> <strong>Categoria pai:</strong> {{$categoria->categoria_id->nome}} </div>
             @endif
+
 		</div>
 	</div>
 </div>

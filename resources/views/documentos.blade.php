@@ -28,7 +28,7 @@
                         <ul>
                             @foreach($tipos_sub as $tip)
                             <li>
-                                <a href="{{route('csc.documentos')}}?tip_id={{$tip->id}}&tipo_pai={{$tipo1->id}}"
+                                <a href="{{route('csc.documentos')}}?documento_id={{$tip->id}}&ano_id={{$tipo1->id}}"
                                     class="nav-link tipos1">
                                     {{$tip->nome}}
                                 </a>

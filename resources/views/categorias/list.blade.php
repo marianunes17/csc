@@ -36,7 +36,7 @@
                             <td>{{$categoria->descricao}}</td>
                             <td>
                                 @if ($categoria->categoria_id)
-                                {{$categoria->categoria_id}}
+                                {{$categoria->categoria_id->nome}}
                                 @endif
                             </td>
                             <td nowrap>

@@ -9,11 +9,11 @@ class Categoria extends Model
     protected $fillable = ['nome', 'descricao'];
 
     public function eventos(){
-        return $this->hasMany("App\Evento","categoria_id");
+        return $this->hasMany("App\Evento");
     }
 
-    public function categoria_id(){ /*Relacionamento com a tabela categoria*/
-        return $this->belongsTo("App\Categoria","categoria_id");
+    public function categoria(){ /*Relacionamento com a tabela categoria*/
+        return $this->belongsTo('App\Categoria', 'categoria_id', 'id', 'nome');
     }
     /*Metodo para adicionar a todos os posts*/
 }
