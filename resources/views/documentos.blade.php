@@ -57,7 +57,7 @@
 
                 <div class="card-body">
                     <p class="card-text">
-                        <div class="row">
+                        <div class="m-auto">
                             {{$documento->descricao}}
                         </div> <br>
 

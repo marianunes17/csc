@@ -94,9 +94,9 @@ class EquipaController extends Controller
             $image = $request->file('imagem');
             $equipaImg = $equipa->id . '_' . time() . '.' . $image->getClientOriginalExtension();
             if (!empty($equipa->imagem)) {
-                Storage::disk('public')->delete('equipas_images/' . $equipa->imagem);
+                Storage::disk('public')->delete('equipa_images/' . $equipa->imagem);
                 }
-                Storage::disk('public')->putFileAs('equipas_images/', $image, $equipaImg);
+                Storage::disk('public')->putFileAs('equipa_images/', $image, $equipaImg);
                 $equipa->imagem = $equipaImg;
                 }
 
