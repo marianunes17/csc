@@ -8,7 +8,7 @@
                             justify-content-between">
 
                     <div class="login">
-                        <a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn">
+                        <a href="{{route('dashboard')}}" class="login-btn">
                             <i class="fa fa-sign-in"></i>
                             <span class="d-none d-md-inline-block">Entrar</span>
                         </a>

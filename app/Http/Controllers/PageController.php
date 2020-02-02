@@ -59,7 +59,7 @@ class PageController extends Controller
             $documentos=Documento::where('tipo_id',$tip_id)->get();
         }
         if ($request->has('tip_pai')) {
-            $tipo_id=$request->has('tip_pai');
+            $tip_id=$request->has('tip_pai');
         }
         $tipos_sub=Tipo::where('tipo_id', $tip_id)->get();
 

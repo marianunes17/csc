@@ -18,8 +18,8 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($categorias as $i => $categoria)
-                        @if ( (request()->query('cat_id')==$categoria->id) ||
-                        (request()->query('cat_pai')==$categoria->id)
+                        @if ( (request()->query('cat_id')==$categoria->id)
+                        || (request()->query('cat_pai')==$categoria->id)
                         || ($i==0 && request()->query('cat_id')==""))
                         <li class="nav-item">
                             <a href="{{route('csc.eventos')}}?cat_id={{$categoria->id}}"
@@ -30,7 +30,7 @@
                             @foreach($categorias_sub as $cat)
                             <li>
                                 <a
-                                    href="{{route('csc.eventos')}}?evento_id={{$cat->id}}&categoria_id={{$categoria->id}}"
+                                    href="{{route('csc.eventos')}}?cat_id={{$cat->id}}&cat_pai_id={{$categoria->id}}"
                                     class="nav-link categorias">
                                     {{$cat->nome}}
                                 </a>

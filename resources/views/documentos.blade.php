@@ -18,7 +18,8 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills flex-column text-sm">
                         @foreach($tipos as $i => $tipo1)
-                        @if ( (request()->query('tip_id')==$tipo1->id) || (request()->query('tipo_pai')==$tipo1->id)
+                        @if ( (request()->query('tip_id')==$tipo1->id)
+                        || (request()->query('tip_pai')==$tipo1->id)
                         || ($i==0 && request()->query('tip_id')==""))
                         <li class="nav-item">
                             <a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
@@ -28,7 +29,7 @@
                         <ul>
                             @foreach($tipos_sub as $tip)
                             <li>
-                                <a href="{{route('csc.documentos')}}?documento_id={{$tip->id}}&ano_id={{$tipo1->id}}"
+                                <a href="{{route('csc.documentos')}}?tip_id={{$tip->id}}&tip_pai_id={{$tipo1->id}}"
                                     class="nav-link tipos1">
                                     {{$tip->nome}}
                                 </a>
@@ -37,8 +38,9 @@
                         </ul>
                         @endif
                         @else
-                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}" class="nav-link
-                            @if (request()->query('tipo_pai')==$tipo1->id) active @endif
+                        <li class="nav-item"><a href="{{route('csc.documentos')}}?tip_id={{$tipo1->id}}"
+                            class="nav-link
+                            @if (request()->query('tip_pai')==$tipo1->id) active @endif
                             tipos1">{{$tipo1->nome}}</a></li>
                         @endif
                         @endforeach
