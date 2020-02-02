@@ -19,7 +19,7 @@
 </div>
 
 <div class="form-group">
-    <label for="inputTipo">Tipo</label>
+    <label for="inputTipo">Categoria do documento</label>
     <select name="tipo" id="inputTipo" class="form-control">
         @foreach ($tipos as $tipo)
         <option {{ old('$tipo', $documento->tipo_id) == $tipo->id ? "selected":""}} value="{{$tipo->id}}" >{{$tipo->nome}}</option>

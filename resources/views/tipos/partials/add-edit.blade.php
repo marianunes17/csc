@@ -6,7 +6,7 @@
 </div>
 
 <div class="form-group">
-    <label for="inputTipo">Tipo</label>
+    <label for="inputTipo">Categoria de Documentos</label>
     <select name="tipo" id="inputTipo" class="form-control">
         <option value="" selected>Tipo pai</option>
         @foreach ($tipos as $tipo_)

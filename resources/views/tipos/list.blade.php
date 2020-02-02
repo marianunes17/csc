@@ -1,18 +1,18 @@
 @extends ("layout.admin")
 
-@section("title", "Anos")
+@section("title", "Categoria de documentos")
 
 @section("content")
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 pl-3">Anos</h1>
+    <h1 class="h3 mb-2 text-gray-800 pl-3">Categoria de Documentos</h1>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <a class="btn btn-primary" href="{{route('tipos.create')}}">
                 <!-- rota para criar a tipo -->
 
-                <i class="fas fa-plus"></i> Adicionar Anos
+                <i class="fas fa-plus"></i> Adicionar Categoria de Documentos
             </a>
         </div>
         <div class="card-body">
@@ -24,7 +24,7 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Documento Pai</th>
+                            <th>Categoria Pai</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -67,7 +67,7 @@
                 </table>
             </div>
             @else
-            <h6>Não há anos</h6>
+            <h6>Não há categorias de documentos</h6>
             <!--Caso não tenha anos mostra esta mensagem-->
             @endif
         </div>

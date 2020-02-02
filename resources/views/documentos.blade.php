@@ -12,7 +12,7 @@
         <div class="col-lg-3">
             <div class="panel panel-default sidebar-menu with-icons">
                 <div class="panel-heading">
-                    <h3 class="h4 panel-title">Tipos</h3>
+                    <h3 class="h4 panel-title">Categoria de Documentos</h3>
                 </div>
 
                 <div class="panel-body">

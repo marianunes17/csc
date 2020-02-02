@@ -8,7 +8,7 @@
 
 	<div class="card shadow mb-4">
 		<h5 class="card-header py-3">
-            Adicionar Ano
+            Adicionar Categoria de Documento
 
             <a href="{{route('tipos.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
             </a>

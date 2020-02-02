@@ -1,7 +1,7 @@
 
 @extends('layout.admin')
 
-@section("title", "Anos")
+@section("title", "Categoria de documentos")
 
 @section('content')
 <div class="container-fluid">
