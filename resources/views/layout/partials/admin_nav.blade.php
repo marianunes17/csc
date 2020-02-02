@@ -26,8 +26,8 @@
     <div class="modal-footer">
         <form action="{{route('logout')}}" method="post" class="inline">
         @csrf
-        <button class="btn btn-link text-muted" type="submit">
-            <i class="fas fa-sign-out-alt">Sair </i>
+        <button class="btn btn-link text-muted ml-2" type="submit">
+            <i class="fas fa-sign-out-alt"></i> Sair
         </button>
         </form>
     </div>
