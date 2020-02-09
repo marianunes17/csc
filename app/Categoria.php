@@ -13,7 +13,7 @@ class Categoria extends Model
     }
 
     public function categoria(){ /*Relacionamento com a tabela categoria*/
-        return $this->belongsTo('App\Categoria', 'categoria_id', 'id', 'nome');
+        return $this->belongsTo('App\Categoria', 'categoria');
     }
     /*Metodo para adicionar a todos os posts*/
 }

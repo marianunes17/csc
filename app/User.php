@@ -17,13 +17,13 @@ class User extends Authenticatable implements MustVerifyEmail{
 
 public function roleToStr(){
  	switch($this->role){
-	 	case 'N':
+	 	case 'Normal':
 	 	return 'Normal';
-	 	case 'A':
+	 	case 'Administrador':
 	 	return 'Admin';
  	}
  }
  public function isAdmin(){
- 	return $this->role=='A';
+ 	return $this->role=='Administrador';
  }
 }
