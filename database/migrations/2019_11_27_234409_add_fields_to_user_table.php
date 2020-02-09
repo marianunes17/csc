@@ -11,10 +11,11 @@ class AddFieldsToUserTable extends Migration
      *
      * @return void
      */
-    public function up()
+     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->enum('role',['A','N'])->default('N');
+            $table->softDeletes();
         });
     }
 
@@ -26,7 +27,8 @@ class AddFieldsToUserTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('role');
+            $table->dropSoftDeletes();
         });
     }
 }
