@@ -8,9 +8,9 @@
                             justify-content-between">
 
                     <div class="login">
-                        <a href="{{route('dashboard')}}" class="login-btn">
+                        <a href="{{route('dashboard')}}" class="login-btn" target="_blank">
                             <i class="fa fa-sign-in"></i>
-                            <span class="d-none d-md-inline-block">Entrar</span>
+                           <!-- <span class="d-none d-md-inline-block">Entrar</span>-->
                         </a>
                     </div>
 
@@ -132,7 +132,7 @@
                         <a href="{{route('csc.eventos')}}" class="nav-link">Eventos</a>
                     </li>
 
-                    <li class="nav-item dropdown menu-large">
+                   <!-- <li class="nav-item dropdown menu-large">
                         <a href="#" data-toggle="dropdown" class="seta">Loja
                             <b class="caret"></b>
                         </a>
@@ -165,7 +165,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
 
                     <li class="nav-item
                         @if ($menu=='Contactos') active @endif">

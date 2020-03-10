@@ -2,7 +2,7 @@
 <footer class="main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <h4 class="h6">Páginas</h4>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
@@ -36,16 +36,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <hr class="d-block d-lg-none mt-4">
                 <h4 class="h6">Contactos</h4>
                 <p class="text-uppercase"><strong>Morada</strong><br>Travessa da Fonte, n.º 4 <br>Carnide - Pombal<br>
                     Portugal
                     <br><br><strong>Telefone</strong><br> 236 946 189 <br>96 841 58 77</p><a
                     href="{{route('csc.contactos')}}" class="btn btn-template-main">Contacte-nos</a>
-                <hr class="d-block d-lg-none">
-            </div>
-            <div class="col-lg-4">
 
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <hr class="d-block d-lg-none mt-4">
                 <h4 class="h6">Redes Sociais | E-mail</h4>
                 <ul class="list-unstyled social">
                     <li class="list-inline-item"><a
