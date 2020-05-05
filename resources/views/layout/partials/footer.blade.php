@@ -29,9 +29,6 @@
                         <a href="{{route('csc.eventos')}}" title="eventos" class="nav-item">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://cscarnide.g7.dwm.best/" class="" target="_blanck">Loja</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="{{route('csc.contactos')}}" title="contactos" class="nav-item">Contactos</a>
                     </li>
                 </ul>
