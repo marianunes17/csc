@@ -58,8 +58,9 @@
     <div class="copyrights">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 text-center-md">
-                    <p>Copyright &copy; by Centro Social de Carnide, 2020</p>
+                <div class="col-sm-12 text-center-md">
+                    <p>Copyright &copy; by Centro Social de Carnide, design based on
+                        <a href="https://bootstrapious.com/p/big-bootstrap-tutorial" class="text-white" target="_blank">Bootstrapious</a>, 2020</p>
                 </div>
             </div>
         </div>
