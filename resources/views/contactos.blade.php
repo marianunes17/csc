@@ -31,8 +31,7 @@
             <div class="col-md-4">
                 <div class="box-simple">
                     <div class="icon-outlined"><i class="fa fa-phone"></i></div>
-                    <h3 class="h4">Contacto Telefnico</h3>
-                    <p>Este contacto encontra-se disponivel 24 horas por dia. Não hesite em contactar. </p>
+                    <h3 class="h4">Contacto Telefónico</h3>
                     <p><strong>Telemóvel: 968 415 877 </strong> <br> <strong> Telefone: 236 946 189</strong></p>
                 </div>
             </div>
@@ -40,7 +39,7 @@
                 <div class="box-simple">
                     <div class="icon-outlined"><i class="fa fa-envelope"></i></div>
                     <h3 class="h4">E-mail</h3>
-                    <p>Não hesite em contactar via email caso tenha alguma questão.</p>
+                    <p>Tem alguma questão? Via e-mail podemos tentar ajudá-lo.</p>
                     <ul class="list-unstyled text-sm">
                         <li><strong><a href="mailto:cscarnide@gmail.com">cscarnide@gmail.com</a></strong></li>
                     </ul>
