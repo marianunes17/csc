@@ -141,7 +141,7 @@ significa q extende a view master -->
                 @if ($errors->any())
                 @include ('partials.errors')
                 @endif
-                <form method="post" action="{{route('testemunhos.store')}}">
+                <form method="post" action="{{route('storetestemunho')}}">
                     @csrf
                     @method('post')
 

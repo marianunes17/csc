@@ -23,6 +23,10 @@ Route::get('/contactos', 'PageController@contactos')->name("csc.contactos");
 
 Route::get('/landingpage', 'PageController@landingpage')->name("csc.landingpage");
 
+/*formularios*/
+Route::post('/storetestemunho', 'PageController@storetestemunho')->name("storetestemunho");
+Route::post('/storecontacto', 'PageController@storecontacto')->name("storecontacto");
+
 
 Route::patch('/publicar/{testemunho}','TestemunhosController@publicar')->name("testemunhos.publicar");
 

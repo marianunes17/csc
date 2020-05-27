@@ -59,54 +59,57 @@
 </section>
 
 <section class="bar pt-0">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="heading text-center">
-                <h2>Formulário de Contacto</h2>
-            </div>
-        </div>
-        <div class="col-md-8 mx-auto" id="zonaContactos">
-            @if ($errors->any())
-            @include ('partials.errors')
-            @endif
-            <form method="post" action="{{route('contactos.store')}}">
-                @csrf
-                @method('post')
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="nome"></label>
-                            <input id="nome" name="nome" class="form-control" placeholder="Nome"
-                                value="{{old('nome')}}">
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="asssunto"></label>
-                            <input id="assunto" name="assunto" class="form-control" placeholder="Assunto"
-                                value="{{old('assunto')}}">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="email"></label>
-                            <input id="email" name="email" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
-                                data-type="email" class="form-control" placeholder="E-mail" value="{{old('email')}}">
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="mensagem"></label>
-                            <textarea id="mensagem" name="mensagem" class="form-control"
-                                placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 text-center">
-                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
-                            Enviar</button>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading text-center">
+                    <h2>Formulário de Contacto</h2>
                 </div>
-            </form>
+            </div>
+            <div class="col-8 mx-auto" id="zonaContactos">
+                @if ($errors->any())
+                @include ('partials.errors')
+                @endif
+                <form method="post" action="{{route('storecontacto')}}">
+                    @csrf
+                    @method('post')
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="nome"></label>
+                                <input id="nome" name="nome" class="form-control" placeholder="Nome"
+                                    value="{{old('nome')}}">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="asssunto"></label>
+                                <input id="assunto" name="assunto" class="form-control" placeholder="Assunto"
+                                    value="{{old('assunto')}}">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input id="email" name="email" pattern="^([\w\.\-]+)@([\w\-]+).(((\w){2,})+)$"
+                                    data-type="email" class="form-control" placeholder="E-mail"
+                                    value="{{old('email')}}">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="mensagem"></label>
+                                <textarea id="mensagem" name="mensagem" class="form-control"
+                                    placeholder="Escreva a sua questão!">{{old('mensagem')}}</textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i>
+                                Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>

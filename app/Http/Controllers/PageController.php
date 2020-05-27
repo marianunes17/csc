@@ -16,7 +16,10 @@ use Illuminate\Http\Request;
 use App\Parceria;
 use App\Documento;
 use App\Tipos;
+use App\Contacto;
 use App\EquipaDirecao;
+use App\Http\Requests\StoreTestemunhosRequest;
+use App\Http\Requests\StoreContactosRequest;
 
 
 class PageController extends Controller
@@ -102,6 +105,29 @@ class PageController extends Controller
     public function landingpage(){
         return view('landingpage')->with('menu', 'landingpage');
     }
+
+    public function storetestemunho(StoreTestemunhosRequest $request){
+        $fields = $request->validated();
+        $testemunho = new Testemunho;
+        $testemunho->fill($fields);
+        $testemunho->data=date('Y-m-d H:i:s');
+        $testemunho->save();
+
+        return redirect()->back()->with('success', 'Testemunho criado com sucesso');
+    }
+
+    public function storecontacto(StoreContactosRequest $request)
+    {
+
+        $fields = $request->validated();
+        $contacto = new Contacto;
+        $contacto->fill($fields);
+        $contacto->data=date('Y-m-d H:i:s');
+        $contacto->save();
+
+         return redirect()->back()->with('success', 'Contacto criado com sucesso');
+    }
+
 }
 
 
