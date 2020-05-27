@@ -29,7 +29,7 @@ class TestemunhosController extends Controller
      */
     public function store(StoreTestemunhosRequest $request)
     {
-   
+
         $fields = $request->validated();
         $testemunho = new Testemunho;
         $testemunho->fill($fields);

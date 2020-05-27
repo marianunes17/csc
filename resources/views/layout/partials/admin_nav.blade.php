@@ -6,10 +6,10 @@
     </button>
 
     <a href="{{route('csc.index')}}" target="_blank" class="text-center text-decoration-none d-inline-block">
-        <img src="{{asset('img/logos/logo-simbolo2.png')}}" alt="Centro Social de Carnide logo"
+        <img src="{{asset('img/logo_simbolo_final.png')}}" alt="Centro Social de Carnide logo"
             style="max-width: 100px;" class="d-none d-md-inline-block">
         <span class="text-white position-relative" style="font-weight: 500;
-        line-height: 1.2; font-size:1rem; left:-20px">Centro Social de Carnide</span>
+        line-height: 1.2; font-size:1rem; left:-20px;">Centro Social de Carnide</span>
     </a>
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0d-md-inline-block ">

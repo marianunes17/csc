@@ -44,21 +44,22 @@
                             <td>{{$testemunho->data}}</td>
                             <td>
                                 <form method="post" action="{{route('testemunhos.publicar',$testemunho)}}">
-                                @csrf
-               @method('patch')
-                                @if($testemunho -> publicado)
-                                <input type="checkbox" name="publicado" checked="" onclick="this.form.submit();">
-                                @else
- <input type="checkbox" name="publicado" onclick="this.form.submit();">
-@endif
-</form>
+                                    @csrf
+                                    @method('patch')
+                                    @if($testemunho -> publicado)
+                                    <input type="checkbox" name="publicado" checked="" onclick="this.form.submit();">
+                                    @else
+                                    <input type="checkbox" name="publicado" onclick="this.form.submit();">
+                                    @endif
+                                </form>
                             </td>
 
 
 
                             <td nowrap>
                                 <a href="{{route('testemunhos.show',$testemunho)}}"
-                                    class="btn btn-sm btn-link text-decoration-none d-inline" title="Visualizar testemunho">
+                                    class="btn btn-sm btn-link text-decoration-none d-inline"
+                                    title="Visualizar testemunho">
                                     <i class="fas fa-eye fa-xs text-primary" style="font-size: 15px;"></i>
                                 </a>
 
