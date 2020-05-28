@@ -10,7 +10,8 @@
         <h5 class="card-header py-3">
             Adicionar Utilizador
 
-            <a href="{{route('users.index')}}" class="btn btn-outline-primary float-right"> <i class="fas fa-arrow-left"></i> Voltar</a>
+            <a href="{{route('users.index')}}" class="btn btn-outline-primary float-right">
+                <i class="fas fa-arrow-left"></i> Voltar</a>
             </a>
         </h5>
 

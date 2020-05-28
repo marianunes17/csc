@@ -26,7 +26,7 @@ class UpdateUserRequest extends FormRequest
         return [
             "name" => 'required|min:3|max:40|regex:/^[A-ZÀ-úa-z\s]+$/',
             "email" => 'required|email|unique:users,email,'.$this->user->id,
-            "role" => 'sometimes|in:N,A',
+            "role" => 'sometimes|in:Normal,Administrador',
         ];
     }
     public function messages()

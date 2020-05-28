@@ -47,8 +47,8 @@
                 <h4 class="h6">Redes Sociais | E-mail</h4>
                 <ul class="list-unstyled social">
                     <li class="list-inline-item"><a
-                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/" target="_blank"><i
-                                class="fa fa-facebook"></i></a></li>
+                            href="https://www.facebook.com/Centro-Social-de-Carnide-188111744658661/" target="_blank">
+                            <i class="fa fa-facebook"></i></a></li>
                     <li class="list-inline-item"><a href="mailto:cscarnide@gmail.com"><i
                                     class="fa fa-envelope"></i></a></li>
                 </ul>

@@ -27,7 +27,7 @@
 
       </form>
 
-      <a href="{{route('users.sendActivationEmail',$user)}}" class="btn btn-primary">Enviar email de ativação</a>
+      <!--<a href="{{route('users.sendActivationEmail',$user)}}" class="btn btn-primary">Enviar email de ativação</a>-->
     </div>
   </div>
 </div>

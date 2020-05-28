@@ -62,8 +62,6 @@
                 Equipa</a>
              <a class="dropdown-item" href="{{route('equipas.index')}}">Lista
                 de Equipa</a>
-
-
         </div>
     </li>
     <li class="nav-item dropdown">

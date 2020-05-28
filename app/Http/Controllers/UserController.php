@@ -38,7 +38,7 @@ class UserController extends Controller
         }
         $users=$users->get();
         }
-            
+
             return view('users.list', compact('users'));
     }
 
@@ -66,8 +66,8 @@ class UserController extends Controller
         $user->fill($fields);
         $user->password = Hash::make('csc');
         $user->save();
-        
-        $user->sendEmailVerificationNotification();
+
+        /*$user->sendEmailVerificationNotification();*/
         return redirect()->route('users.index')->with('success', 'User successfully created');
     }
 
@@ -125,10 +125,10 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('success', 'User successfully deleted');
     }
 
-    public function send_reactivate_email(User $user)
+  /*  public function send_reactivate_email(User $user)
     {
         $user->sendEmailVerificationNotification();
         return redirect()->route('users.index')->with('success', 'Email successfully sent');
-    }
+    }*/
 
 }
